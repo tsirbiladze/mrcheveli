@@ -21,7 +21,7 @@ MAX_HINTS = 4
 TIER_RANK = {"anthropic": 0, "openai": 0, "partner": 1, "third-party": 2}
 USAGE = """usage:
   match.py --answers <file> [--format md|json] [--catalog <file>]
-  match.py --questions --surface <surface> [--role <id>] [--lang ka|en] [--catalog <file>]"""
+  match.py --questions --surface <surface> [--role <activity>] [--lang ka|en] [--catalog <file>]"""
 
 
 class Refusal(Exception):
@@ -91,9 +91,8 @@ def normalize(answers, catalog):
     surface = answers.get("surface")
     if surface not in tax["surfaces"]:
         refuse("answers.surface: must be one of %s" % ", ".join(tax["surfaces"]))
-    roles = [r["id"] for r in tax["roles"]]
-    if answers.get("role") not in roles:
-        refuse("answers.role: must be one of %s" % ", ".join(roles))
+    if not isinstance(answers.get("role"), str) or not answers["role"].strip():
+        refuse("answers.role: describe an activity")
     for key in ("tasks", "uses", "limits", "installed"):
         if key in answers and not is_string_list(answers[key]):
             refuse("answers.%s: must be a list of strings" % key)
@@ -132,7 +131,6 @@ def normalize(answers, catalog):
     return {
         "lang": lang,
         "surface": surface,
-        "role": answers["role"],
         "tasks": tasks,
         "limits": limits,
         "direct": direct,
@@ -748,9 +746,10 @@ def questions(catalog, messages, lang, role, surface):
     # The questions name the platform's owner, so they are worded for the surface they are asked on.
     platform = platform_of(catalog, surface)
     m = wording(messages, lang, platform, surface)
-    role_ids = [r["id"] for r in tax["roles"]]
-    if role is not None and role not in role_ids:
-        refuse("--role: must be one of %s" % ", ".join(role_ids))
+    if role is not None and not role.strip():
+        refuse("--role: describe an activity")
+    if role is not None and not any(r["id"] == role for r in tax["roles"]):
+        role = "general"
 
     def option(item):
         return {"id": item["id"], "label": fmt(item["label"][lang], {"owner": platform["owner"]})}
@@ -779,8 +778,8 @@ def questions(catalog, messages, lang, role, surface):
                 question(
                     "role",
                     False,
-                    [option(r) for r in tax["roles"] if r["asked"]],
-                    [option(r) for r in tax["roles"] if not r["asked"]],
+                    [],
+                    [option(r) for r in tax["roles"]],
                 ),
                 question(
                     "limits",

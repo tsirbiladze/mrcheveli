@@ -40,7 +40,8 @@
       "name": "Google Drive",
       "aliases": [
         "Google Docs",
-        "Google Sheets"
+        "Google Sheets",
+        "Google Slides"
       ],
       "group": "google",
       "money": false,
@@ -1382,6 +1383,42 @@
       "money": false,
       "keys": [
         "backstory"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "pagerduty",
+      "name": "PagerDuty",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "pagerduty"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "datadog"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "definite",
+      "name": "Definite",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "definite"
       ],
       "georgia": {
         "status": "unknown"

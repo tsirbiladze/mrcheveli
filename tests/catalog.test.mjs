@@ -123,6 +123,8 @@ test('the questions fit a tool that takes four answers and a 12-character header
     const first = JSON.parse(node(['--questions', '--lang', lang, '--surface', surface]).stdout);
     assert.equal(first.round, 1);
     assert.deepEqual(first.questions.map((q) => q.id), ['role', 'limits']);
+    assert.deepEqual(first.questions[0].options, []);
+    assert.ok(first.questions[0].otherChoices.some((r) => r.id === 'general'));
     assert.equal(first.questions[1].other, null);
     assert.equal(first.questions[1].options.at(-1).id, 'none');
     const rounds = [first];
@@ -134,7 +136,7 @@ test('the questions fit a tool that takes four answers and a 12-character header
     }
     for (const round of rounds) {
       for (const question of round.questions) {
-        assert.ok(question.options.length >= 2 && question.options.length <= 4, question.id);
+        if (question.id !== 'role') assert.ok(question.options.length >= 2 && question.options.length <= 4, question.id);
         assert.ok([...question.header].length <= 12, `${question.header} is longer than 12 characters`);
         assert.ok(question.text.length > 5);
         assert.equal(question.other !== null, question.otherChoices.length > 0);

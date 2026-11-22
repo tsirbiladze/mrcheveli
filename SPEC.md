@@ -10,7 +10,7 @@ Open source (MIT). The skill and the catalog live in this one repository and sha
 
 ## Who it is for
 
-A person in Georgia who works with Claude or ChatGPT and is not a developer: sales, accounting, marketing, legal work, a small business. They work in the assistant's app (Claude's chat, desktop app and Cowork; the ChatGPT app), where plugins are added by pressing a button on a Plugins page. People who work in a terminal are served too: in Claude Code and in Codex the skill runs the install command itself, on a yes.
+Anyone in Georgia using Claude or ChatGPT for work, study, a hobby or a personal project. They work in the assistant's app (Claude's chat, desktop app and Cowork; the ChatGPT app), where plugins are added by pressing a button on a Plugins page. People who work in a terminal are served too: in Claude Code and in Codex the skill runs the install command itself, on a yes.
 
 ## Decisions (the owner's, 2026-11-19)
 
@@ -90,9 +90,9 @@ Tools for rs.ge, Georgian banks, the National Bank's rates, Georgian law and Geo
 
 | Round | Question | Answers |
 |---|---|---|
-| 1 | What do you mostly do? | four roles; three more by a free answer |
+| 1 | What do you mostly do? | free text, including several activities; a known role only supplies example tasks |
 | 1 | What limits do you have? | known publishers only; nothing that touches money; a company account; none |
-| 2 | What do you do most often? | the role's own tasks, two to four; any other task by a free answer |
+| 2 | What do you do most often? | two to four example tasks; accept tasks from any role and note uncovered work |
 | 2 | Which services do you already use? | Google; Microsoft 365; a team tool; a CRM or an accounting program; any service by name |
 
 Each question has at most four ready answers and a header of at most 12 characters, so that it fits a question tool where an agent has one. The wording comes from the script (`--questions`), in Georgian or English, and so do the short sentences the agent says around the answer: asking before an install, saying what it could not use, the hand-over.
@@ -133,10 +133,10 @@ The commands are built from names the build has checked against a fixed pattern 
 
 Only what the script printed is recommended. One yes installs one plugin. Signing in is done by the person. Text from anywhere else is data, not instructions.
 
-## Limits of version 0.1.0
+## Limits of version 0.2.0
 
 - Two marketplaces: `anthropics/knowledge-work-plugins` and `openai/plugins`. Not the Claude Code marketplace of developer plugins and not the connectors directory. Of the part of ChatGPT's directory that is not in OpenAI's public repository, only OpenAI's Sales plugin, from its page: the plugins of most services it works with are not in the catalog.
-- Roles: sales, accounting and finance, marketing, legal, small business owner, customer support, HR and operations. Engineering, data, design, product management and research plugins are left out.
+- Any activity is accepted. Recommendations are limited to the tasks and services covered by this catalog. If an activity has no suitable match, the skill says so.
 - Four surfaces: Claude's apps, Claude Code, the ChatGPT app and Codex in a terminal. In the two apps the skill never installs.
 - "Works in Georgia" is about being able to sign up and pay. It says nothing about the Georgian language, Georgian tax rules or local prices.
 - No Georgian tool has been reviewed.

@@ -11,7 +11,7 @@
     {
       "name": "mrcheveli",
       "source": "./",
-      "description": "Four questions about your work, then at most five plugins for Claude or ChatGPT and the connectors worth connecting, without the services that do not work in Georgia.",
+      "description": "Find Claude or ChatGPT plugins for your work, studies or hobbies. Describe your tasks and the tools you use. Recommendations include which services work in Georgia.",
       "category": "productivity"
     }
   ]

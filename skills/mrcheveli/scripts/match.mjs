@@ -17,7 +17,7 @@ const MAX_HINTS = 4;
 const TIER_RANK = { anthropic: 0, openai: 0, partner: 1, 'third-party': 2 };
 const USAGE = `usage:
   match.mjs --answers <file> [--format md|json] [--catalog <file>]
-  match.mjs --questions --surface <surface> [--role <id>] [--lang ka|en] [--catalog <file>]`;
+  match.mjs --questions --surface <surface> [--role <activity>] [--lang ka|en] [--catalog <file>]`;
 
 class Refusal extends Error {}
 
@@ -116,10 +116,7 @@ function normalize(answers, catalog) {
   if (!tax.surfaces.includes(surface)) {
     refuse(`answers.surface: must be one of ${tax.surfaces.join(', ')}`);
   }
-  const roles = tax.roles.map((r) => r.id);
-  if (!roles.includes(answers.role)) {
-    refuse(`answers.role: must be one of ${roles.join(', ')}`);
-  }
+  if (typeof answers.role !== 'string' || answers.role.trim() === '') refuse('answers.role: describe an activity');
   for (const key of ['tasks', 'uses', 'limits', 'installed']) {
     if (answers[key] !== undefined && !isStringList(answers[key])) {
       refuse(`answers.${key}: must be a list of strings`);
@@ -161,7 +158,7 @@ function normalize(answers, catalog) {
     refuse('answers.tasks: give at least one task, or name a service in answers.uses');
   }
   const installed = unique((answers.installed || []).map((id) => id.split('@')[0]));
-  return { lang, surface, role: answers.role, tasks, limits, direct, usedGroups: unique(usedGroups), installed };
+  return { lang, surface, tasks, limits, direct, usedGroups: unique(usedGroups), installed };
 }
 
 // ---- the choice ------------------------------------------------------------
@@ -649,8 +646,8 @@ function questions(catalog, messages, lang, role, surface) {
   // The questions name the platform's owner, so they are worded for the surface they are asked on.
   const platform = platformOf(catalog, surface);
   const m = wording(messages, lang, platform, surface);
-  const roleIds = tax.roles.map((r) => r.id);
-  if (role !== null && !roleIds.includes(role)) refuse(`--role: must be one of ${roleIds.join(', ')}`);
+  if (role !== null && role.trim() === '') refuse('--role: describe an activity');
+  if (role !== null && !tax.roles.some((r) => r.id === role)) role = 'general';
   const option = (item) => ({ id: item.id, label: fmt(item.label[lang], { owner: platform.owner }) });
   // A question with otherChoices takes a free answer too: "other" is the label to offer it under.
   const question = (id, multi, options, otherChoices) => ({
@@ -671,7 +668,7 @@ function questions(catalog, messages, lang, role, surface) {
       lang,
       round: 1,
       questions: [
-        question('role', false, tax.roles.filter((r) => r.asked).map(option), tax.roles.filter((r) => !r.asked).map(option)),
+        question('role', false, [], tax.roles.map(option)),
         question('limits', true, tax.limits.map(option).concat([{ id: 'none', label: m['question.none'] }]), []),
       ],
       phrases,

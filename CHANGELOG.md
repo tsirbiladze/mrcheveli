@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0 — 2026-11-22
+
+Describe any activity in your own words. Recommendations follow the tasks and services you name, including lesson slides, data analysis, code review and web app development. If the catalog has no match, the skill tells you.
+
 ## 0.1.0 — 2026-11-19
 
 First version. Not released.

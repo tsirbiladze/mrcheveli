@@ -2,7 +2,6 @@
   "roles": [
     {
       "id": "sales",
-      "asked": true,
       "label": {
         "ka": "გაყიდვები და კლიენტები",
         "en": "Sales and customers"
@@ -10,7 +9,6 @@
     },
     {
       "id": "finance",
-      "asked": true,
       "label": {
         "ka": "ბუღალტერია და ფინანსები",
         "en": "Accounting and finance"
@@ -18,7 +16,6 @@
     },
     {
       "id": "marketing",
-      "asked": true,
       "label": {
         "ka": "მარკეტინგი და ტექსტები",
         "en": "Marketing and content"
@@ -26,7 +23,6 @@
     },
     {
       "id": "legal",
-      "asked": true,
       "label": {
         "ka": "სამართალი და დოკუმენტები",
         "en": "Legal and documents"
@@ -34,7 +30,6 @@
     },
     {
       "id": "owner",
-      "asked": false,
       "label": {
         "ka": "მცირე ბიზნესის მფლობელი",
         "en": "Small business owner"
@@ -42,7 +37,6 @@
     },
     {
       "id": "support",
-      "asked": false,
       "label": {
         "ka": "მომხმარებელთა მხარდაჭერა",
         "en": "Customer support"
@@ -50,10 +44,16 @@
     },
     {
       "id": "people",
-      "asked": false,
       "label": {
         "ka": "ადამიანური რესურსები და ოპერაციები",
         "en": "HR and operations"
+      }
+    },
+    {
+      "id": "general",
+      "label": {
+        "ka": "სხვა ან რამდენიმე საქმიანობა",
+        "en": "Another activity or a mix of activities"
       }
     }
   ],
@@ -252,7 +252,7 @@
     },
     {
       "id": "general.day",
-      "role": "*",
+      "role": "general",
       "label": {
         "ka": "ფოსტა, კალენდარი და ამოცანები",
         "en": "Email, calendar and tasks"
@@ -260,18 +260,58 @@
     },
     {
       "id": "general.find",
-      "role": "*",
+      "role": "general",
       "label": {
-        "ka": "ინფორმაციის პოვნა კომპანიის ხელსაწყოებში",
-        "en": "Finding information across company tools"
+        "ka": "ინფორმაციის მოძებნა ჩემს ფაილებში, წერილებსა და ჩანაწერებში",
+        "en": "Finding information in my files, messages and notes"
       }
     },
     {
       "id": "general.pdf",
-      "role": "*",
+      "role": "general",
       "label": {
         "ka": "PDF-ების ნახვა, შევსება და ხელმოწერა",
         "en": "Viewing, filling and signing PDFs"
+      }
+    },
+    {
+      "id": "general.analysis",
+      "role": "general",
+      "label": {
+        "ka": "მონაცემების გაანალიზება და დიაგრამების აგება",
+        "en": "Analysing data and making charts"
+      }
+    },
+    {
+      "id": "general.review",
+      "role": "*",
+      "label": {
+        "ka": "პროგრამული კოდის შემოწმება და შეცდომების პოვნა",
+        "en": "Reviewing code and debugging software"
+      }
+    },
+    {
+      "id": "general.web",
+      "role": "*",
+      "label": {
+        "ka": "ვებაპლიკაციის შექმნა და ტესტირება",
+        "en": "Building and testing a web app"
+      }
+    },
+    {
+      "id": "general.slides",
+      "role": "*",
+      "label": {
+        "ka": "პრეზენტაციის ან სასწავლო სლაიდების მომზადება",
+        "en": "Making presentations or lesson slides"
+      }
+    },
+    {
+      "id": "general.other",
+      "role": "*",
+      "label": {
+        "ka": "საქმე, რომელსაც კატალოგი ჯერ არ ფარავს",
+        "en": "A task outside the catalog"
       }
     }
   ],

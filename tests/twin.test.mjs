@@ -43,6 +43,10 @@ test('the twins agree on the synthetic catalog', () => {
 
 test('the twins agree on the shipped catalog, for every task and every named service', () => {
   const catalog = readJson(REAL);
+  const teacher = answersFile(base({ role: 'მუსიკის მასწავლებელი', tasks: ['general.slides'], uses: ['canva'] }));
+  assert.equal(same(['--answers', teacher], 'unlisted occupation').status, 0);
+  const free = ['--questions', '--surface', 'claude-app', '--role'];
+  assert.equal(same([...free, 'მუსიკის მასწავლებელი'], 'free-text activity').stdout, node([...free, 'general']).stdout);
   const roles = catalog.taxonomy.roles.map((r) => r.id);
   for (const role of roles) {
     const tasks = catalog.taxonomy.tasks.filter((t) => t.role === role || t.role === '*').map((t) => t.id);
@@ -89,7 +93,8 @@ test('the twins print the same questions', () => {
 test('the twins refuse the same way', () => {
   const bad = [
     base({ surface: 'chatgpt' }),
-    base({ role: 'pilot' }),
+    base({ role: '   ' }),
+    base({ role: 42 }),
     base({ tasks: ['sales.flying'] }),
     base({ uses: ['abacus'] }),
     base({ limits: ['cheap'] }),
@@ -105,7 +110,7 @@ test('the twins refuse the same way', () => {
   }
   assert.equal(same(['--answers', '/nonexistent/answers.json', '--catalog', FIXTURE], 'missing file').status, 2);
   assert.equal(same(['--questions', '--surface', 'claude-app', '--lang', 'fr'], 'bad lang').status, 2);
-  assert.equal(same(['--questions', '--surface', 'claude-app', '--role', 'pilot'], 'bad role').status, 2);
+  assert.equal(same(['--questions', '--surface', 'claude-app', '--role', ''], 'empty activity').status, 2);
   assert.equal(same(['--questions'], 'no surface').status, 2);
   assert.equal(same(['--questions', '--surface', 'gemini'], 'bad surface').status, 2);
   assert.equal(same(['--format', 'xml', '--answers', 'x'], 'bad format').status, 2);

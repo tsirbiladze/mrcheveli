@@ -611,7 +611,8 @@
       "kind": "service",
       "tasks": [
         "marketing.design",
-        "owner.marketing"
+        "owner.marketing",
+        "general.slides"
       ],
       "requires": [
         "canva"
@@ -980,7 +981,8 @@
       "kind": "role",
       "tasks": [
         "finance.reports",
-        "marketing.analytics"
+        "marketing.analytics",
+        "general.analysis"
       ],
       "requires": [],
       "access": [
@@ -1111,7 +1113,8 @@
       "kind": "service",
       "tasks": [
         "general.find",
-        "owner.admin"
+        "owner.admin",
+        "general.slides"
       ],
       "requires": [
         "google-drive"
@@ -1276,7 +1279,8 @@
       "kind": "service",
       "tasks": [
         "marketing.design",
-        "owner.marketing"
+        "owner.marketing",
+        "general.slides"
       ],
       "requires": [
         "canva"
@@ -1602,6 +1606,84 @@
       "what": {
         "ka": "Shopify-ის მაღაზიის მართვა საუბრით: პროდუქტები, მარაგი, ფასდაკლების კოდები, შეკვეთები და ანალიტიკა. სკილების დიდი ნაწილი დეველოპერებისთვისაა.",
         "en": "Running a Shopify store by conversation: products, inventory, discount codes, orders and analytics. A large part of its skills is for developers."
+      }
+    },
+    {
+      "id": "engineering@knowledge-work-plugins",
+      "name": "engineering",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "general.review"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ამოწმებს კოდის ცვლილებებს, გეხმარება შეცდომის მიზეზის პოვნაში და ტესტების დაგეგმვაში. შეგიძლია კოდი პირდაპირ მიაწოდო.",
+        "en": "Reviews code changes, helps trace bugs and plans tests. You can paste the code directly."
+      }
+    },
+    {
+      "id": "data@knowledge-work-plugins",
+      "name": "data",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "general.analysis"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ადარებს მონაცემებს, წერს SQL მოთხოვნებს და აგებს დიაგრამებს. შეგიძლია CSV ან Excel ფაილი ატვირთო.",
+        "en": "Compares datasets, writes SQL queries and builds charts. You can supply a CSV or Excel file."
+      }
+    },
+    {
+      "id": "build-web-apps@openai-curated",
+      "name": "build-web-apps",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "general.web"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "გეხმარება ვებაპლიკაციის ინტერფეისის აწყობასა და ბრაუზერში შემოწმებაში.",
+        "en": "Helps build a web app interface and test it in a browser."
       }
     }
   ]

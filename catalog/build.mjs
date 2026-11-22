@@ -90,7 +90,7 @@ export function build(dir = HERE, givenVersion = null) {
     const count = taxonomy.tasks.filter((t) => t.role === role.id).length;
     if (count < 2 || count > 4) fail(`catalog/taxonomy.json: role "${role.id}" needs 2 to 4 tasks, has ${count}`);
   }
-  if (taxonomy.roles.filter((r) => r.asked).length !== 4) fail('catalog/taxonomy.json: exactly 4 roles are asked');
+  if (!roleIds.includes('general')) fail('catalog/taxonomy.json: needs a general role for free-text activities');
   if (taxonomy.groups.filter((g) => g.asked).length !== 4) fail('catalog/taxonomy.json: exactly 4 groups are asked');
   if (taxonomy.limits.length !== 3) fail('catalog/taxonomy.json: exactly 3 limits, the fourth answer is "none"');
   const groupIds = ids(taxonomy.groups);

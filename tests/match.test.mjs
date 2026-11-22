@@ -199,7 +199,7 @@ test('Georgian is the default language', () => {
 test('a wrong answers file is refused in one line that names the field', () => {
   const cases = [
     [base({ surface: 'chatgpt' }), /^mrcheveli: answers\.surface: must be one of claude-app, claude-code, chatgpt-app, codex-cli\n$/],
-    [base({ role: 'pilot' }), /^mrcheveli: answers\.role: must be one of /],
+    [base({ role: '' }), /^mrcheveli: answers\.role: describe an activity/],
     [base({ tasks: ['sales.flying'] }), /^mrcheveli: answers\.tasks: unknown task "sales\.flying"\n$/],
     [base({ uses: ['abacus'] }), /^mrcheveli: answers\.uses: unknown service "abacus"/],
     [base({ uses: ['group:abacus'] }), /^mrcheveli: answers\.uses: unknown group "group:abacus"\n$/],
@@ -510,7 +510,7 @@ test('on ChatGPT, "nothing fits" says that the catalog is a part of the director
   assert.ok(!none.includes('nothing you need to install'));
   const some = markdown(chat({ tasks: ['sales.pipeline', 'legal.research'] }));
   assert.match(some, /I chose nothing from the catalog for these tasks: .*OpenAI's plugin directory may hold a plugin/);
-  assert.match(markdown(base({ role: 'legal', tasks: ['legal.research'] })), /nothing you need to install now/);
+  assert.match(markdown(base({ role: 'legal', tasks: ['legal.research'] })), /no plugin in the catalog fits/);
 });
 
 test('on ChatGPT, a named service that no chosen plugin connects is not said to be impossible to connect', () => {

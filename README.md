@@ -1,10 +1,10 @@
 # mrcheveli
 
-**An agent skill that tells you which plugins are worth installing for your work, in Claude or in ChatGPT, and leaves out the services that do not work in Georgia.** It asks four questions, then recommends at most five plugins. For each one it says which connectors to connect, which to skip because the service behind them cannot be used from Georgia, and how to install it. Made for people in Georgia who work with Claude or ChatGPT and are not developers. It speaks Georgian by default.
+**An agent skill that tells you which plugins are worth installing for your work, in Claude or in ChatGPT, and leaves out the services that do not work in Georgia.** It asks four questions, then recommends at most five plugins. For each one it says which connectors to connect, which to skip because the service behind them cannot be used from Georgia, and how to install it. Describe any activity in your own words, including study, a hobby or paid work. A teacher making lesson slides and a researcher analysing survey data can get different recommendations. It speaks Georgian by default.
 
 [Skill page](https://tsirbiladze.com/skills/mrcheveli) · [ქართულად](README.ka.md) · [Changelog](CHANGELOG.md) · MIT
 
-> The install commands below use the `main` branch. Version 0.1.0 has no release tag yet.
+> The install commands below use the `main` branch. Version 0.2.0 has no release tag yet.
 
 ## Why
 
@@ -82,18 +82,18 @@ The catalog ships inside the skill. Its date is printed with every answer.
 
 | | |
 |---|---|
-| Plugins | 58 |
-| for Claude | 35 |
-| for ChatGPT | 23 |
-| of them by Anthropic | 11 |
-| of them by OpenAI | 10 |
+| Plugins | 61 |
+| for Claude | 37 |
+| for ChatGPT | 24 |
+| of them by Anthropic | 13 |
+| of them by OpenAI | 11 |
 | of them by the service itself | 35 |
 | of them by a third party | 2 |
-| Services | 95 |
+| Services | 98 |
 | work in Georgia | 35 |
 | work in part | 2 |
 | do not work in Georgia | 8 |
-| no official source in the catalog | 50 |
+| no official source in the catalog | 53 |
 | Georgian tools listed | 7 |
 | Georgian tools reviewed | 0 |
 
@@ -113,7 +113,7 @@ The plugins come from two public marketplaces, each plugin pinned to a commit: [
 
 ## Limits
 
-Two marketplaces. From Anthropic's, the plugins for sales, accounting and finance, marketing, legal work, small business, customer support, HR and operations. From OpenAI's public repository, 22 plugins of the 65 in it: two bundles, for data analysis and for marketing visuals, and plugins for single services; and 1 more that only ChatGPT's directory holds, OpenAI's Sales, described from its page. The directory inside ChatGPT holds far more than that. The Sales plugin works with the plugins of 38 services, and most of those plugins, HubSpot's among them, are in the directory and not in the catalog: the answer names the service and says its plugin has not been assessed. No developer plugins, no connectors directory. Four surfaces: Claude's apps, Claude Code, the ChatGPT app and Codex in a terminal. In Claude's apps, plugins from Anthropic's directory are shown on paid plans. "Works in Georgia" is about signing up and paying: it says nothing about the Georgian language, Georgian tax rules or local prices. No Georgian tool has been reviewed. The catalog is as old as its date.
+Two marketplaces. From Anthropic's, the plugins for sales, accounting and finance, marketing, legal work, small business, customer support, HR, operations, data analysis and software engineering. From OpenAI's public repository, 23 plugins of the 65 in it: three bundles for data analysis, marketing visuals and web app development, and plugins for single services; and 1 more that only ChatGPT's directory holds, OpenAI's Sales, described from its page. The directory inside ChatGPT holds far more than that. The Sales plugin works with the plugins of 38 services, and most of those plugins, HubSpot's among them, are in the directory and not in the catalog: the answer names the service and says its plugin has not been assessed. The connectors directory is outside the catalog. Four surfaces: Claude's apps, Claude Code, the ChatGPT app and Codex in a terminal. In Claude's apps, plugins from Anthropic's directory are shown on paid plans. "Works in Georgia" is about signing up and paying: it says nothing about the Georgian language, Georgian tax rules or local prices. No Georgian tool has been reviewed. The catalog is as old as its date.
 
 ## In this repository
 
@@ -127,7 +127,7 @@ Two marketplaces. From Anthropic's, the plugins for sales, accounting and financ
 
 ## How it is tested
 
-- 109 tests (`npm test`): the choice on a synthetic catalog, the refusals of a wrong answers file, the catalog build and what it refuses, the shipped catalog's own rules, the skill folder, and these documents' numbers against the catalog.
+- 110 tests (`npm test`): the choice on a synthetic catalog, the refusals of a wrong answers file, the catalog build and what it refuses, the shipped catalog's own rules, the skill folder, and these documents' numbers against the catalog.
 - The two twins, `match.mjs` and `match.py`, are run on the same inputs and must print the same bytes: on the synthetic catalog, and on the shipped one for every role, both languages and all four surfaces.
 - Every status with a source was checked against its page on 2026-11-19: all 43 quotes were found (`node catalog/sources.mjs`), 12 of them through a page reader because the page refuses a plain request or is a PDF.
 - Six rehearsals in three rounds by agents that had never seen the skill: three as Claude Code and three as Claude's app, for four fictional people, against a stand-in for the `claude` command that installs nothing. In all six the agent asked the four questions, showed the script's answer, and installed only the plugins that got a yes. In one, the agent ran a listing command of its own to check an install; the skill now forbids it. What the agents found unclear was fixed after each round. The changes made after the last round are covered by tests and were not rehearsed again.

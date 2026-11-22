@@ -10,7 +10,7 @@ source: https://github.com/tsirbiladze/mrcheveli/blob/main/skills/mrcheveli/SKIL
 
 `mrcheveli` tells you which plugins are worth installing for your work, in Claude or in ChatGPT. It asks four questions: what you mostly do, what limits you have, what you do most often, and which services you already use. Then it recommends at most five plugins, and for each one it says which connectors to connect, which to leave alone, and how to install it.
 
-It is made for people in Georgia who are not developers. It recommends only the plugins of the assistant you are talking to: Claude's to a person in Claude, ChatGPT's to a person in ChatGPT. A role plugin is a bundle: Anthropic's `small-business` plugin holds 44 skills and connectors to 35 services, and nothing on the Plugins page says which of those services a business registered in Georgia can open an account with. By each service's own published list, 8 of the 35 it cannot: Airwallex, Gusto, MYOB, Ramp, RingCentral, Square, Stripe and TikTok Ads. `mrcheveli` tells you that before you connect anything, with a link to the page that shows it.
+Describe your work, studies or hobby in your own words. A teacher can ask for help making slides, a researcher for help analysing survey results. It recommends only the plugins of the assistant you are talking to: Claude's to a person in Claude, ChatGPT's to a person in ChatGPT. A role plugin is a bundle: Anthropic's `small-business` plugin holds 44 skills and connectors to 35 services, and nothing on the Plugins page says which of those services a business registered in Georgia can open an account with. By each service's own published list, 8 of the 35 it cannot: Airwallex, Gusto, MYOB, Ramp, RingCentral, Square, Stripe and TikTok Ads. `mrcheveli` tells you that before you connect anything, with a link to the page that shows it.
 
 The choice is made by a script, not by the model. The same answers always give the same list, and every fact in it comes from a catalog that ships with the skill: the publisher, what the plugin holds, the status of each service.
 
@@ -21,7 +21,7 @@ The choice is made by a script, not by the model. The same answers always give t
 - You work in Georgia and want to know, before signing up, whether a service a plugin leans on is sold here at all.
 - You set Claude or ChatGPT up for a colleague who is an accountant, a lawyer or in sales, and want a short list to start from.
 
-It is not a search engine for plugins. It chooses from its own catalog of 58 plugins, 35 for Claude and 23 for ChatGPT, and tells you when nothing in it fits.
+It is not a search engine for plugins. It chooses from its own catalog of 61 plugins, 37 for Claude and 24 for ChatGPT, and tells you when nothing in it fits.
 
 ## What you get
 
@@ -40,18 +40,18 @@ Below the list: what was left out and why, services that have a plugin of their 
 
 | | |
 |---|---|
-| Plugins | 58 |
-| for Claude | 35 |
-| for ChatGPT | 23 |
-| of them by Anthropic | 11 |
-| of them by OpenAI | 10 |
+| Plugins | 61 |
+| for Claude | 37 |
+| for ChatGPT | 24 |
+| of them by Anthropic | 13 |
+| of them by OpenAI | 11 |
 | of them by the service itself | 35 |
 | of them by a third party | 2 |
-| Services | 95 |
+| Services | 98 |
 | work in Georgia | 35 |
 | work in part | 2 |
 | do not work in Georgia | 8 |
-| no official source in the catalog | 50 |
+| no official source in the catalog | 53 |
 | Georgian tools listed | 7 |
 | Georgian tools reviewed | 0 |
 
@@ -74,9 +74,9 @@ Below the list: what was left out and why, services that have a plugin of their 
 
 ## Limits
 
-- **Two marketplaces, and not all of either.** For Claude, plugins from [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins): sales, accounting and finance, marketing, legal work, small business, customer support, HR and operations. For ChatGPT, 22 of the 65 plugins in OpenAI's public repository, [`openai/plugins`](https://github.com/openai/plugins): two bundles, for data analysis and for marketing visuals, and plugins for single services. No developer plugins, no connectors directory.
+- **Two marketplaces, and not all of either.** For Claude, plugins from [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins): sales, accounting and finance, marketing, legal work, small business, customer support, HR, operations, data analysis and software engineering. For ChatGPT, 23 of the 65 plugins in OpenAI's public repository, [`openai/plugins`](https://github.com/openai/plugins): three bundles for data analysis, marketing visuals and web app development, and plugins for single services. The connectors directory is outside the catalog.
 - **In ChatGPT the catalog is thin.** The directory inside ChatGPT holds far more than OpenAI's public repository. One plugin from it is in the catalog, OpenAI's Sales, written down from its page as it was seen on 2026-11-19: the catalog knows which services it works with and not how many skills it holds, and the answer says so. The plugins of most of those services, HubSpot's among them, are in the directory and not in the catalog. A person in accounting or legal work who asks in ChatGPT may be told that nothing in the catalog fits.
-- **"Works in Georgia" is about signing up and paying.** It says nothing about the Georgian language, Georgian tax rules or local prices. A status stands on an official page and a quote from it; where the catalog holds no official statement, because none was found or none has been looked for yet, the answer says „შეუმოწმებელია“, and that is 50 of the 95 services.
+- **"Works in Georgia" is about signing up and paying.** It says nothing about the Georgian language, Georgian tax rules or local prices. A status stands on an official page and a quote from it; where the catalog holds no official statement, because none was found or none has been looked for yet, the answer says „შეუმოწმებელია“, and that is 53 of the 98 services.
 - **A "yes" can be thin.** For some services it rests on a list of the countries the service excludes, without Georgia on it. That shows the service does not rule Georgia out, not that every part of it works here.
 - **A paid plan, in Claude's apps.** Plugins from Anthropic's directory are shown on the Pro, Max, Ultra, Team and Enterprise plans.
 - **A catalog has a date.** Plugins change and services open in new countries. The date is printed with every answer.

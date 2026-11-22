@@ -7,6 +7,23 @@ import { REAL, match, names } from './helpers.mjs';
 const person = (over) => match({ lang: 'ka', surface: 'claude-app', limits: [], installed: [], uses: [], ...over }, REAL);
 const ids = (list) => list.map((s) => s.id);
 
+test('an unlisted or mixed activity gets matches for its actual tasks', () => {
+  const general = (surface, tasks, uses = []) => person({ role: 'general', surface, tasks, uses });
+  for (const [surface, analysis] of [['claude-app', 'data'], ['chatgpt-app', 'data-analytics']]) {
+    assert.deepEqual(names(general(surface, ['general.slides'], ['canva'])), ['canva']);
+    assert.deepEqual(names(general(surface, ['general.analysis', 'general.slides'], ['canva'])), [analysis, 'canva']);
+    const unsupported = general(surface, ['general.other']);
+    assert.deepEqual(unsupported.recommend, []);
+    assert.deepEqual(unsupported.hints, []);
+    assert.equal(unsupported.uncovered.length, 1);
+    const partial = general(surface, ['general.other', 'general.slides'], ['canva']);
+    assert.deepEqual(names(partial), ['canva']);
+    assert.deepEqual(partial.uncovered, unsupported.uncovered);
+  }
+  assert.deepEqual(names(general('claude-code', ['general.review'])), ['engineering']);
+  assert.deepEqual(names(general('codex-cli', ['general.web'])), ['build-web-apps']);
+});
+
 test('a shop owner who uses Google and Canva', () => {
   const result = person({ role: 'owner', tasks: ['owner.money', 'owner.marketing'], uses: ['group:google', 'canva'] });
   assert.deepEqual(names(result), ['small-business', 'canva']);
