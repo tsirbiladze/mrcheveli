@@ -147,7 +147,8 @@ Only what the script printed is recommended. One yes installs one plugin. Signin
 - `node catalog/sources.mjs`: every status with evidence, against its page.
 - Rehearsals (`tests/rehearsal/`): an agent that has never seen the skill follows it for a fictional person, against a stand-in for the `claude` or the `codex` command that installs nothing.
 - On a real account, once: the Codex install command and its removal, for one plugin.
-- Not yet: a run in Claude's apps or in the ChatGPT app with a real account, a run in a real Claude Code session, the Codex install command for Sales and for the two plugins listed under an app's id, installing the skill itself as a Codex plugin, and a real person reading the answer.
+- The skill installed from the public GitHub repository in clean Codex CLI and Claude Code profiles. Both installed scripts returned a sales recommendation.
+- Not yet: a run in Claude's apps or in the ChatGPT app with a real account, a conversation in Claude Code, the Codex install command for Sales and for the two plugins listed under an app's id, and a real person reading the answer.
 
 ## Release
 

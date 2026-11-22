@@ -40,9 +40,9 @@ Then ask: *"რომელი პლაგინები დავაყენ
 codex plugin marketplace add tsirbiladze/mrcheveli
 ```
 
-Then open the **Plugins** tab in the ChatGPT desktop app, or type `/plugins` in Codex, choose the Mrcheveli marketplace and install `mrcheveli`. Start a new chat and ask the same question.
+In Codex, install the skill with `codex plugin add mrcheveli@mrcheveli`. Start a new chat and ask *"Which plugins should I install for my work?"*
 
-This path is written from OpenAI's documentation and has not been tried: see "How it is tested".
+In the ChatGPT desktop app, open **Plugins**, choose the Mrcheveli marketplace and install `mrcheveli`. Installation through the app is untested.
 </details>
 
 <details>
@@ -135,9 +135,11 @@ Two marketplaces. From Anthropic's, the plugins for sales, accounting and financ
 - One more rehearsal after the skill learned to install in Codex, again by Codex itself, for a fictional sales manager who uses HubSpot, Gmail and Slack. It asked the four questions, showed the answer with OpenAI's Sales plugin first, and asked before each of the three plugins. It ran the install command for the two that got a yes and nothing for the one that got a no, and when the stand-in refused one, it said so and tried no other way. What it found unclear was fixed afterwards: what to do when it cannot ask for approval, where a failed plugin goes in the hand-over, and how a person can check the page a plugin is described from. Those changes are covered by tests and were not rehearsed again.
 - On a real account, once, with the owner's yes: `codex plugin add` and `codex plugin remove` for one plugin, on 2026-11-19. Both worked with the id the directory lists.
 
+The public GitHub install worked in clean Codex CLI and Claude Code profiles on Linux. In both profiles the installed script recommended Sales first for a salesperson using HubSpot and Gmail.
+
 Tried on Node.js 24 and Python 3.14, on Linux.
 
-Not yet seen: a run in Claude's apps or in the ChatGPT app with a real account, a real Claude Code session, the Codex install command for Sales and for the two plugins the directory lists under an app's id, installing mrcheveli itself in ChatGPT or Codex (its Codex manifest is written from OpenAI's documentation, and nothing here validates it), a person who is not a developer reading the answer, Node.js 22, Python 3.9, macOS, Windows.
+Not yet seen: a run in Claude's apps or in the ChatGPT app with a real account, a real Claude Code conversation, the Codex install command for Sales and for the two plugins the directory lists under an app's id, a person who is not a developer reading the answer, Node.js 22, Python 3.9, macOS, Windows.
 
 ```bash
 npm test          # no dependencies, no network
