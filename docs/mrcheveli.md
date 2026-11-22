@@ -1,6 +1,6 @@
 ---
 title: The /mrcheveli Skill
-summary: Four questions about your work, then at most five plugins for Claude or ChatGPT and the connectors worth connecting, without the services that do not work in Georgia.
+summary: Up to five plugins for your activity in Claude or ChatGPT, with the connectors you can use in Georgia.
 category: Plugins
 status: experimental
 source: https://github.com/tsirbiladze/mrcheveli/blob/main/skills/mrcheveli/SKILL.md
@@ -8,7 +8,7 @@ source: https://github.com/tsirbiladze/mrcheveli/blob/main/skills/mrcheveli/SKIL
 
 ## What it does
 
-`mrcheveli` tells you which plugins are worth installing for your work, in Claude or in ChatGPT. It asks four questions: what you mostly do, what limits you have, what you do most often, and which services you already use. Then it recommends at most five plugins, and for each one it says which connectors to connect, which to leave alone, and how to install it.
+`mrcheveli` tells you which plugins are worth installing for your work, in Claude or in ChatGPT. Describe what you want to do, which services you use and any limits you have. Then it recommends at most five plugins, and for each one it says which connectors to connect, which to leave alone, and how to install it.
 
 Describe your work, studies or hobby in your own words. A teacher can ask for help making slides, a researcher for help analysing survey results. It recommends only the plugins of the assistant you are talking to: Claude's to a person in Claude, ChatGPT's to a person in ChatGPT. A role plugin is a bundle: Anthropic's `small-business` plugin holds 44 skills and connectors to 35 services, and nothing on the Plugins page says which of those services a business registered in Georgia can open an account with. By each service's own published list, 8 of the 35 it cannot: Airwallex, Gusto, MYOB, Ramp, RingCentral, Square, Stripe and TikTok Ads. `mrcheveli` tells you that before you connect anything, with a link to the page that shows it.
 
@@ -58,14 +58,14 @@ Below the list: what was left out and why, services that have a plugin of their 
 ## How it goes
 
 1. **See.** The skill finds out where it runs and which plugins you already have, without asking you.
-2. **Ask.** Four questions in two rounds, each with ready answers. You can answer in your own words.
+2. **Ask.** It uses what you have already said. If a detail would change the advice, it asks one question and waits. You can answer in your own words.
 3. **Choose.** The script picks at most five plugins and sorts every connector of each.
 4. **Install.** Each plugin waits for your yes. In Claude's apps and in the ChatGPT app the skill installs nothing: it gives you the steps, and you press the button. In Claude Code it runs two commands, and in Codex in a terminal one, each shown to you first. Connecting a service is always yours, with your own account.
-5. **Hand over.** What was installed, how to remove it, and the date of the catalog.
+5. **Finish.** See what was installed, what you chose to skip and which installations failed. In an app, you confirm what you installed.
 
 ## It's working if
 
-- It asks you four questions and no more, in Georgian.
+- If you describe the task, tools and limits in your first message, it can recommend plugins straight away.
 - It recommends five plugins or fewer, and says so when none fits.
 - Every service it tells you not to connect comes with a link to that service's own page.
 - A service it could not check says „შეუმოწმებელია“, not "works".

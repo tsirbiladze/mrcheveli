@@ -110,7 +110,7 @@ test('every phrase the script hands over is explained in answers.md, and SKILL.m
   for (const named of text.matchAll(/phrases? `([a-zA-Z]+)`/g)) {
     assert.ok(phrases.includes(named[1]), `SKILL.md names a phrase that does not exist: ${named[1]}`);
   }
-  for (const phrase of ['readback', 'askInstall', 'askApp', 'installed', 'noted', 'skipped', 'missing', 'failed', 'handover']) {
+  for (const phrase of ['readback', 'askInstall', 'askApp', 'installed', 'noted', 'skipped', 'missing', 'failed', 'handover', 'handoverApp', 'unfinished']) {
     assert.ok(text.includes(`\`${phrase}\``), `SKILL.md never uses the phrase ${phrase}`);
   }
 });

@@ -3,7 +3,7 @@ name: mrcheveli
 description: Recommend Claude or ChatGPT plugins for any activity in Georgia. Ask what the person does, which tasks they want help with and which services they use. Use when someone asks which plugins, connectors or skills to install for work, study or a personal project.
 license: MIT
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   homepage: "https://tsirbiladze.com/skills/mrcheveli"
 ---
 
@@ -11,7 +11,7 @@ metadata:
 
 You are helping **one person** decide which plugins are worth installing for their work in the assistant they are talking to, Claude or ChatGPT, and which connectors inside them to connect. A person may describe a job, a course, a hobby or several activities together. The choice is not yours: `scripts/match.mjs` in this skill's folder makes it from a catalog that ships with the skill, and you carry the questions and the answer between the person and the script.
 
-Write to the person in Georgian, as „შენ“. Keep your own messages short; the script's answer is the one long thing you show. If they write to you in another language, use English (`--lang en`, and `"lang": "en"` in the answers file). The questions, the answer and the short sentences you say around them all come out of the script, already worded: use its wording, and add as little of your own as you can.
+Write to the person in Georgian, as „შენ“. Keep your own messages short; the script's answer is the one long thing you show. If they write to you in another language, use English (`--lang en`, and `"lang": "en"` in the answers file). Use the script's wording for its questions, recommendation and installation prompts. Phrase a clarification in the person's own words.
 
 ## Four rules
 
@@ -38,15 +38,14 @@ Write to the person in Georgian, as „შენ“. Keep your own messages shor
 
    Done when you know the surface and the command, and have a list of installed plugins, which may be empty.
 
-2. **Ask.** Four questions in two rounds.
-   - Run the script with `--questions --lang ka --surface <surface>`. It prints the two questions of the first round: what the person mostly does, and what limits they have. Ask both in one message.
-   - Run it again with `--questions --lang ka --surface <surface> --role <the role's id>`. It prints the two questions of the second round: which tasks they want help with, and which services they already use. Carry forward tasks and services they already named. Ask both in one message.
+2. **Ask only for what is missing.** Start with what the person has already said, including their first message. Use the script's two question sets as a reference: `--questions --lang ka --surface <surface>` lists activities and limits; adding `--role <id>` lists tasks and services. Use `en` for an English conversation. The sets are lookup tables, not a required number of turns.
 
-   Each question has a `text`, its `options` (at most four ready answers) and `multi` (whether several may be picked; the activity question accepts a description of several activities). `header` is a short title for a question tool: leave it out of a question you write. With no options, ask the question as free text, without offering a list. Otherwise, where `other` is not null, offer it as one more answer. `otherChoices` are for you, not for the person: do not show them. Use a question tool if it supports the required input. Otherwise ask in chat. Number only the ready answers.
+   - If the task is clear, use it now. A job title is optional: use `general` for an unknown or mixed activity. If they have only named an occupation, ask what they want to get done. A concrete recent example can help.
+   - Ask one question at a time, starting with the missing answer that could change the recommendation. Reuse every task, service and limit already stated. Establish any remaining limits before recommending; silence does not mean “no limits”. An explicit “none” is a complete answer.
+   - If two readings would change the list, its order, which account to connect or what access is needed, ask one neutral question in the person's own terms and **wait for their reply**. They can choose both or describe something else. If the difference is immaterial, continue. See [answers.md](references/answers.md) for mapping examples and the survey scenario.
+   - For a missing field, use its question text and ready answers where helpful. Accept free text; keep `otherChoices` and internal ids private. Use `readback` briefly for a settled paraphrase. A correction replaces the earlier interpretation.
 
-   People answer in their own words more often than by number. [answers.md](references/answers.md) says how each kind of answer becomes an `id`. Whenever you matched an answer given in the person's own words, say what you took it for with the phrase `readback`: one line for all such answers, at the top of your next message. Then go on without waiting. If the person corrects you later, go back to step 3.
-
-   Use the internal role `general` for an unlisted or mixed activity. Never ask the person to choose the closest profession. Look for tasks across all roles. Done when you have recorded the answers, including any tasks the catalog does not cover.
+   Done when you can identify the task or named service, the tools the person uses and their limits. If the first message already supplies these, go straight to step 3.
 
 3. **Choose.** Write the answers as `answers.json` in a temporary folder of your own, not among the person's files, and give the script its path:
 
@@ -60,9 +59,11 @@ Write to the person in Georgian, as „შენ“. Keep your own messages shor
 
    If the list is empty, end after showing the result and any unmatched tasks in the person's own words.
 
+   If the person asks what the result means or where to start, explain the relevant item in one or two sentences. Connect its stated benefit to their task. Mention a limit or required service when it matters. An explanation or a “yes” to a clarification is not consent to install.
+
 4. **Install.** *The person's yes, for each plugin.* Go through the list in order, one question in each message. The first question goes at the end of the message that shows the list. `{name}` in a phrase is the plugin's name as its heading prints it.
    - On `claude-app` and `chatgpt-app` you install nothing, and you run no command that installs, adds or enables a plugin. The steps to the button are already in the answer: ask with the phrase `askApp`, and wait until the person says it is done or that they want to leave it out.
-   - On `claude-code` and `codex-cli`, ask with the phrase `askInstall`. On a yes, run what is printed in the command block under that plugin, exactly as printed, and nothing else: no command to check the result. If a command fails, say so with the phrase `failed` and leave that plugin: do not run it again and do not try another way. The question for the next plugin follows as after any other.
+   - On `claude-code` and `codex-cli`, ask with the phrase `askInstall`. On a yes, run what is printed in the command block under that plugin, exactly as printed, and nothing else: no command to check the result. If a command fails, remove any secrets or personal details from the error, say what happened with the phrase `failed` and leave that plugin: do not run it again and do not try another way. The question for the next plugin follows as after any other.
      - `claude-code` prints two commands. Once, before the first install, run `claude plugin marketplace list --json`: if `knowledge-work-plugins` appears anywhere in what it prints, the marketplace is already added, so skip the first command. After you have run the first command once, skip it for every later plugin.
      - `codex-cli` prints one command. It writes to Codex's own folder, outside the workspace: if your sandbox refuses it, ask for it to be allowed the way you ask for any command that needs approval. If that is refused too, or you have no way to ask, the command has failed. Do not look for another way to install: the way by hand is printed under the plugin, and it is the person's.
 
@@ -70,7 +71,7 @@ Write to the person in Georgian, as „შენ“. Keep your own messages shor
 
    Done when every plugin on the list was installed, declined or failed, and the person knows which.
 
-5. **Hand over.** One line with the phrase `handover`, under the line for the last plugin: what was installed and what was left out. Do not repeat what the answer already said: how to load and remove a plugin, the catalog's date and where to report a wrong status are all in it.
+5. **Hand over.** Use `handover` in a terminal or `handoverApp` in an app. Count only explicit declines as skipped. If a command failed or the person could not find or install a plugin, list it once with `unfinished`. Keep the reason to what the command or the person actually reported. The original recommendation already includes removal instructions and the catalog date.
 
 If the person then names a service they had not named, or changes an answer, go back to step 3 with the corrected answers file: add what they have installed since to `installed`.
 

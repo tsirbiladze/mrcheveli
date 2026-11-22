@@ -111,10 +111,12 @@
     "say.installed": "`{name}` დაყენდა.",
     "say.noted": "კარგი, `{name}` დაყენებულად ჩავინიშნე.",
     "say.skipped": "კარგი, `{name}` გამოტოვებულია.",
-    "say.missing": "კარგი, `{name}` გამოვტოვოთ. თუ პლაგინი არ ჩანს ან არ ყენდება, ეს შენს გეგმაზე, ქვეყანაზე ან ადმინისტრატორზეა დამოკიდებული.",
-    "say.failed": "`{name}` ვერ დაყენდა. ბრძანებამ ეს დაწერა: {text}",
-    "say.handover": "მზადაა. დაყენდა: {installed}. გამოტოვებულია: {skipped}.",
-    "say.none": "არცერთი"
+    "say.missing": "`{name}` დაყენებულად არ ჩავთვალე.",
+    "say.failed": "`{name}` ვერ დაყენდა. {text}",
+    "say.handover": "დაყენდა: {installed}. შენი არჩევანით გამოტოვებულია: {skipped}.",
+    "say.none": "არცერთი",
+    "say.handoverApp": "შენი თქმით, დაყენდა: {installed}. შენი არჩევანით გამოტოვებულია: {skipped}.",
+    "say.unfinished": "დაყენება ვერ დასრულდა: {list}."
   },
   "en": {
     "title": "# Your kit",
@@ -228,9 +230,11 @@
     "say.installed": "`{name}` is installed.",
     "say.noted": "All right, I have `{name}` down as installed.",
     "say.skipped": "All right, `{name}` is left out.",
-    "say.missing": "All right, we leave `{name}` out. When a plugin is not there or will not install, that depends on your plan, your country or your administrator.",
-    "say.failed": "`{name}` was not installed. The command said: {text}",
-    "say.handover": "Done. Installed: {installed}. Left out: {skipped}.",
-    "say.none": "none"
+    "say.missing": "I haven’t counted `{name}` as installed.",
+    "say.failed": "`{name}` could not be installed. {text}",
+    "say.handover": "Installed: {installed}. Skipped by choice: {skipped}.",
+    "say.none": "none",
+    "say.handoverApp": "You confirmed installing: {installed}. Skipped by choice: {skipped}.",
+    "say.unfinished": "Installation did not finish: {list}."
   }
 }

@@ -11,6 +11,7 @@ test('an unlisted or mixed activity gets matches for its actual tasks', () => {
   const general = (surface, tasks, uses = []) => person({ role: 'general', surface, tasks, uses });
   for (const [surface, analysis] of [['claude-app', 'data'], ['chatgpt-app', 'data-analytics']]) {
     assert.deepEqual(names(general(surface, ['general.slides'], ['canva'])), ['canva']);
+    assert.deepEqual(names(general(surface, ['general.analysis'], ['canva'])), [analysis, 'canva']);
     assert.deepEqual(names(general(surface, ['general.analysis', 'general.slides'], ['canva'])), [analysis, 'canva']);
     const unsupported = general(surface, ['general.other']);
     assert.deepEqual(unsupported.recommend, []);

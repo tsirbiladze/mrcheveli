@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — 2026-11-22
+
+The skill uses the task, services and limits you already described. When your words could lead to different recommendations, it asks one question and waits. The final summary distinguishes successful installs, plugins you declined and installs that could not be completed. In an app it records the installs you confirm.
+
+The interview and handover changes draw on [Matt Pocock’s AI Hero skills](https://github.com/mattpocock/skills/tree/abeeaf95660ba9e8b7c753eb38f441ca707a8823/skills). See the [review of all 39 skills (Georgian)](docs/research/ai-hero-skills.ka.md).
+
 ## 0.2.0 — 2026-11-22
 
 Describe any activity in your own words. Recommendations follow the tasks and services you name, including lesson slides, data analysis, code review and web app development. If the catalog has no match, the skill tells you.

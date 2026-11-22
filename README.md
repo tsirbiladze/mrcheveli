@@ -1,10 +1,10 @@
 # mrcheveli
 
-**An agent skill that tells you which plugins are worth installing for your work, in Claude or in ChatGPT, and leaves out the services that do not work in Georgia.** It asks four questions, then recommends at most five plugins. For each one it says which connectors to connect, which to skip because the service behind them cannot be used from Georgia, and how to install it. Describe any activity in your own words, including study, a hobby or paid work. A teacher making lesson slides and a researcher analysing survey data can get different recommendations. It speaks Georgian by default.
+**An agent skill that tells you which plugins are worth installing for your work, in Claude or in ChatGPT, and leaves out the services that do not work in Georgia.** It uses the tasks, tools and limits you describe to recommend up to five plugins. For each one it says which connectors to connect, which to skip because the service behind them cannot be used from Georgia, and how to install it. Describe any activity in your own words, including study, a hobby or paid work. A teacher making lesson slides and a researcher analysing survey data can get different recommendations. It speaks Georgian by default.
 
 [Skill page](https://tsirbiladze.com/skills/mrcheveli) · [ქართულად](README.ka.md) · [Changelog](CHANGELOG.md) · MIT
 
-> The install commands below use the `main` branch. Version 0.2.0 has no release tag yet.
+> The install commands below use the `main` branch. Version 0.2.1 has no release tag yet.
 
 ## Why
 
@@ -106,10 +106,10 @@ The plugins come from two public marketplaces, each plugin pinned to a commit: [
 ## How it goes
 
 1. **See**: where it runs, and which plugins you already have.
-2. **Ask**: four questions in two rounds. What you mostly do; what limits you have; what you do most often; which services you already use.
+2. **Ask.** Start with what you already said. If two interpretations would lead to different advice, the skill asks one follow-up and waits for your answer.
 3. **Choose**: the script picks at most five plugins and sorts each one's connectors.
 4. **Install**, on your yes for each plugin. In Claude's apps and in the ChatGPT app the skill installs nothing: it gives the steps to the button, and you press it. In Claude Code it runs two commands, and in Codex in a terminal one, each printed before it is run. Connecting a service is always yours, with your own account.
-5. **Hand over**: what was installed, how to remove it, the catalog's date.
+5. **Finish.** See which plugins were installed, which you chose to skip and which could not be installed. In an app, you confirm what you installed.
 
 ## Limits
 
@@ -130,6 +130,7 @@ Two marketplaces. From Anthropic's, the plugins for sales, accounting and financ
 - 110 tests (`npm test`): the choice on a synthetic catalog, the refusals of a wrong answers file, the catalog build and what it refuses, the shipped catalog's own rules, the skill folder, and these documents' numbers against the catalog.
 - The two twins, `match.mjs` and `match.py`, are run on the same inputs and must print the same bytes: on the synthetic catalog, and on the shipped one for every role, both languages and all four surfaces.
 - Every status with a source was checked against its page on 2026-11-19: all 43 quotes were found (`node catalog/sources.mjs`), 12 of them through a page reader because the page refuses a plain request or is a PDF.
+- In a Codex CLI rehearsal, a fictional teacher using Canva asked for help with survey results. The skill asked what work remained, recommended only Canva when she said she needed slides, and waited for a separate yes. When the stand-in refused the install, the summary listed Canva as unfinished. [Rehearsal scenario](tests/rehearsal/people/eka.md)
 - Six rehearsals in three rounds by agents that had never seen the skill: three as Claude Code and three as Claude's app, for four fictional people, against a stand-in for the `claude` command that installs nothing. In all six the agent asked the four questions, showed the script's answer, and installed only the plugins that got a yes. In one, the agent ran a listing command of its own to check an install; the skill now forbids it. What the agents found unclear was fixed after each round. The changes made after the last round are covered by tests and were not rehearsed again.
 - Four more rehearsals for OpenAI's side, in two rounds, for three fictional people. The two as Codex in a terminal were run by Codex itself (`codex exec`, Codex CLI 0.169.0), with only its plugin command replaced by a stand-in: it asked the four questions, showed the script's answer with the steps to `/plugins`, and ran nothing that installs, as the skill then required. The two as the ChatGPT app were played by Claude agents told that they were ChatGPT, because the app cannot be driven from a script: they show that the instructions can be followed, not how ChatGPT follows them. The first round found ten faults, among them a question that named Anthropic to a person in ChatGPT, plugins called by their ids and not by the names the directory shows, and a count of connectors that did not add up. They were fixed before the second round. What the second round found was wording, and the changes made after it are covered by tests and were not rehearsed again.
 - One more rehearsal after the skill learned to install in Codex, again by Codex itself, for a fictional sales manager who uses HubSpot, Gmail and Slack. It asked the four questions, showed the answer with OpenAI's Sales plugin first, and asked before each of the three plugins. It ran the install command for the two that got a yes and nothing for the one that got a no, and when the stand-in refused one, it said so and tried no other way. What it found unclear was fixed afterwards: what to do when it cannot ask for approval, where a failed plugin goes in the hand-over, and how a person can check the page a plugin is described from. Those changes are covered by tests and were not rehearsed again.
