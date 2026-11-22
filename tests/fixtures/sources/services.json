@@ -1,0 +1,195 @@
+{
+  "services": [
+    {
+      "id": "workspace",
+      "name": "Workspace",
+      "group": "google",
+      "money": false,
+      "abstract": true,
+      "keys": [],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02"
+      }
+    },
+    {
+      "id": "mail",
+      "name": "Mail",
+      "group": "google",
+      "money": false,
+      "keys": [
+        "mail"
+      ],
+      "evidence": "workspace",
+      "aliases": [
+        "Letters",
+        "Post"
+      ]
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "group": "google",
+      "money": false,
+      "keys": [
+        "the calendar"
+      ],
+      "evidence": "workspace"
+    },
+    {
+      "id": "crm-a",
+      "name": "CRM A",
+      "group": "crm",
+      "money": false,
+      "keys": [
+        "crm-a"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02"
+      }
+    },
+    {
+      "id": "crm-b",
+      "name": "CRM B",
+      "group": "crm",
+      "money": false,
+      "keys": [
+        "crm-b"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "crm-c",
+      "name": "CRM C",
+      "group": "crm",
+      "money": false,
+      "keys": [
+        "crm-c"
+      ],
+      "georgia": {
+        "status": "partial",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "გადახდა მხოლოდ ბარათით",
+          "en": "card payments only"
+        }
+      }
+    },
+    {
+      "id": "pay-x",
+      "name": "Pay X",
+      "group": "payments",
+      "money": true,
+      "keys": [
+        "pay-x"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "საქართველოში რეგისტრირებული ბიზნესი ანგარიშს ვერ ხსნის.",
+          "en": "A business registered in Georgia cannot open an account."
+        }
+      }
+    },
+    {
+      "id": "pay-y",
+      "name": "Pay Y",
+      "group": "payments",
+      "money": true,
+      "keys": [
+        "pay-y"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02"
+      }
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "group": "accounting",
+      "money": true,
+      "keys": [
+        "books"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02"
+      }
+    },
+    {
+      "id": "chat",
+      "name": "Chat",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "chat"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02"
+      }
+    },
+    {
+      "id": "nowhere",
+      "name": "Nowhere",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "nowhere"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "მხოლოდ ერთ ქვეყანაში მუშაობს.",
+          "en": "It works in one country only."
+        }
+      }
+    },
+    {
+      "id": "design-a",
+      "name": "Design A",
+      "group": "design",
+      "money": false,
+      "keys": [
+        "design-a"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://example.test/countries",
+        "quote": "Gabon, Gambia, Georgia, Germany",
+        "checked": "2026-01-02"
+      }
+    }
+  ]
+}

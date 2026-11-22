@@ -1,0 +1,1612 @@
+{
+  "schema": 1,
+  "version": "9.9.9",
+  "generated": "2026-01-03",
+  "issues": "https://github.com/tsirbiladze/mrcheveli/issues",
+  "marketplaces": {
+    "test-market": {
+      "repo": "example/test-market",
+      "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "platform": "claude",
+      "installs": "test-market"
+    },
+    "chat-market": {
+      "repo": "example/chat-market",
+      "commit": "cccccccccccccccccccccccccccccccccccccccc",
+      "platform": "chatgpt",
+      "installs": "chat-directory"
+    },
+    "chat-directory": {
+      "repo": null,
+      "commit": null,
+      "platform": "chatgpt",
+      "installs": "chat-directory"
+    }
+  },
+  "taxonomy": {
+    "roles": [
+      {
+        "id": "sales",
+        "asked": true,
+        "label": {
+          "ka": "გაყიდვები და კლიენტები",
+          "en": "Sales and customers"
+        }
+      },
+      {
+        "id": "finance",
+        "asked": true,
+        "label": {
+          "ka": "ბუღალტერია და ფინანსები",
+          "en": "Accounting and finance"
+        }
+      },
+      {
+        "id": "marketing",
+        "asked": true,
+        "label": {
+          "ka": "მარკეტინგი და ტექსტები",
+          "en": "Marketing and content"
+        }
+      },
+      {
+        "id": "legal",
+        "asked": true,
+        "label": {
+          "ka": "სამართალი და დოკუმენტები",
+          "en": "Legal and documents"
+        }
+      },
+      {
+        "id": "owner",
+        "asked": false,
+        "label": {
+          "ka": "მცირე ბიზნესის მფლობელი",
+          "en": "Small business owner"
+        }
+      },
+      {
+        "id": "support",
+        "asked": false,
+        "label": {
+          "ka": "მომხმარებელთა მხარდაჭერა",
+          "en": "Customer support"
+        }
+      },
+      {
+        "id": "people",
+        "asked": false,
+        "label": {
+          "ka": "ადამიანური რესურსები და ოპერაციები",
+          "en": "HR and operations"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "id": "sales.research",
+        "role": "sales",
+        "label": {
+          "ka": "კომპანიებისა და კონტაქტების მოძიება",
+          "en": "Finding companies and contacts"
+        }
+      },
+      {
+        "id": "sales.meetings",
+        "role": "sales",
+        "label": {
+          "ka": "შეხვედრისთვის მომზადება და შემდგომი წერილები",
+          "en": "Preparing for calls and following up"
+        }
+      },
+      {
+        "id": "sales.pipeline",
+        "role": "sales",
+        "label": {
+          "ka": "CRM-ის მოწესრიგება და გაყიდვების პროგნოზი",
+          "en": "Keeping the CRM tidy and forecasting"
+        }
+      },
+      {
+        "id": "sales.proposals",
+        "role": "sales",
+        "label": {
+          "ka": "შეთავაზებები და ხელშეკრულებები",
+          "en": "Proposals and contracts"
+        }
+      },
+      {
+        "id": "finance.books",
+        "role": "finance",
+        "label": {
+          "ka": "ბუღალტრული ჩანაწერები, ინვოისები, შეჯერება",
+          "en": "Bookkeeping, invoices, reconciliation"
+        }
+      },
+      {
+        "id": "finance.reports",
+        "role": "finance",
+        "label": {
+          "ka": "ანგარიშგება და ანალიზი",
+          "en": "Reporting and analysis"
+        }
+      },
+      {
+        "id": "finance.tax",
+        "role": "finance",
+        "label": {
+          "ka": "დეკლარაციები და rs.ge",
+          "en": "Tax returns and rs.ge"
+        }
+      },
+      {
+        "id": "finance.payments",
+        "role": "finance",
+        "label": {
+          "ka": "გადახდები და ბანკი",
+          "en": "Payments and banking"
+        }
+      },
+      {
+        "id": "marketing.content",
+        "role": "marketing",
+        "label": {
+          "ka": "ტექსტები, პოსტები, წერილები",
+          "en": "Copy, posts and emails"
+        }
+      },
+      {
+        "id": "marketing.design",
+        "role": "marketing",
+        "label": {
+          "ka": "ვიზუალი და პრეზენტაციები",
+          "en": "Visuals and presentations"
+        }
+      },
+      {
+        "id": "marketing.campaigns",
+        "role": "marketing",
+        "label": {
+          "ka": "კამპანიები და რეკლამა",
+          "en": "Campaigns and ads"
+        }
+      },
+      {
+        "id": "marketing.analytics",
+        "role": "marketing",
+        "label": {
+          "ka": "შედეგების ანალიზი და SEO",
+          "en": "Performance analysis and SEO"
+        }
+      },
+      {
+        "id": "legal.contracts",
+        "role": "legal",
+        "label": {
+          "ka": "ხელშეკრულებების შემოწმება და შედგენა",
+          "en": "Reviewing and drafting contracts"
+        }
+      },
+      {
+        "id": "legal.research",
+        "role": "legal",
+        "label": {
+          "ka": "კანონმდებლობისა და პრაქტიკის მოძიება",
+          "en": "Researching legislation and case law"
+        }
+      },
+      {
+        "id": "legal.compliance",
+        "role": "legal",
+        "label": {
+          "ka": "შესაბამისობა და რისკები",
+          "en": "Compliance and risk"
+        }
+      },
+      {
+        "id": "legal.signing",
+        "role": "legal",
+        "label": {
+          "ka": "ხელმოწერა და დოკუმენტების მართვა",
+          "en": "Signing and managing documents"
+        }
+      },
+      {
+        "id": "owner.money",
+        "role": "owner",
+        "label": {
+          "ka": "ფული: ინვოისები, ხარჯები, გადახდები",
+          "en": "Money: invoices, expenses, payments"
+        }
+      },
+      {
+        "id": "owner.customers",
+        "role": "owner",
+        "label": {
+          "ka": "კლიენტების მოზიდვა და გაყიდვა",
+          "en": "Winning and serving customers"
+        }
+      },
+      {
+        "id": "owner.marketing",
+        "role": "owner",
+        "label": {
+          "ka": "საიტი, სოციალური ქსელები, რეკლამა",
+          "en": "Website, social media, ads"
+        }
+      },
+      {
+        "id": "owner.admin",
+        "role": "owner",
+        "label": {
+          "ka": "ყოველდღიური საქმეები და დოკუმენტები",
+          "en": "Day-to-day admin and documents"
+        }
+      },
+      {
+        "id": "support.tickets",
+        "role": "support",
+        "label": {
+          "ka": "მომართვებზე პასუხი და ესკალაცია",
+          "en": "Answering and escalating tickets"
+        }
+      },
+      {
+        "id": "support.knowledge",
+        "role": "support",
+        "label": {
+          "ka": "ცოდნის ბაზა და ხშირი კითხვები",
+          "en": "Knowledge base and FAQs"
+        }
+      },
+      {
+        "id": "people.hiring",
+        "role": "people",
+        "label": {
+          "ka": "დაქირავება და თანამშრომლების საკითხები",
+          "en": "Hiring and people matters"
+        }
+      },
+      {
+        "id": "people.process",
+        "role": "people",
+        "label": {
+          "ka": "პროცესები, მომწოდებლები, დაგეგმვა",
+          "en": "Processes, vendors, planning"
+        }
+      },
+      {
+        "id": "general.day",
+        "role": "*",
+        "label": {
+          "ka": "ფოსტა, კალენდარი და ამოცანები",
+          "en": "Email, calendar and tasks"
+        }
+      },
+      {
+        "id": "general.find",
+        "role": "*",
+        "label": {
+          "ka": "ინფორმაციის პოვნა კომპანიის ხელსაწყოებში",
+          "en": "Finding information across company tools"
+        }
+      },
+      {
+        "id": "general.pdf",
+        "role": "*",
+        "label": {
+          "ka": "PDF-ების ნახვა, შევსება და ხელმოწერა",
+          "en": "Viewing, filling and signing PDFs"
+        }
+      }
+    ],
+    "groups": [
+      {
+        "id": "google",
+        "asked": true,
+        "label": {
+          "ka": "Google (Gmail, კალენდარი, Drive)",
+          "en": "Google (Gmail, Calendar, Drive)"
+        },
+        "short": {
+          "ka": "Google",
+          "en": "Google"
+        }
+      },
+      {
+        "id": "microsoft",
+        "asked": true,
+        "label": {
+          "ka": "Microsoft 365 (Outlook, Teams, Excel)",
+          "en": "Microsoft 365 (Outlook, Teams, Excel)"
+        },
+        "short": {
+          "ka": "Microsoft 365",
+          "en": "Microsoft 365"
+        }
+      },
+      {
+        "id": "team",
+        "asked": true,
+        "label": {
+          "ka": "Slack, Notion ან მსგავსი გუნდური ხელსაწყო",
+          "en": "Slack, Notion or a similar team tool"
+        },
+        "short": {
+          "ka": "გუნდური ხელსაწყოები",
+          "en": "Team tools"
+        }
+      },
+      {
+        "id": "crm",
+        "asked": true,
+        "label": {
+          "ka": "CRM ან ბუღალტრული პროგრამა",
+          "en": "A CRM or an accounting program"
+        },
+        "short": {
+          "ka": "CRM",
+          "en": "CRM"
+        },
+        "also": [
+          "accounting"
+        ]
+      },
+      {
+        "id": "accounting",
+        "asked": false,
+        "label": {
+          "ka": "ბუღალტრული პროგრამა",
+          "en": "Accounting program"
+        }
+      },
+      {
+        "id": "payments",
+        "asked": false,
+        "label": {
+          "ka": "გადახდები",
+          "en": "Payments"
+        }
+      },
+      {
+        "id": "meetings",
+        "asked": false,
+        "label": {
+          "ka": "შეხვედრები და ჩანაწერები",
+          "en": "Meetings and recordings"
+        }
+      },
+      {
+        "id": "prospecting",
+        "asked": false,
+        "label": {
+          "ka": "კონტაქტების ბაზები",
+          "en": "Contact databases"
+        }
+      },
+      {
+        "id": "design",
+        "asked": false,
+        "label": {
+          "ka": "დიზაინი",
+          "en": "Design"
+        }
+      },
+      {
+        "id": "files",
+        "asked": false,
+        "label": {
+          "ka": "ფაილების საცავი",
+          "en": "File storage"
+        }
+      },
+      {
+        "id": "marketing-tools",
+        "asked": false,
+        "label": {
+          "ka": "მარკეტინგის ხელსაწყოები",
+          "en": "Marketing tools"
+        }
+      },
+      {
+        "id": "commerce",
+        "asked": false,
+        "label": {
+          "ka": "ონლაინ მაღაზია და საიტი",
+          "en": "Online store and website"
+        }
+      },
+      {
+        "id": "data",
+        "asked": false,
+        "label": {
+          "ka": "მონაცემთა საცავები",
+          "en": "Data warehouses"
+        }
+      },
+      {
+        "id": "support-tools",
+        "asked": false,
+        "label": {
+          "ka": "მხარდაჭერის ხელსაწყოები",
+          "en": "Support tools"
+        }
+      },
+      {
+        "id": "other",
+        "asked": false,
+        "label": {
+          "ka": "სხვა",
+          "en": "Other"
+        }
+      }
+    ],
+    "limits": [
+      {
+        "id": "known-publishers",
+        "label": {
+          "ka": "მხოლოდ {owner}-ის ან თვითონ სერვისის გამოშვებული პლაგინები",
+          "en": "Only plugins published by {owner} or by the service itself"
+        }
+      },
+      {
+        "id": "no-money",
+        "label": {
+          "ka": "არაფერი, რაც ფულთან, ბანკთან ან გადასახადებთან წვდომას ითხოვს",
+          "en": "Nothing that needs access to money, a bank or taxes"
+        }
+      },
+      {
+        "id": "managed",
+        "label": {
+          "ka": "კომპანიის ანგარიშია, პლაგინებს ადმინისტრატორი მართავს",
+          "en": "A company account: an administrator manages plugins"
+        }
+      }
+    ],
+    "tiers": [
+      {
+        "id": "anthropic",
+        "label": {
+          "ka": "Anthropic-ის გამოშვებული",
+          "en": "Published by Anthropic"
+        }
+      },
+      {
+        "id": "openai",
+        "label": {
+          "ka": "OpenAI-ის გამოშვებული",
+          "en": "Published by OpenAI"
+        }
+      },
+      {
+        "id": "partner",
+        "label": {
+          "ka": "თვითონ სერვისის გამოშვებული, {owner}-ის კატალოგში",
+          "en": "Published by the service itself, in {owner}'s catalog"
+        }
+      },
+      {
+        "id": "third-party",
+        "label": {
+          "ka": "მესამე მხარის, {owner}-ის კატალოგში",
+          "en": "Third party, in {owner}'s catalog"
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "claude",
+        "name": "Claude",
+        "owner": "Anthropic",
+        "tier": "anthropic",
+        "surfaces": [
+          "claude-app",
+          "claude-code"
+        ],
+        "assistant": {
+          "claude-app": "Claude",
+          "claude-code": "Claude"
+        }
+      },
+      {
+        "id": "chatgpt",
+        "name": "ChatGPT",
+        "owner": "OpenAI",
+        "tier": "openai",
+        "surfaces": [
+          "chatgpt-app",
+          "codex-cli"
+        ],
+        "assistant": {
+          "chatgpt-app": "ChatGPT",
+          "codex-cli": "Codex"
+        }
+      }
+    ],
+    "surfaces": [
+      "claude-app",
+      "claude-code",
+      "chatgpt-app",
+      "codex-cli"
+    ],
+    "georgia": [
+      "yes",
+      "partial",
+      "no",
+      "unknown"
+    ]
+  },
+  "services": [
+    {
+      "id": "mail",
+      "name": "Mail",
+      "aliases": [
+        "Letters",
+        "Post"
+      ],
+      "group": "google",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "aliases": [],
+      "group": "google",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "crm-a",
+      "name": "CRM A",
+      "aliases": [],
+      "group": "crm",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "crm-b",
+      "name": "CRM B",
+      "aliases": [],
+      "group": "crm",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "crm-c",
+      "name": "CRM C",
+      "aliases": [],
+      "group": "crm",
+      "money": false,
+      "georgia": {
+        "status": "partial",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "გადახდა მხოლოდ ბარათით",
+          "en": "card payments only"
+        }
+      }
+    },
+    {
+      "id": "pay-x",
+      "name": "Pay X",
+      "aliases": [],
+      "group": "payments",
+      "money": true,
+      "georgia": {
+        "status": "no",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "საქართველოში რეგისტრირებული ბიზნესი ანგარიშს ვერ ხსნის.",
+          "en": "A business registered in Georgia cannot open an account."
+        }
+      }
+    },
+    {
+      "id": "pay-y",
+      "name": "Pay Y",
+      "aliases": [],
+      "group": "payments",
+      "money": true,
+      "georgia": {
+        "status": "yes",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "aliases": [],
+      "group": "accounting",
+      "money": true,
+      "georgia": {
+        "status": "yes",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "chat",
+      "name": "Chat",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "nowhere",
+      "name": "Nowhere",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "no",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "მხოლოდ ერთ ქვეყანაში მუშაობს.",
+          "en": "It works in one country only."
+        }
+      }
+    },
+    {
+      "id": "design-a",
+      "name": "Design A",
+      "aliases": [],
+      "group": "design",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://example.test/countries",
+        "checked": "2026-01-02",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    }
+  ],
+  "plugins": [
+    {
+      "id": "seller@test-market",
+      "name": "seller",
+      "aka": [],
+      "title": "seller",
+      "install": "seller@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "sales.research",
+        "sales.meetings",
+        "sales.pipeline"
+      ],
+      "requires": [],
+      "services": [
+        "mail",
+        "calendar",
+        "crm-a",
+        "crm-b",
+        "crm-c",
+        "pay-x",
+        "pay-y",
+        "chat"
+      ],
+      "skills": 36,
+      "connectors": 8,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "seller: ქართული აღწერა.",
+        "en": "seller: an English description."
+      },
+      "source": {
+        "repo": "anthropics/seller-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "keeper@test-market",
+      "name": "keeper",
+      "aka": [],
+      "title": "keeper",
+      "install": "keeper@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "finance.books",
+        "owner.money"
+      ],
+      "requires": [],
+      "services": [
+        "books",
+        "pay-y"
+      ],
+      "skills": 3,
+      "connectors": 2,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "keeper: ქართული აღწერა.",
+        "en": "keeper: an English description."
+      },
+      "source": {
+        "repo": "anthropics/keeper-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "crm-a-plugin@test-market",
+      "name": "crm-a-plugin",
+      "aka": [],
+      "title": "crm-a-plugin",
+      "install": "crm-a-plugin@test-market",
+      "marketplace": "test-market",
+      "publisher": "Crm-A-Plugin",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "crm-a"
+      ],
+      "services": [
+        "crm-a"
+      ],
+      "skills": 3,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "crm-a-plugin: ქართული აღწერა.",
+        "en": "crm-a-plugin: an English description."
+      },
+      "source": {
+        "repo": "crm-a-plugin-org/crm-a-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "crm-b-plugin@test-market",
+      "name": "crm-b-plugin",
+      "aka": [],
+      "title": "crm-b-plugin",
+      "install": "crm-b-plugin@test-market",
+      "marketplace": "test-market",
+      "publisher": "Crm-B-Plugin",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "crm-b"
+      ],
+      "services": [
+        "crm-b"
+      ],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "crm-b-plugin: ქართული აღწერა.",
+        "en": "crm-b-plugin: an English description."
+      },
+      "source": {
+        "repo": "crm-b-plugin-org/crm-b-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "crm-c-plugin@test-market",
+      "name": "crm-c-plugin",
+      "aka": [],
+      "title": "crm-c-plugin",
+      "install": "crm-c-plugin@test-market",
+      "marketplace": "test-market",
+      "publisher": "Crm-C-Plugin",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "crm-c"
+      ],
+      "services": [
+        "crm-c"
+      ],
+      "skills": 3,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "crm-c-plugin: ქართული აღწერა.",
+        "en": "crm-c-plugin: an English description."
+      },
+      "source": {
+        "repo": "crm-c-plugin-org/crm-c-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "nowhere-plugin@test-market",
+      "name": "nowhere-plugin",
+      "aka": [],
+      "title": "nowhere-plugin",
+      "install": "nowhere-plugin@test-market",
+      "marketplace": "test-market",
+      "publisher": "Nowhere-Plugin",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "nowhere"
+      ],
+      "services": [
+        "nowhere"
+      ],
+      "skills": 3,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "nowhere-plugin: ქართული აღწერა.",
+        "en": "nowhere-plugin: an English description."
+      },
+      "source": {
+        "repo": "nowhere-plugin-org/nowhere-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "outsider@test-market",
+      "name": "outsider",
+      "aka": [],
+      "title": "outsider",
+      "install": "outsider@test-market",
+      "marketplace": "test-market",
+      "publisher": "Somebody",
+      "tier": "third-party",
+      "kind": "role",
+      "tasks": [
+        "marketing.content"
+      ],
+      "requires": [],
+      "services": [
+        "design-a"
+      ],
+      "skills": 3,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "agents"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "outsider: ქართული აღწერა.",
+        "en": "outsider: an English description."
+      },
+      "source": {
+        "repo": "outsider-org/outsider-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "viewer@test-market",
+      "name": "viewer",
+      "aka": [],
+      "title": "viewer",
+      "install": "viewer@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "utility",
+      "tasks": [
+        "general.pdf"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "local"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "viewer: ქართული აღწერა.",
+        "en": "viewer: an English description."
+      },
+      "source": {
+        "repo": "anthropics/viewer-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "code-only@test-market",
+      "name": "code-only",
+      "aka": [],
+      "title": "code-only",
+      "install": "code-only@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "marketing.content"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-code"
+      ],
+      "what": {
+        "ka": "code-only: ქართული აღწერა.",
+        "en": "code-only: an English description."
+      },
+      "source": {
+        "repo": "anthropics/code-only-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "chat-plugin@test-market",
+      "name": "chat-plugin",
+      "aka": [],
+      "title": "chat-plugin",
+      "install": "chat-plugin@test-market",
+      "marketplace": "test-market",
+      "publisher": "Chat-Plugin",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "chat"
+      ],
+      "services": [
+        "chat"
+      ],
+      "skills": 3,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "chat-plugin: ქართული აღწერა.",
+        "en": "chat-plugin: an English description."
+      },
+      "source": {
+        "repo": "chat-plugin-org/chat-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "extra1@test-market",
+      "name": "extra1",
+      "aka": [],
+      "title": "extra1",
+      "install": "extra1@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra1: ქართული აღწერა.",
+        "en": "extra1: an English description."
+      },
+      "source": {
+        "repo": "anthropics/extra1-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "extra2@test-market",
+      "name": "extra2",
+      "aka": [],
+      "title": "extra2",
+      "install": "extra2@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra2: ქართული აღწერა.",
+        "en": "extra2: an English description."
+      },
+      "source": {
+        "repo": "anthropics/extra2-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "extra3@test-market",
+      "name": "extra3",
+      "aka": [],
+      "title": "extra3",
+      "install": "extra3@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra3: ქართული აღწერა.",
+        "en": "extra3: an English description."
+      },
+      "source": {
+        "repo": "anthropics/extra3-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "extra4@test-market",
+      "name": "extra4",
+      "aka": [],
+      "title": "extra4",
+      "install": "extra4@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra4: ქართული აღწერა.",
+        "en": "extra4: an English description."
+      },
+      "source": {
+        "repo": "anthropics/extra4-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "extra5@test-market",
+      "name": "extra5",
+      "aka": [],
+      "title": "extra5",
+      "install": "extra5@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra5: ქართული აღწერა.",
+        "en": "extra5: an English description."
+      },
+      "source": {
+        "repo": "anthropics/extra5-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "extra6@test-market",
+      "name": "extra6",
+      "aka": [],
+      "title": "extra6",
+      "install": "extra6@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra6: ქართული აღწერა.",
+        "en": "extra6: an English description."
+      },
+      "source": {
+        "repo": "anthropics/extra6-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "extra7@test-market",
+      "name": "extra7",
+      "aka": [],
+      "title": "extra7",
+      "install": "extra7@test-market",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 3,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra7: ქართული აღწერა.",
+        "en": "extra7: an English description."
+      },
+      "source": {
+        "repo": "anthropics/extra7-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "insight@chat-market",
+      "name": "insight",
+      "aka": [],
+      "title": "Insight Desk",
+      "install": "insight@chat-directory",
+      "marketplace": "chat-market",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "sales.pipeline",
+        "finance.reports"
+      ],
+      "requires": [],
+      "services": [
+        "chat",
+        "crm-a",
+        "pay-x",
+        "mail"
+      ],
+      "skills": 15,
+      "connectors": 4,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "local"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "ანალიზი მონაცემებით.",
+        "en": "Analysis from data."
+      },
+      "source": {
+        "repo": "openai/chat-market",
+        "path": "plugins/insight",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      }
+    },
+    {
+      "id": "chat-app@chat-market",
+      "name": "chat-app",
+      "aka": [],
+      "title": "Chat App",
+      "install": "chat-app@chat-directory",
+      "marketplace": "chat-market",
+      "publisher": "Chat Co.",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "chat"
+      ],
+      "services": [
+        "chat"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "ჩატის კონექტორი.",
+        "en": "The chat connector."
+      },
+      "source": {
+        "repo": "openai/chat-market",
+        "path": "plugins/chat-app",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      }
+    },
+    {
+      "id": "mail-app@chat-market",
+      "name": "mail-app",
+      "aka": [],
+      "title": "Mail App",
+      "install": "mail-app@chat-directory",
+      "marketplace": "chat-market",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "mail"
+      ],
+      "services": [
+        "mail"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "ფოსტის კონექტორი.",
+        "en": "The mail connector."
+      },
+      "source": {
+        "repo": "openai/chat-market",
+        "path": "plugins/mail-app",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      }
+    },
+    {
+      "id": "crm-a-kit@chat-market",
+      "name": "crm-a-kit",
+      "aka": [
+        "app-0123456789abcdef0123456789abcdef"
+      ],
+      "title": "CRM-A Kit",
+      "install": "app-0123456789abcdef0123456789abcdef@chat-directory",
+      "marketplace": "chat-market",
+      "publisher": "Crm-A Inc",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "crm-a"
+      ],
+      "services": [
+        "crm-a"
+      ],
+      "skills": 4,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "CRM-A-ს სკილები.",
+        "en": "Skills for CRM-A."
+      },
+      "source": {
+        "repo": "openai/chat-market",
+        "path": "plugins/crm-a-kit",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      }
+    },
+    {
+      "id": "closer@chat-directory",
+      "name": "closer",
+      "aka": [],
+      "title": "Closer",
+      "install": "closer@chat-directory",
+      "marketplace": "chat-directory",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "sales.meetings"
+      ],
+      "requires": [],
+      "services": [
+        "mail",
+        "crm-a",
+        "crm-b",
+        "pay-x",
+        "chat"
+      ],
+      "skills": null,
+      "connectors": 5,
+      "worksWith": true,
+      "access": [],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "გაყიდვების შეხვედრებისთვის, სხვა პლაგინებთან ერთად.",
+        "en": "For sales meetings, together with other plugins."
+      },
+      "source": {
+        "directory": "chat-directory",
+        "seen": "2026-01-02"
+      }
+    }
+  ],
+  "georgianTools": [
+    {
+      "id": "tool-listed",
+      "name": "tool-listed",
+      "url": "https://github.com/example/tool-listed",
+      "status": "listed",
+      "reviewed": null,
+      "money": true,
+      "tasks": [
+        "finance.tax"
+      ],
+      "what": {
+        "ka": "ჩამოთვლილი ხელსაწყო.",
+        "en": "A listed tool."
+      }
+    },
+    {
+      "id": "tool-reviewed",
+      "name": "tool-reviewed",
+      "url": "https://github.com/example/tool-reviewed",
+      "status": "reviewed",
+      "reviewed": {
+        "date": "2026-01-01",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      },
+      "money": false,
+      "tasks": [
+        "legal.research"
+      ],
+      "what": {
+        "ka": "გადამოწმებული ხელსაწყო.",
+        "en": "A reviewed tool."
+      }
+    }
+  ]
+}

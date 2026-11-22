@@ -1,0 +1,570 @@
+{
+  "plugins": [
+    {
+      "id": "seller@test-market",
+      "name": "seller",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "sales.research",
+        "sales.meetings",
+        "sales.pipeline"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "seller: ქართული აღწერა.",
+        "en": "seller: an English description."
+      }
+    },
+    {
+      "id": "keeper@test-market",
+      "name": "keeper",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "finance.books",
+        "owner.money"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "keeper: ქართული აღწერა.",
+        "en": "keeper: an English description."
+      }
+    },
+    {
+      "id": "crm-a-plugin@test-market",
+      "name": "crm-a-plugin",
+      "marketplace": "test-market",
+      "publisher": "Crm-A-Plugin",
+      "owner": "crm-a-plugin-org",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "crm-a"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "crm-a-plugin: ქართული აღწერა.",
+        "en": "crm-a-plugin: an English description."
+      }
+    },
+    {
+      "id": "crm-b-plugin@test-market",
+      "name": "crm-b-plugin",
+      "marketplace": "test-market",
+      "publisher": "Crm-B-Plugin",
+      "owner": "crm-b-plugin-org",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "crm-b"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "crm-b-plugin: ქართული აღწერა.",
+        "en": "crm-b-plugin: an English description."
+      }
+    },
+    {
+      "id": "crm-c-plugin@test-market",
+      "name": "crm-c-plugin",
+      "marketplace": "test-market",
+      "publisher": "Crm-C-Plugin",
+      "owner": "crm-c-plugin-org",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "crm-c"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "crm-c-plugin: ქართული აღწერა.",
+        "en": "crm-c-plugin: an English description."
+      }
+    },
+    {
+      "id": "nowhere-plugin@test-market",
+      "name": "nowhere-plugin",
+      "marketplace": "test-market",
+      "publisher": "Nowhere-Plugin",
+      "owner": "nowhere-plugin-org",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "nowhere"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "nowhere-plugin: ქართული აღწერა.",
+        "en": "nowhere-plugin: an English description."
+      }
+    },
+    {
+      "id": "outsider@test-market",
+      "name": "outsider",
+      "marketplace": "test-market",
+      "publisher": "Somebody",
+      "owner": "outsider-org",
+      "tier": "third-party",
+      "kind": "role",
+      "tasks": [
+        "marketing.content"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "outsider: ქართული აღწერა.",
+        "en": "outsider: an English description."
+      }
+    },
+    {
+      "id": "viewer@test-market",
+      "name": "viewer",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "utility",
+      "tasks": [
+        "general.pdf"
+      ],
+      "requires": [],
+      "access": [],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "viewer: ქართული აღწერა.",
+        "en": "viewer: an English description."
+      }
+    },
+    {
+      "id": "code-only@test-market",
+      "name": "code-only",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "marketing.content"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-code"
+      ],
+      "what": {
+        "ka": "code-only: ქართული აღწერა.",
+        "en": "code-only: an English description."
+      }
+    },
+    {
+      "id": "chat-plugin@test-market",
+      "name": "chat-plugin",
+      "marketplace": "test-market",
+      "publisher": "Chat-Plugin",
+      "owner": "chat-plugin-org",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "chat"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "chat-plugin: ქართული აღწერა.",
+        "en": "chat-plugin: an English description."
+      }
+    },
+    {
+      "id": "extra1@test-market",
+      "name": "extra1",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra1: ქართული აღწერა.",
+        "en": "extra1: an English description."
+      }
+    },
+    {
+      "id": "extra2@test-market",
+      "name": "extra2",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra2: ქართული აღწერა.",
+        "en": "extra2: an English description."
+      }
+    },
+    {
+      "id": "extra3@test-market",
+      "name": "extra3",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra3: ქართული აღწერა.",
+        "en": "extra3: an English description."
+      }
+    },
+    {
+      "id": "extra4@test-market",
+      "name": "extra4",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra4: ქართული აღწერა.",
+        "en": "extra4: an English description."
+      }
+    },
+    {
+      "id": "extra5@test-market",
+      "name": "extra5",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra5: ქართული აღწერა.",
+        "en": "extra5: an English description."
+      }
+    },
+    {
+      "id": "extra6@test-market",
+      "name": "extra6",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra6: ქართული აღწერა.",
+        "en": "extra6: an English description."
+      }
+    },
+    {
+      "id": "extra7@test-market",
+      "name": "extra7",
+      "marketplace": "test-market",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "extra7: ქართული აღწერა.",
+        "en": "extra7: an English description."
+      }
+    },
+    {
+      "id": "insight@chat-market",
+      "name": "insight",
+      "marketplace": "chat-market",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "sales.pipeline",
+        "finance.reports"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "ანალიზი მონაცემებით.",
+        "en": "Analysis from data."
+      }
+    },
+    {
+      "id": "chat-app@chat-market",
+      "name": "chat-app",
+      "marketplace": "chat-market",
+      "publisher": "Chat Co.",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "chat"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "ჩატის კონექტორი.",
+        "en": "The chat connector."
+      }
+    },
+    {
+      "id": "mail-app@chat-market",
+      "name": "mail-app",
+      "marketplace": "chat-market",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "mail"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "ფოსტის კონექტორი.",
+        "en": "The mail connector."
+      }
+    },
+    {
+      "id": "crm-a-kit@chat-market",
+      "name": "crm-a-kit",
+      "marketplace": "chat-market",
+      "publisher": "Crm-A Inc",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "crm-a"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "CRM-A-ს სკილები.",
+        "en": "Skills for CRM-A."
+      }
+    },
+    {
+      "id": "closer@chat-directory",
+      "name": "closer",
+      "marketplace": "chat-directory",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "sales.meetings"
+      ],
+      "requires": [],
+      "access": [],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "გაყიდვების შეხვედრებისთვის, სხვა პლაგინებთან ერთად.",
+        "en": "For sales meetings, together with other plugins."
+      }
+    }
+  ]
+}

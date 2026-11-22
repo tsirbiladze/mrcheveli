@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (Node.js ${{ matrix.node }}, Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # The oldest Node.js and Python the two twins are written for…
+          - node: 22
+            python: "3.9"
+          # …and the ones the repository is developed on.
+          - node: 24
+            python: "3.x"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: node --version && python3 --version
+      # No dependencies to install: the tests, the build and both twins use only what ships with Node.js and Python.
+      - run: npm test
+      # The committed catalog must be what catalog/ gives.
+      - run: npm run check

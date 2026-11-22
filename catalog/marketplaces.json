@@ -1,0 +1,17 @@
+{
+  "knowledge-work-plugins": {
+    "repo": "anthropics/knowledge-work-plugins",
+    "platform": "claude",
+    "format": "claude"
+  },
+  "openai-curated": {
+    "repo": "openai/plugins",
+    "platform": "chatgpt",
+    "format": "codex",
+    "installs": "openai-curated-remote"
+  },
+  "openai-curated-remote": {
+    "platform": "chatgpt",
+    "format": "directory"
+  }
+}

@@ -1,0 +1,53 @@
+name: Catalog
+
+# Once a week: has a plugin of the catalog changed upstream, and does every "works in Georgia"
+# status still stand on its source? A change opens an issue. Nothing is committed: a person
+# reads the change, and the catalog is rebuilt by hand.
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Plugins upstream
+        id: upstream
+        continue-on-error: true
+        run: node catalog/snapshot.mjs --check | tee upstream.txt
+      - name: Sources of the statuses
+        id: sources
+        continue-on-error: true
+        run: node catalog/sources.mjs --reader https://r.jina.ai/ | tee sources.txt
+      - name: Open an issue
+        if: steps.upstream.outcome == 'failure' || steps.sources.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "The weekly check found a change. Read it, correct catalog/, then run \`npm run build\` and \`npm test\`."
+            echo
+            echo "## Plugins upstream"
+            echo '```'
+            cat upstream.txt
+            echo '```'
+            echo
+            echo "## Sources of the statuses"
+            echo '```'
+            cat sources.txt
+            echo '```'
+          } > body.md
+          gh issue create --title "Catalog check: $(date -u +%F)" --body-file body.md
+      - name: Fail the run when something changed
+        if: steps.upstream.outcome == 'failure' || steps.sources.outcome == 'failure'
+        run: exit 1

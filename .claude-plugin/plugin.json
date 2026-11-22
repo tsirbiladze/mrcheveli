@@ -1,0 +1,19 @@
+{
+  "name": "mrcheveli",
+  "version": "0.1.0",
+  "description": "Four questions about your work, then at most five plugins for Claude or ChatGPT and the connectors worth connecting, without the services that do not work in Georgia.",
+  "author": {
+    "name": "Tornike Sirbiladze",
+    "url": "https://tsirbiladze.com"
+  },
+  "homepage": "https://tsirbiladze.com/skills/mrcheveli",
+  "repository": "https://github.com/tsirbiladze/mrcheveli",
+  "license": "MIT",
+  "keywords": [
+    "plugins",
+    "connectors",
+    "recommendation",
+    "Georgia",
+    "ქართული"
+  ]
+}

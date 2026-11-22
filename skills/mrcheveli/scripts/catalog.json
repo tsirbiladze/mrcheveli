@@ -1,0 +1,4741 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "generated": "2026-11-19",
+  "issues": "https://github.com/tsirbiladze/mrcheveli/issues",
+  "marketplaces": {
+    "knowledge-work-plugins": {
+      "repo": "anthropics/knowledge-work-plugins",
+      "commit": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e",
+      "platform": "claude",
+      "installs": "knowledge-work-plugins"
+    },
+    "openai-curated": {
+      "repo": "openai/plugins",
+      "commit": "981b02c0c44058b595f3b4180002c3ae3c806d40",
+      "platform": "chatgpt",
+      "installs": "openai-curated-remote"
+    },
+    "openai-curated-remote": {
+      "repo": null,
+      "commit": null,
+      "platform": "chatgpt",
+      "installs": "openai-curated-remote"
+    }
+  },
+  "taxonomy": {
+    "roles": [
+      {
+        "id": "sales",
+        "asked": true,
+        "label": {
+          "ka": "გაყიდვები და კლიენტები",
+          "en": "Sales and customers"
+        }
+      },
+      {
+        "id": "finance",
+        "asked": true,
+        "label": {
+          "ka": "ბუღალტერია და ფინანსები",
+          "en": "Accounting and finance"
+        }
+      },
+      {
+        "id": "marketing",
+        "asked": true,
+        "label": {
+          "ka": "მარკეტინგი და ტექსტები",
+          "en": "Marketing and content"
+        }
+      },
+      {
+        "id": "legal",
+        "asked": true,
+        "label": {
+          "ka": "სამართალი და დოკუმენტები",
+          "en": "Legal and documents"
+        }
+      },
+      {
+        "id": "owner",
+        "asked": false,
+        "label": {
+          "ka": "მცირე ბიზნესის მფლობელი",
+          "en": "Small business owner"
+        }
+      },
+      {
+        "id": "support",
+        "asked": false,
+        "label": {
+          "ka": "მომხმარებელთა მხარდაჭერა",
+          "en": "Customer support"
+        }
+      },
+      {
+        "id": "people",
+        "asked": false,
+        "label": {
+          "ka": "ადამიანური რესურსები და ოპერაციები",
+          "en": "HR and operations"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "id": "sales.research",
+        "role": "sales",
+        "label": {
+          "ka": "კომპანიებისა და კონტაქტების მოძიება",
+          "en": "Finding companies and contacts"
+        }
+      },
+      {
+        "id": "sales.meetings",
+        "role": "sales",
+        "label": {
+          "ka": "შეხვედრისთვის მომზადება და შემდგომი წერილები",
+          "en": "Preparing for calls and following up"
+        }
+      },
+      {
+        "id": "sales.pipeline",
+        "role": "sales",
+        "label": {
+          "ka": "CRM-ის მოწესრიგება და გაყიდვების პროგნოზი",
+          "en": "Keeping the CRM tidy and forecasting"
+        }
+      },
+      {
+        "id": "sales.proposals",
+        "role": "sales",
+        "label": {
+          "ka": "შეთავაზებები და ხელშეკრულებები",
+          "en": "Proposals and contracts"
+        }
+      },
+      {
+        "id": "finance.books",
+        "role": "finance",
+        "label": {
+          "ka": "ბუღალტრული ჩანაწერები, ინვოისები, შეჯერება",
+          "en": "Bookkeeping, invoices, reconciliation"
+        }
+      },
+      {
+        "id": "finance.reports",
+        "role": "finance",
+        "label": {
+          "ka": "ანგარიშგება და ანალიზი",
+          "en": "Reporting and analysis"
+        }
+      },
+      {
+        "id": "finance.tax",
+        "role": "finance",
+        "label": {
+          "ka": "დეკლარაციები და rs.ge",
+          "en": "Tax returns and rs.ge"
+        }
+      },
+      {
+        "id": "finance.payments",
+        "role": "finance",
+        "label": {
+          "ka": "გადახდები და ბანკი",
+          "en": "Payments and banking"
+        }
+      },
+      {
+        "id": "marketing.content",
+        "role": "marketing",
+        "label": {
+          "ka": "ტექსტები, პოსტები, წერილები",
+          "en": "Copy, posts and emails"
+        }
+      },
+      {
+        "id": "marketing.design",
+        "role": "marketing",
+        "label": {
+          "ka": "ვიზუალი და პრეზენტაციები",
+          "en": "Visuals and presentations"
+        }
+      },
+      {
+        "id": "marketing.campaigns",
+        "role": "marketing",
+        "label": {
+          "ka": "კამპანიები და რეკლამა",
+          "en": "Campaigns and ads"
+        }
+      },
+      {
+        "id": "marketing.analytics",
+        "role": "marketing",
+        "label": {
+          "ka": "შედეგების ანალიზი და SEO",
+          "en": "Performance analysis and SEO"
+        }
+      },
+      {
+        "id": "legal.contracts",
+        "role": "legal",
+        "label": {
+          "ka": "ხელშეკრულებების შემოწმება და შედგენა",
+          "en": "Reviewing and drafting contracts"
+        }
+      },
+      {
+        "id": "legal.research",
+        "role": "legal",
+        "label": {
+          "ka": "კანონმდებლობისა და პრაქტიკის მოძიება",
+          "en": "Researching legislation and case law"
+        }
+      },
+      {
+        "id": "legal.compliance",
+        "role": "legal",
+        "label": {
+          "ka": "შესაბამისობა და რისკები",
+          "en": "Compliance and risk"
+        }
+      },
+      {
+        "id": "legal.signing",
+        "role": "legal",
+        "label": {
+          "ka": "ხელმოწერა და დოკუმენტების მართვა",
+          "en": "Signing and managing documents"
+        }
+      },
+      {
+        "id": "owner.money",
+        "role": "owner",
+        "label": {
+          "ka": "ფული: ინვოისები, ხარჯები, გადახდები",
+          "en": "Money: invoices, expenses, payments"
+        }
+      },
+      {
+        "id": "owner.customers",
+        "role": "owner",
+        "label": {
+          "ka": "კლიენტების მოზიდვა და გაყიდვა",
+          "en": "Winning and serving customers"
+        }
+      },
+      {
+        "id": "owner.marketing",
+        "role": "owner",
+        "label": {
+          "ka": "საიტი, სოციალური ქსელები, რეკლამა",
+          "en": "Website, social media, ads"
+        }
+      },
+      {
+        "id": "owner.admin",
+        "role": "owner",
+        "label": {
+          "ka": "ყოველდღიური საქმეები და დოკუმენტები",
+          "en": "Day-to-day admin and documents"
+        }
+      },
+      {
+        "id": "support.tickets",
+        "role": "support",
+        "label": {
+          "ka": "მომართვებზე პასუხი და ესკალაცია",
+          "en": "Answering and escalating tickets"
+        }
+      },
+      {
+        "id": "support.knowledge",
+        "role": "support",
+        "label": {
+          "ka": "ცოდნის ბაზა და ხშირი კითხვები",
+          "en": "Knowledge base and FAQs"
+        }
+      },
+      {
+        "id": "people.hiring",
+        "role": "people",
+        "label": {
+          "ka": "დაქირავება და თანამშრომლების საკითხები",
+          "en": "Hiring and people matters"
+        }
+      },
+      {
+        "id": "people.process",
+        "role": "people",
+        "label": {
+          "ka": "პროცესები, მომწოდებლები, დაგეგმვა",
+          "en": "Processes, vendors, planning"
+        }
+      },
+      {
+        "id": "general.day",
+        "role": "*",
+        "label": {
+          "ka": "ფოსტა, კალენდარი და ამოცანები",
+          "en": "Email, calendar and tasks"
+        }
+      },
+      {
+        "id": "general.find",
+        "role": "*",
+        "label": {
+          "ka": "ინფორმაციის პოვნა კომპანიის ხელსაწყოებში",
+          "en": "Finding information across company tools"
+        }
+      },
+      {
+        "id": "general.pdf",
+        "role": "*",
+        "label": {
+          "ka": "PDF-ების ნახვა, შევსება და ხელმოწერა",
+          "en": "Viewing, filling and signing PDFs"
+        }
+      }
+    ],
+    "groups": [
+      {
+        "id": "google",
+        "asked": true,
+        "label": {
+          "ka": "Google (Gmail, კალენდარი, Drive)",
+          "en": "Google (Gmail, Calendar, Drive)"
+        },
+        "short": {
+          "ka": "Google",
+          "en": "Google"
+        }
+      },
+      {
+        "id": "microsoft",
+        "asked": true,
+        "label": {
+          "ka": "Microsoft 365 (Outlook, Teams, Excel)",
+          "en": "Microsoft 365 (Outlook, Teams, Excel)"
+        },
+        "short": {
+          "ka": "Microsoft 365",
+          "en": "Microsoft 365"
+        }
+      },
+      {
+        "id": "team",
+        "asked": true,
+        "label": {
+          "ka": "Slack, Notion ან მსგავსი გუნდური ხელსაწყო",
+          "en": "Slack, Notion or a similar team tool"
+        },
+        "short": {
+          "ka": "გუნდური ხელსაწყოები",
+          "en": "Team tools"
+        }
+      },
+      {
+        "id": "crm",
+        "asked": true,
+        "label": {
+          "ka": "CRM ან ბუღალტრული პროგრამა",
+          "en": "A CRM or an accounting program"
+        },
+        "short": {
+          "ka": "CRM",
+          "en": "CRM"
+        },
+        "also": [
+          "accounting"
+        ]
+      },
+      {
+        "id": "accounting",
+        "asked": false,
+        "label": {
+          "ka": "ბუღალტრული პროგრამა",
+          "en": "Accounting program"
+        }
+      },
+      {
+        "id": "payments",
+        "asked": false,
+        "label": {
+          "ka": "გადახდები",
+          "en": "Payments"
+        }
+      },
+      {
+        "id": "meetings",
+        "asked": false,
+        "label": {
+          "ka": "შეხვედრები და ჩანაწერები",
+          "en": "Meetings and recordings"
+        }
+      },
+      {
+        "id": "prospecting",
+        "asked": false,
+        "label": {
+          "ka": "კონტაქტების ბაზები",
+          "en": "Contact databases"
+        }
+      },
+      {
+        "id": "design",
+        "asked": false,
+        "label": {
+          "ka": "დიზაინი",
+          "en": "Design"
+        }
+      },
+      {
+        "id": "files",
+        "asked": false,
+        "label": {
+          "ka": "ფაილების საცავი",
+          "en": "File storage"
+        }
+      },
+      {
+        "id": "marketing-tools",
+        "asked": false,
+        "label": {
+          "ka": "მარკეტინგის ხელსაწყოები",
+          "en": "Marketing tools"
+        }
+      },
+      {
+        "id": "commerce",
+        "asked": false,
+        "label": {
+          "ka": "ონლაინ მაღაზია და საიტი",
+          "en": "Online store and website"
+        }
+      },
+      {
+        "id": "data",
+        "asked": false,
+        "label": {
+          "ka": "მონაცემთა საცავები",
+          "en": "Data warehouses"
+        }
+      },
+      {
+        "id": "support-tools",
+        "asked": false,
+        "label": {
+          "ka": "მხარდაჭერის ხელსაწყოები",
+          "en": "Support tools"
+        }
+      },
+      {
+        "id": "other",
+        "asked": false,
+        "label": {
+          "ka": "სხვა",
+          "en": "Other"
+        }
+      }
+    ],
+    "limits": [
+      {
+        "id": "known-publishers",
+        "label": {
+          "ka": "მხოლოდ {owner}-ის ან თვითონ სერვისის გამოშვებული პლაგინები",
+          "en": "Only plugins published by {owner} or by the service itself"
+        }
+      },
+      {
+        "id": "no-money",
+        "label": {
+          "ka": "არაფერი, რაც ფულთან, ბანკთან ან გადასახადებთან წვდომას ითხოვს",
+          "en": "Nothing that needs access to money, a bank or taxes"
+        }
+      },
+      {
+        "id": "managed",
+        "label": {
+          "ka": "კომპანიის ანგარიშია, პლაგინებს ადმინისტრატორი მართავს",
+          "en": "A company account: an administrator manages plugins"
+        }
+      }
+    ],
+    "tiers": [
+      {
+        "id": "anthropic",
+        "label": {
+          "ka": "Anthropic-ის გამოშვებული",
+          "en": "Published by Anthropic"
+        }
+      },
+      {
+        "id": "openai",
+        "label": {
+          "ka": "OpenAI-ის გამოშვებული",
+          "en": "Published by OpenAI"
+        }
+      },
+      {
+        "id": "partner",
+        "label": {
+          "ka": "თვითონ სერვისის გამოშვებული, {owner}-ის კატალოგში",
+          "en": "Published by the service itself, in {owner}'s catalog"
+        }
+      },
+      {
+        "id": "third-party",
+        "label": {
+          "ka": "მესამე მხარის, {owner}-ის კატალოგში",
+          "en": "Third party, in {owner}'s catalog"
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "claude",
+        "name": "Claude",
+        "owner": "Anthropic",
+        "tier": "anthropic",
+        "surfaces": [
+          "claude-app",
+          "claude-code"
+        ],
+        "assistant": {
+          "claude-app": "Claude",
+          "claude-code": "Claude"
+        }
+      },
+      {
+        "id": "chatgpt",
+        "name": "ChatGPT",
+        "owner": "OpenAI",
+        "tier": "openai",
+        "surfaces": [
+          "chatgpt-app",
+          "codex-cli"
+        ],
+        "assistant": {
+          "chatgpt-app": "ChatGPT",
+          "codex-cli": "Codex"
+        }
+      }
+    ],
+    "surfaces": [
+      "claude-app",
+      "claude-code",
+      "chatgpt-app",
+      "codex-cli"
+    ],
+    "georgia": [
+      "yes",
+      "partial",
+      "no",
+      "unknown"
+    ]
+  },
+  "services": [
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "aliases": [],
+      "group": "google",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://knowledge.workspace.google.com/admin/support/troubleshooting/countries-or-regions-where-google-workspace-is-available",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "google-calendar",
+      "name": "Google Calendar",
+      "aliases": [],
+      "group": "google",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://knowledge.workspace.google.com/admin/support/troubleshooting/countries-or-regions-where-google-workspace-is-available",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "aliases": [
+        "Google Docs",
+        "Google Sheets"
+      ],
+      "group": "google",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://knowledge.workspace.google.com/admin/support/troubleshooting/countries-or-regions-where-google-workspace-is-available",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "microsoft-365",
+      "name": "Microsoft 365",
+      "aliases": [
+        "Outlook",
+        "Teams",
+        "Excel",
+        "Word",
+        "OneDrive",
+        "SharePoint"
+      ],
+      "group": "microsoft",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.microsoft.com/en-us/microsoft-365/business/international-availability",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://slack.com/help/articles/226166647-Sales-tax-and-VAT",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "asana",
+      "name": "Asana",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://asana.com/ru/guide/help/faq/global-trade-compliance",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian",
+      "aliases": [
+        "Jira",
+        "Confluence"
+      ],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "trello",
+      "name": "Trello",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://support.atlassian.com/trello/docs/sanctioned-countries/",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "monday",
+      "name": "monday.com",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://monday.com/l/legal/tos/",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "clickup",
+      "name": "ClickUp",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://help.clickup.com/hc/en-us/articles/6327730920599-Global-Trade-Compliance",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "guru",
+      "name": "Guru",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "ringcentral",
+      "name": "RingCentral",
+      "aliases": [
+        "RingEX"
+      ],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "no",
+        "source": "https://support.ringcentral.com/article-v2/8825.html?brand=RC_US&product=RingEX&language=en_US",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "საქართველო არ არის იმ ქვეყნებს შორის, სადაც RingEX იყიდება.",
+          "en": "Georgia is not among the countries where RingEX is offered."
+        }
+      }
+    },
+    {
+      "id": "zoho-projects",
+      "name": "Zoho Projects",
+      "aliases": [],
+      "group": "team",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/account/articles/account-restrictions-for-sanctioned-countries-regions",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "aliases": [],
+      "group": "crm",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "aliases": [],
+      "group": "crm",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.salesforce.com/company/legal/compliance/",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "close",
+      "name": "Close",
+      "aliases": [],
+      "group": "crm",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "zoho-crm",
+      "name": "Zoho CRM",
+      "aliases": [],
+      "group": "crm",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/account/articles/account-restrictions-for-sanctioned-countries-regions",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "quickbooks",
+      "name": "QuickBooks",
+      "aliases": [
+        "QuickBooks Online"
+      ],
+      "group": "accounting",
+      "money": true,
+      "georgia": {
+        "status": "yes",
+        "source": "https://quickbooks.intuit.com/choose-country/",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "xero",
+      "name": "Xero",
+      "aliases": [],
+      "group": "accounting",
+      "money": true,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.xero.com/legal/terms/",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "myob",
+      "name": "MYOB",
+      "aliases": [],
+      "group": "accounting",
+      "money": true,
+      "georgia": {
+        "status": "no",
+        "source": "https://www.myob.com/au/support/myob-business/product-account/myob-business-release-notes",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "MYOB ავსტრალიისა და ახალი ზელანდიის ბიზნესისთვისაა, და მისი კონექტორიც იქაური მომხმარებლებისთვის.",
+          "en": "MYOB is made for businesses in Australia and New Zealand, and its connector is offered to customers there."
+        }
+      }
+    },
+    {
+      "id": "zoho-books",
+      "name": "Zoho Books",
+      "aliases": [],
+      "group": "accounting",
+      "money": true,
+      "georgia": {
+        "status": "yes",
+        "source": "https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/account/articles/account-restrictions-for-sanctioned-countries-regions",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "expensify",
+      "name": "Expensify",
+      "aliases": [],
+      "group": "accounting",
+      "money": true,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.expensify.com/terms",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "gusto",
+      "name": "Gusto",
+      "aliases": [],
+      "group": "accounting",
+      "money": true,
+      "georgia": {
+        "status": "no",
+        "source": "https://gusto.com/legal/terms",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Gusto-ს ხელფასების სერვისს ამერიკული საბანკო ანგარიში სჭირდება.",
+          "en": "Gusto payroll needs a bank account in the United States."
+        }
+      }
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "aliases": [],
+      "group": "payments",
+      "money": true,
+      "georgia": {
+        "status": "no",
+        "source": "https://stripe.com/global",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "საქართველო არ არის იმ ქვეყნებს შორის, სადაც ბიზნესს Stripe-ის ანგარიშის გახსნა შეუძლია.",
+          "en": "Georgia is not among the countries where a business can open a Stripe account."
+        }
+      }
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "aliases": [],
+      "group": "payments",
+      "money": true,
+      "georgia": {
+        "status": "yes",
+        "source": "https://developer.paypal.com/payouts/supported-features",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "aliases": [],
+      "group": "payments",
+      "money": true,
+      "georgia": {
+        "status": "no",
+        "source": "https://squareup.com/help/us/en/article/5085-accepted-cards",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Square ბარათით გადახდას მხოლოდ რვა ქვეყნის ბიზნესისთვის იღებს და საქართველო მათ შორის არ არის.",
+          "en": "Square takes card payments only for businesses in eight countries, and Georgia is not one of them."
+        }
+      }
+    },
+    {
+      "id": "airwallex",
+      "name": "Airwallex",
+      "aliases": [],
+      "group": "payments",
+      "money": true,
+      "georgia": {
+        "status": "no",
+        "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "საქართველო არ არის იმ ადგილების სიაში, სადაც ბიზნესს Airwallex-ში რეგისტრაცია შეუძლია.",
+          "en": "Georgia is not on the list of places where a business can register for Airwallex."
+        }
+      }
+    },
+    {
+      "id": "ramp",
+      "name": "Ramp",
+      "aliases": [],
+      "group": "payments",
+      "money": true,
+      "georgia": {
+        "status": "no",
+        "source": "https://support.ramp.com/applying-and-signing-up-for-ramp-us-based/",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Ramp-ის ეს პროგრამა მხოლოდ აშშ-ში რეგისტრირებულ კომპანიებს იღებს.",
+          "en": "This Ramp programme accepts only companies registered in the United States."
+        }
+      }
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom",
+      "aliases": [],
+      "group": "meetings",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0066420",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies.ai",
+      "aliases": [],
+      "group": "meetings",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "otter-ai",
+      "name": "Otter.ai",
+      "aliases": [],
+      "group": "meetings",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "gong",
+      "name": "Gong",
+      "aliases": [],
+      "group": "meetings",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "aliases": [],
+      "group": "meetings",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.granola.ai/static/Granola-Platform-Terms-2025-12-19.pdf",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "calendly",
+      "name": "Calendly",
+      "aliases": [],
+      "group": "meetings",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "zoominfo",
+      "name": "ZoomInfo",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo.io",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "clay",
+      "name": "Clay",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.clay.com/faq/what-countries-is-the-app-available-in",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "lusha",
+      "name": "Lusha",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "crunchbase",
+      "name": "Crunchbase",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "outreach",
+      "name": "Outreach",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "common-room",
+      "name": "Common Room",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "leadfeeder",
+      "name": "Leadfeeder",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "similarweb",
+      "name": "Similarweb",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "aliases": [],
+      "group": "design",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.canva.com/help/global-payment-methods/",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "aliases": [],
+      "group": "design",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "adobe",
+      "name": "Adobe Creative Cloud",
+      "aliases": [
+        "Photoshop",
+        "Illustrator",
+        "Adobe Express"
+      ],
+      "group": "design",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://helpx.adobe.com/express/mobile/get-started/faq.html",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "box",
+      "name": "Box",
+      "aliases": [],
+      "group": "files",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.box.com/legal/termsofservice",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "egnyte",
+      "name": "Egnyte",
+      "aliases": [],
+      "group": "files",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "aliases": [],
+      "group": "files",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://help.dropbox.com/security/restricted-access-region-country",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "docusign",
+      "name": "Docusign",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.docusign.com/legal/terms-and-conditions/msa",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "amplitude",
+      "name": "Amplitude",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://amplitude.com/terms",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "ahrefs",
+      "name": "Ahrefs",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "klaviyo",
+      "name": "Klaviyo",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "supermetrics",
+      "name": "Supermetrics",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://supermetrics.com/terms-of-service",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "mailchimp",
+      "name": "Mailchimp",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://mailchimp.com/legal/terms/",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "tiktok-ads",
+      "name": "TikTok Ads",
+      "aliases": [
+        "TikTok"
+      ],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "no",
+        "source": "https://ads.tiktok.com/resources/help/article/available-countries-and-regions-for-ad-account-creation-in-bc",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "საქართველო არ არის იმ ქვეყნების სიაში, საიდანაც TikTok-ის სარეკლამო ანგარიშის დამოუკიდებლად გახსნა შეიძლება.",
+          "en": "Georgia is not on the list of countries whose users can create a TikTok ad account on their own."
+        }
+      }
+    },
+    {
+      "id": "activecampaign",
+      "name": "ActiveCampaign",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.activecampaign.com/legal/terms-of-service",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "postiz",
+      "name": "Postiz",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "aliases": [],
+      "group": "commerce",
+      "money": true,
+      "georgia": {
+        "status": "partial",
+        "source": "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Shopify Payments საქართველოში არ არის: გადახდების მისაღებად სხვა პროვაიდერი გჭირდება.",
+          "en": "Shopify Payments is not offered in Georgia: taking payments needs another provider."
+        }
+      }
+    },
+    {
+      "id": "wix",
+      "name": "Wix",
+      "aliases": [],
+      "group": "commerce",
+      "money": true,
+      "georgia": {
+        "status": "partial",
+        "source": "https://www.wix.com/payments",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Wix Payments საქართველოში არ არის: გადახდების მისაღებად სხვა პროვაიდერი გჭირდება.",
+          "en": "Wix Payments is not offered in Georgia: taking payments needs another provider."
+        }
+      }
+    },
+    {
+      "id": "amazon-seller",
+      "name": "Amazon Seller Central",
+      "aliases": [
+        "Amazon"
+      ],
+      "group": "commerce",
+      "money": true,
+      "georgia": {
+        "status": "yes",
+        "source": "https://sellercentral.amazon.com/help/hub/reference/external/200405020",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "aliases": [],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "aliases": [],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://www.databricks.com/legal/external-use-schedule",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "bigquery",
+      "name": "Google BigQuery",
+      "aliases": [
+        "Google Cloud"
+      ],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://docs.cloud.google.com/billing/docs/resources/vat-overview",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "aliases": [],
+      "group": "support-tools",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "zoho-desk",
+      "name": "Zoho Desk",
+      "aliases": [],
+      "group": "support-tools",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/account/articles/account-restrictions-for-sanctioned-countries-regions",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://zapier.com/legal/website-terms-of-use",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "airtable",
+      "name": "Airtable",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "miro",
+      "name": "Miro",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "yes",
+        "source": "https://miro.com/legal/documents/Miro-Support-Policy.pdf",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "emergent",
+      "name": "Emergent",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "statsig",
+      "name": "Statsig",
+      "aliases": [],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "chatgpt-sites",
+      "name": "ChatGPT Sites",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "hex",
+      "name": "Hex",
+      "aliases": [],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "deepnote",
+      "name": "Deepnote",
+      "aliases": [],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "mixpanel",
+      "name": "Mixpanel",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "posthog",
+      "name": "PostHog",
+      "aliases": [],
+      "group": "marketing-tools",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "omni-analytics",
+      "name": "Omni Analytics",
+      "aliases": [],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "metabase",
+      "name": "Metabase",
+      "aliases": [],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "thoughtspot",
+      "name": "ThoughtSpot",
+      "aliases": [],
+      "group": "data",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "attio",
+      "name": "Attio",
+      "aliases": [],
+      "group": "crm",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "ironclad",
+      "name": "Ironclad",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "pandadoc",
+      "name": "PandaDoc",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "salesloft",
+      "name": "Salesloft",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "seismic",
+      "name": "Seismic",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "highspot",
+      "name": "Highspot",
+      "aliases": [],
+      "group": "other",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "aliases": [],
+      "group": "design",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "zoom-revenue-accelerator",
+      "name": "Zoom Revenue Accelerator",
+      "aliases": [],
+      "group": "meetings",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "hg-insights",
+      "name": "HG Insights",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "rox",
+      "name": "Rox",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "actively",
+      "name": "Actively",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "meticulate",
+      "name": "Meticulate",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    },
+    {
+      "id": "backstory",
+      "name": "Backstory",
+      "aliases": [],
+      "group": "prospecting",
+      "money": false,
+      "georgia": {
+        "status": "unknown",
+        "source": "",
+        "checked": "",
+        "note": {
+          "ka": "",
+          "en": ""
+        }
+      }
+    }
+  ],
+  "plugins": [
+    {
+      "id": "sales@knowledge-work-plugins",
+      "name": "sales",
+      "aka": [],
+      "title": "sales",
+      "install": "sales@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "sales.research",
+        "sales.meetings",
+        "sales.pipeline",
+        "sales.proposals"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "hubspot",
+        "salesforce",
+        "close",
+        "monday",
+        "clay",
+        "zoominfo",
+        "notion",
+        "atlassian",
+        "fireflies",
+        "apollo",
+        "outreach",
+        "google-calendar",
+        "gmail",
+        "microsoft-365",
+        "similarweb",
+        "google-drive",
+        "gong",
+        "zoom",
+        "otter-ai",
+        "calendly",
+        "lusha",
+        "crunchbase"
+      ],
+      "skills": 36,
+      "connectors": 23,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "გაყიდვების მთელი დღე: ზარისთვის მომზადება, შეჯამება და შემდგომი წერილი, კომპანიის მოკვლევა, გარიგებებისა და პროგნოზის მიმოხილვა, კლიენტისთვის ერთგვერდიანი მასალა. მუშაობს შენს CRM-თან, ფოსტასთან და კალენდართან, ან ატვირთულ ფაილებთან.",
+        "en": "The whole sales day: call prep, summaries and follow-ups, account research, deal and forecast reviews, a one-pager for the customer. It works with your CRM, email and calendar, or with files you upload."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "sales",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "finance@knowledge-work-plugins",
+      "name": "finance",
+      "aka": [],
+      "title": "finance",
+      "install": "finance@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "finance.books",
+        "finance.reports"
+      ],
+      "requires": [],
+      "services": [
+        "snowflake",
+        "databricks",
+        "bigquery",
+        "slack",
+        "google-calendar",
+        "gmail"
+      ],
+      "skills": 8,
+      "connectors": 6,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ბუღალტრული გატარებები, შეჯერება, ფინანსური ანგარიშგება, გადახრების ანალიზი, თვის დახურვა და აუდიტისთვის მომზადება. აშშ-ის პრაქტიკაზეა აგებული (მაგალითად SOX), საქართველოს საგადასახადო წესებს არ იცნობს.",
+        "en": "Journal entries, reconciliation, financial statements, variance analysis, month-end close and audit prep. It is built on US practice (SOX, for one) and does not know Georgian tax rules."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "finance",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "legal@knowledge-work-plugins",
+      "name": "legal",
+      "aka": [],
+      "title": "legal",
+      "install": "legal@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts",
+        "legal.compliance",
+        "legal.signing"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "box",
+        "egnyte",
+        "atlassian",
+        "docusign",
+        "google-calendar",
+        "gmail"
+      ],
+      "skills": 9,
+      "connectors": 7,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ხელშეკრულების შემოწმება, NDA-ების დახარისხება, რისკის შეფასება, მომწოდებლის შემოწმება და ხელმოწერაზე გაგზავნა. კომპანიის შიდა იურისტისთვისაა; ქართულ კანონმდებლობას თვითონ არ შეიცავს.",
+        "en": "Contract review, NDA triage, risk assessment, vendor checks and sending for signature. It is made for in-house counsel; it does not hold Georgian legislation itself."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "legal",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "marketing@knowledge-work-plugins",
+      "name": "marketing",
+      "aka": [],
+      "title": "marketing",
+      "install": "marketing@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "marketing.content",
+        "marketing.campaigns",
+        "marketing.analytics"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "canva",
+        "figma",
+        "hubspot",
+        "amplitude",
+        "notion",
+        "ahrefs",
+        "similarweb",
+        "klaviyo",
+        "supermetrics",
+        "google-calendar",
+        "gmail"
+      ],
+      "skills": 8,
+      "connectors": 12,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ტექსტების წერა, წერილების სერია, კამპანიის გეგმა, ბრენდის ხმის შემოწმება, კონკურენტების მიმოხილვა, შედეგების ანგარიში და SEO აუდიტი.",
+        "en": "Writing copy, email sequences, campaign plans, brand-voice reviews, competitor briefs, performance reports and SEO audits."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "marketing",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "small-business@knowledge-work-plugins",
+      "name": "small-business",
+      "aka": [],
+      "title": "small-business",
+      "install": "small-business@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "owner.money",
+        "owner.customers",
+        "owner.marketing",
+        "owner.admin"
+      ],
+      "requires": [],
+      "services": [
+        "airwallex",
+        "apollo",
+        "atlassian",
+        "canva",
+        "clay",
+        "docusign",
+        "emergent",
+        "expensify",
+        "gmail",
+        "google-calendar",
+        "google-drive",
+        "gusto",
+        "hubspot",
+        "mailchimp",
+        "quickbooks",
+        "monday",
+        "myob",
+        "notion",
+        "paypal",
+        "ramp",
+        "ringcentral",
+        "shopify",
+        "slack",
+        "square",
+        "stripe",
+        "tiktok-ads",
+        "trello",
+        "wix",
+        "xero",
+        "zapier",
+        "zoho-books",
+        "zoho-crm",
+        "zoho-desk",
+        "zoho-projects",
+        "zoom"
+      ],
+      "skills": 44,
+      "connectors": 35,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "მცირე ბიზნესის ყოველდღიური საქმეები ერთ პლაგინში: ინვოისების გამოდევნება, გადასახდელი ანგარიშები, თვის დახურვა, ლიდების მოძიება, სოციალური ქსელების კონტენტი, განცხადება ვაკანსიაზე. ყოველ ნაბიჯს, რომელიც ფულს ან კლიენტს ეხება, შენ ადასტურებ.",
+        "en": "A small business's daily work in one plugin: chasing invoices, bills to pay, month-end close, finding leads, social content, job posts. You approve every step that touches money or a customer."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "small-business",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "customer-support@knowledge-work-plugins",
+      "name": "customer-support",
+      "aka": [],
+      "title": "customer-support",
+      "install": "customer-support@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "support.tickets",
+        "support.knowledge"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "intercom",
+        "hubspot",
+        "guru",
+        "atlassian",
+        "notion",
+        "google-calendar",
+        "gmail"
+      ],
+      "skills": 5,
+      "connectors": 8,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "მომართვების დახარისხება, პასუხის მონახაზი, ესკალაცია, კლიენტის კონტექსტის მოძიება და ცოდნის ბაზის სტატია გადაჭრილი საკითხიდან.",
+        "en": "Ticket triage, draft replies, escalations, customer research and a knowledge-base article from a solved issue."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "customer-support",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "human-resources@knowledge-work-plugins",
+      "name": "human-resources",
+      "aka": [],
+      "title": "human-resources",
+      "install": "human-resources@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "people.hiring"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "google-calendar",
+        "gmail",
+        "notion",
+        "atlassian"
+      ],
+      "skills": 9,
+      "connectors": 5,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "დაქირავების პროცესი, გასაუბრებისთვის მომზადება, შეთავაზების წერილი, ახალი თანამშრომლის შემოყვანა, შეფასებები და ანაზღაურების ანალიზი.",
+        "en": "The hiring pipeline, interview prep, offer letters, onboarding, performance reviews and compensation analysis."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "human-resources",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "operations@knowledge-work-plugins",
+      "name": "operations",
+      "aka": [],
+      "title": "operations",
+      "install": "operations@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "people.process"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "google-calendar",
+        "gmail",
+        "notion",
+        "atlassian",
+        "asana"
+      ],
+      "skills": 9,
+      "connectors": 6,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "პროცესის აღწერა და გაუმჯობესება, მომწოდებლის შეფასება, ცვლილების მოთხოვნა, სიმძლავრის დაგეგმვა, რისკების შეფასება და სტატუსის ანგარიში.",
+        "en": "Process documentation and improvement, vendor reviews, change requests, capacity planning, risk assessment and status reports."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "operations",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "productivity@knowledge-work-plugins",
+      "name": "productivity",
+      "aka": [],
+      "title": "productivity",
+      "install": "productivity@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "notion",
+        "asana",
+        "linear",
+        "atlassian",
+        "monday",
+        "clickup",
+        "google-calendar",
+        "gmail"
+      ],
+      "skills": 4,
+      "connectors": 9,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ამოცანების სია, დღის გეგმა და სამუშაო მეხსიერება: რა გაქვს დაწყებული, ვის რას დაჰპირდი. ეყრდნობა კალენდარს, ფოსტასა და ჩატს.",
+        "en": "A task list, a plan for the day and a working memory of what you have started and promised. It draws on your calendar, email and chat."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "productivity",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "enterprise-search@knowledge-work-plugins",
+      "name": "enterprise-search",
+      "aka": [],
+      "title": "enterprise-search",
+      "install": "enterprise-search@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "general.find"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "notion",
+        "guru",
+        "atlassian",
+        "asana",
+        "google-calendar",
+        "gmail"
+      ],
+      "skills": 5,
+      "connectors": 7,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ერთი ძიება ფოსტაში, ჩატში, დოკუმენტებსა და ვიკიში ერთდროულად, და ნაპოვნის შეჯამება წყაროებით.",
+        "en": "One search across email, chat, documents and wikis at once, and a summary of what it found, with sources."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "enterprise-search",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "pdf-viewer@knowledge-work-plugins",
+      "name": "pdf-viewer",
+      "aka": [],
+      "title": "pdf-viewer",
+      "install": "pdf-viewer@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "tier": "anthropic",
+      "kind": "utility",
+      "tasks": [
+        "general.pdf",
+        "legal.signing"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 1,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "local"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "PDF-ის ნახვა, მონიშვნა, ფორმის შევსება და ხელმოწერის დასმა ცოცხალ ფანჯარაში, შემდეგ კი მონიშნული ასლის ჩამოტვირთვა.",
+        "en": "View a PDF, mark it up, fill a form and place a signature in a live viewer, then download the annotated copy."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "pdf-viewer",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "hubspot-sales@knowledge-work-plugins",
+      "name": "hubspot-sales",
+      "aka": [],
+      "title": "hubspot-sales",
+      "install": "hubspot-sales@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "HubSpot",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline",
+        "sales.meetings"
+      ],
+      "requires": [
+        "hubspot"
+      ],
+      "services": [
+        "hubspot"
+      ],
+      "skills": 9,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "agents"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "HubSpot-ის გაყიდვების დღე Claude-იდან: კონტაქტებისა და გარიგებების შეტანა, დილის მიმოხილვა, ზარისთვის მომზადება, შემდგომი წერილი და ჩანაწერების განახლება. ყველაფერი HubSpot-ში იწერება.",
+        "en": "The HubSpot sales day from Claude: importing contacts and deals, a morning brief, call prep, follow-ups and record updates. Everything is written back to HubSpot."
+      },
+      "source": {
+        "repo": "HubSpot/hubspot-mcp-plugins",
+        "path": "HubSpot-Sales",
+        "sha": "a0c59600fc1ddcf03ceca71aebf0c28aa55f49e3"
+      }
+    },
+    {
+      "id": "monday-crm@knowledge-work-plugins",
+      "name": "monday-crm",
+      "aka": [],
+      "title": "monday-crm",
+      "install": "monday-crm@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "monday.com",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "monday"
+      ],
+      "services": [
+        "monday"
+      ],
+      "skills": 9,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "monday CRM ჩვეულებრივი ენით: გაყიდვების ძაბრის აწყობა, გარიგებების დილის სია, პროგნოზის დაფა, მონაცემების გასუფთავება და შეხვედრის ჩანაწერებიდან გარიგების განახლება.",
+        "en": "monday CRM in plain language: building a pipeline, a ranked morning deal list, a forecast dashboard, data clean-up and deal updates from meeting notes."
+      },
+      "source": {
+        "repo": "mondaycom/mcp",
+        "path": "plugins/monday-crm",
+        "sha": "5eb0835e921de42ba603d7a8315ab4a2575a46b2"
+      }
+    },
+    {
+      "id": "monday-com@knowledge-work-plugins",
+      "name": "monday-com",
+      "aka": [],
+      "title": "monday-com",
+      "install": "monday-com@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "monday.com",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.day",
+        "people.process"
+      ],
+      "requires": [
+        "monday"
+      ],
+      "services": [
+        "monday"
+      ],
+      "skills": 5,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "monday.com-ის დაფები, ჩანაწერები, დოკუმენტები და ფორმები Claude-იდან, კითხვისა და ჩაწერის სრული უფლებით.",
+        "en": "monday.com boards, items, docs and forms from Claude, with full read and write access."
+      },
+      "source": {
+        "repo": "mondaycom/monday-claude-cowork-plugin",
+        "path": "",
+        "sha": "ce381e93a0a6c2ed3b9942ff1803b8078ba89389"
+      }
+    },
+    {
+      "id": "apollo@knowledge-work-plugins",
+      "name": "apollo",
+      "aka": [],
+      "title": "apollo",
+      "install": "apollo@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Apollo.io",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "apollo"
+      ],
+      "services": [
+        "apollo"
+      ],
+      "skills": 3,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Apollo.io-ში კონტაქტების მოძიება, ლიდის მონაცემების შევსება და მათი ჩატვირთვა წერილების სერიაში.",
+        "en": "Finding contacts in Apollo.io, enriching a lead and loading leads into an outreach sequence."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "partner-built/apollo",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "zoominfo@knowledge-work-plugins",
+      "name": "zoominfo",
+      "aka": [],
+      "title": "zoominfo",
+      "install": "zoominfo@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "ZoomInfo",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "zoominfo"
+      ],
+      "services": [
+        "zoominfo"
+      ],
+      "skills": 35,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ZoomInfo-ში კომპანიებისა და კონტაქტების ძიება, ლიდის შევსება და მსგავსი კომპანიების პოვნა.",
+        "en": "Searching companies and contacts in ZoomInfo, enriching leads and finding lookalike companies."
+      },
+      "source": {
+        "repo": "Zoominfo/zoominfo-mcp-plugin",
+        "path": "",
+        "sha": "31a1ec506078e0aaf4e14e098e39865f32777d8a"
+      }
+    },
+    {
+      "id": "lusha@knowledge-work-plugins",
+      "name": "lusha",
+      "aka": [],
+      "title": "lusha",
+      "install": "lusha@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Lusha",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "lusha"
+      ],
+      "services": [
+        "lusha"
+      ],
+      "skills": 6,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Lusha-ს ბაზიდან კონტაქტების მოძიება და დასარეკი სიის აწყობა: ტელეფონის ნომრები და კომპანიის ნიშნები.",
+        "en": "Finding contacts in Lusha's database and building a call list: phone numbers and company signals."
+      },
+      "source": {
+        "repo": "lusha-oss/lusha-mcp-plugin",
+        "path": "",
+        "sha": "4bcf5c743d5799d7c02727dd991585208f7a47b1"
+      }
+    },
+    {
+      "id": "leadfeeder@knowledge-work-plugins",
+      "name": "leadfeeder",
+      "aka": [],
+      "title": "leadfeeder",
+      "install": "leadfeeder@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Leadfeeder",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "leadfeeder"
+      ],
+      "services": [
+        "leadfeeder"
+      ],
+      "skills": 6,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ვინ შემოვიდა შენს საიტზე: ყოველდღიური მიმოხილვა, კომპანიის მოკვლევა, კონტაქტის პოვნა და წერილის მონახაზი. სჭირდება Leadfeeder-ის ანგარიში.",
+        "en": "Who visited your website: a daily brief, company research, contact discovery and outreach drafts. It needs a Leadfeeder account."
+      },
+      "source": {
+        "repo": "Leadfeeder/leadfeeder-mcp-plugin",
+        "path": "",
+        "sha": "cddf27f0771393b01a9a91335b8972e44f48cf45"
+      }
+    },
+    {
+      "id": "common-room@knowledge-work-plugins",
+      "name": "common-room",
+      "aka": [],
+      "title": "common-room",
+      "install": "common-room@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Common Room",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research",
+        "sales.meetings"
+      ],
+      "requires": [
+        "common-room"
+      ],
+      "services": [
+        "common-room"
+      ],
+      "skills": 6,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Common Room-ის მონაცემებით კომპანიისა და კონტაქტის მოკვლევა, ზარისთვის მომზადება და პერსონალური წერილის მონახაზი.",
+        "en": "Account and contact research from Common Room data, call prep and personalised outreach drafts."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "partner-built/common-room",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "slack-by-salesforce@knowledge-work-plugins",
+      "name": "slack-by-salesforce",
+      "aka": [],
+      "title": "slack-by-salesforce",
+      "install": "slack-by-salesforce@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Salesforce",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "slack"
+      ],
+      "services": [
+        "slack"
+      ],
+      "skills": 2,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Slack-ში შეტყობინებების ძიება, გაგზავნა და canvas-ების მართვა Claude-იდან.",
+        "en": "Searching and sending Slack messages and managing canvases from Claude."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "partner-built/slack",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "intercom@knowledge-work-plugins",
+      "name": "intercom",
+      "aka": [],
+      "title": "intercom",
+      "install": "intercom@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Intercom",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "support.tickets"
+      ],
+      "requires": [
+        "intercom"
+      ],
+      "services": [
+        "intercom"
+      ],
+      "skills": 4,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Intercom-ის საუბრების ძიება, მომართვების ტენდენციების ანალიზი და კონტაქტებისა და კომპანიების ნახვა.",
+        "en": "Searching Intercom conversations, analysing support patterns and looking up contacts and companies."
+      },
+      "source": {
+        "repo": "intercom/claude-plugin-external",
+        "path": "",
+        "sha": "62773a7d4b8aac31545d6888fe6479be3bc53804"
+      }
+    },
+    {
+      "id": "activecampaign@knowledge-work-plugins",
+      "name": "activecampaign",
+      "aka": [],
+      "title": "activecampaign",
+      "install": "activecampaign@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "ActiveCampaign",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.campaigns",
+        "marketing.content"
+      ],
+      "requires": [
+        "activecampaign"
+      ],
+      "services": [
+        "activecampaign"
+      ],
+      "skills": 6,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "agents"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ActiveCampaign-ის კონტაქტები, კამპანიები, ავტომატიზაციები და გარიგებები Claude-იდან.",
+        "en": "ActiveCampaign contacts, campaigns, automations and deals from Claude."
+      },
+      "source": {
+        "repo": "ActiveCampaign/activecampaign-plugin",
+        "path": "",
+        "sha": "0ff858728bc52aee335d5475b0d4eb5f3a9589b0"
+      }
+    },
+    {
+      "id": "canva@knowledge-work-plugins",
+      "name": "canva",
+      "aka": [],
+      "title": "canva",
+      "install": "canva@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Canva",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.design",
+        "owner.marketing"
+      ],
+      "requires": [
+        "canva"
+      ],
+      "services": [
+        "canva"
+      ],
+      "skills": 6,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Canva-ს დიზაინების შექმნა, რედაქტირება, ზომის შეცვლა და ბრენდთან შესაბამისობის შემოწმება.",
+        "en": "Creating, editing, resizing and brand-checking Canva designs."
+      },
+      "source": {
+        "repo": "canva-sdks/canva-skills",
+        "path": "plugins/canva",
+        "sha": "bfcbc681560f6031e9949ea52f81e20beb87e39e"
+      }
+    },
+    {
+      "id": "adobe-for-creativity@knowledge-work-plugins",
+      "name": "adobe-for-creativity",
+      "aka": [],
+      "title": "adobe-for-creativity",
+      "install": "adobe-for-creativity@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Adobe",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.design"
+      ],
+      "requires": [
+        "adobe"
+      ],
+      "services": [
+        "adobe"
+      ],
+      "skills": 15,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Adobe Creative Cloud-ის ხელსაწყოები სურათებისთვის, ვექტორებისთვის და ვიდეოსთვის: რამდენიმე ფაილის ერთად დამუშავება და სხვადასხვა პლატფორმაზე მორგება.",
+        "en": "Adobe Creative Cloud tools for images, vectors and video: editing several assets at once and adapting them for different platforms."
+      },
+      "source": {
+        "repo": "adobe/skills",
+        "path": "plugins/creative-cloud/adobe-for-creativity",
+        "sha": "0f487c9b1b98d8e62dfc80ee4d28b29f5471261f"
+      }
+    },
+    {
+      "id": "miro@knowledge-work-plugins",
+      "name": "miro",
+      "aka": [],
+      "title": "miro",
+      "install": "miro@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Miro",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process"
+      ],
+      "requires": [
+        "miro"
+      ],
+      "services": [
+        "miro"
+      ],
+      "skills": 3,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Miro-ს დაფების წაკითხვა და დიაგრამების შექმნა Claude-იდან.",
+        "en": "Reading Miro boards and creating diagrams from Claude."
+      },
+      "source": {
+        "repo": "miroapp/miro-ai",
+        "path": "claude-plugins/miro",
+        "sha": "b6408e1bdfe0c842f209d40b52e92caf118a4d39"
+      }
+    },
+    {
+      "id": "zapier@knowledge-work-plugins",
+      "name": "zapier",
+      "aka": [],
+      "title": "zapier",
+      "install": "zapier@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Zapier",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process",
+        "owner.admin"
+      ],
+      "requires": [
+        "zapier"
+      ],
+      "services": [
+        "zapier"
+      ],
+      "skills": 4,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "agents"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Zapier-ის მოქმედებების მოძებნა, ჩართვა და გაშვება Claude-იდან, იმ აპებში, რომლებიც Zapier-ში გაქვს დაკავშირებული.",
+        "en": "Finding, enabling and running Zapier actions from Claude, in the apps you have connected in Zapier."
+      },
+      "source": {
+        "repo": "zapier/zapier-mcp",
+        "path": "plugins/zapier",
+        "sha": "54a12277a12c60df51ec16cf4e4ef0b27b166649"
+      }
+    },
+    {
+      "id": "airtable@knowledge-work-plugins",
+      "name": "airtable",
+      "aka": [],
+      "title": "airtable",
+      "install": "airtable@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Airtable",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process",
+        "owner.admin"
+      ],
+      "requires": [
+        "airtable"
+      ],
+      "services": [
+        "airtable"
+      ],
+      "skills": 8,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Airtable-ის ბაზებთან მუშაობა Claude-იდან: ჩანაწერების ნახვა, დამატება და შეცვლა.",
+        "en": "Working with Airtable bases from Claude: reading, adding and changing records."
+      },
+      "source": {
+        "repo": "Airtable/skills",
+        "path": "plugins/airtable",
+        "sha": "812ee67f1fd3d76fb45ff8df40afaa0448602ba8"
+      }
+    },
+    {
+      "id": "box@knowledge-work-plugins",
+      "name": "box",
+      "aka": [],
+      "title": "box",
+      "install": "box@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Box",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "owner.admin"
+      ],
+      "requires": [
+        "box"
+      ],
+      "services": [
+        "box"
+      ],
+      "skills": 9,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Box-ის ფაილების ძიება, საქაღალდეების მოწესრიგება და დოკუმენტების შეჯამება Box AI-ით.",
+        "en": "Searching Box files, organising folders and summarising documents with Box AI."
+      },
+      "source": {
+        "repo": "box/skills",
+        "path": "",
+        "sha": "84320fd8984b95cab430335cd341d8314c14bbcb"
+      }
+    },
+    {
+      "id": "dropbox@knowledge-work-plugins",
+      "name": "dropbox",
+      "aka": [],
+      "title": "dropbox",
+      "install": "dropbox@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Dropbox",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "owner.admin"
+      ],
+      "requires": [
+        "dropbox"
+      ],
+      "services": [
+        "dropbox"
+      ],
+      "skills": 6,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Dropbox-ის ფაილების ძიება და მოწესრიგება, შექმნილი შინაარსის შენახვა და გასაზიარებელი ბმულების შექმნა. მუშაობს მხოლოდ იმ ფაილებთან, რომლებზეც უკვე გაქვს წვდომა.",
+        "en": "Searching and organising Dropbox files, saving generated content and creating sharing links. It works only with files you already have access to."
+      },
+      "source": {
+        "repo": "dropbox/dropbox-ai-plugins",
+        "path": "claude",
+        "sha": "078f0ca36df40f054829b58731a5f86a561d9668"
+      }
+    },
+    {
+      "id": "intuit-quickbooks@knowledge-work-plugins",
+      "name": "intuit-quickbooks",
+      "aka": [],
+      "title": "intuit-quickbooks",
+      "install": "intuit-quickbooks@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Intuit",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "finance.books",
+        "finance.reports",
+        "owner.money"
+      ],
+      "requires": [
+        "quickbooks"
+      ],
+      "services": [
+        "quickbooks"
+      ],
+      "skills": 10,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "QuickBooks-ის მონაცემებით ფინანსური მდგომარეობის მიმოხილვა, ვადაგადაცილებული ინვოისების შეხსენება და ინვოისის მონახაზი წერილიდან.",
+        "en": "A financial-health brief from QuickBooks data, overdue-invoice reminders and invoice drafts from email."
+      },
+      "source": {
+        "repo": "intuit/quickbooks-claude-plugin",
+        "path": "",
+        "sha": "c8daa17a64d4d0fdeabdf0516524f72549b6ad19"
+      }
+    },
+    {
+      "id": "airwallex-agentos@knowledge-work-plugins",
+      "name": "airwallex-agentos",
+      "aka": [],
+      "title": "airwallex-agentos",
+      "install": "airwallex-agentos@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Airwallex",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "finance.payments",
+        "owner.money"
+      ],
+      "requires": [
+        "airwallex"
+      ],
+      "services": [
+        "airwallex"
+      ],
+      "skills": 5,
+      "connectors": 2,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Airwallex-ის ანგარიშის მართვა ჩვეულებრივი ენით: ინვოისის აწყობა შეკვეთიდან, მომწოდებლის დამატება და ნაშთების ნახვა ვალუტების მიხედვით.",
+        "en": "Running an Airwallex account in plain language: invoices from a purchase order, onboarding suppliers and cash position by currency."
+      },
+      "source": {
+        "repo": "airwallex/airwallex-marketplace",
+        "path": "plugins/airwallex-agentos",
+        "sha": "877551077786664d1cbeb32013443291c66e69e6"
+      }
+    },
+    {
+      "id": "amazon-selling-partner@knowledge-work-plugins",
+      "name": "amazon-selling-partner",
+      "aka": [],
+      "title": "amazon-selling-partner",
+      "install": "amazon-selling-partner@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Amazon",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "owner.customers"
+      ],
+      "requires": [
+        "amazon-seller"
+      ],
+      "services": [
+        "amazon-seller"
+      ],
+      "skills": 11,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Amazon Seller Central-ის ანგარიში Claude-ში: გაყიდვები, მარაგი და განცხადებების შედეგები. ყოველ ცვლილებას გაშვებამდე შენ ადასტურებ.",
+        "en": "Your Amazon Seller Central account in Claude: sales, inventory and listing performance. You approve every change before it runs."
+      },
+      "source": {
+        "repo": "amzn/selling-partner-agentic-toolkit",
+        "path": "",
+        "sha": "10573bac239b7062a476667eaa574d400335c70e"
+      }
+    },
+    {
+      "id": "postiz@knowledge-work-plugins",
+      "name": "postiz",
+      "aka": [],
+      "title": "postiz",
+      "install": "postiz@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Postiz",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.content",
+        "owner.marketing"
+      ],
+      "requires": [
+        "postiz"
+      ],
+      "services": [
+        "postiz"
+      ],
+      "skills": 1,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-code"
+      ],
+      "what": {
+        "ka": "სოციალური ქსელების პოსტების დაგეგმვა და ანალიტიკა Postiz-ის ბრძანებების ხაზიდან.",
+        "en": "Scheduling social posts and reading analytics through Postiz's command-line tool."
+      },
+      "source": {
+        "repo": "gitroomhq/postiz-agent",
+        "path": "",
+        "sha": "86e02524377cc60a6cd6ef67fd10a3caeade8d2c"
+      }
+    },
+    {
+      "id": "brand-voice@knowledge-work-plugins",
+      "name": "brand-voice",
+      "aka": [],
+      "title": "brand-voice",
+      "install": "brand-voice@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Tribe AI",
+      "tier": "third-party",
+      "kind": "role",
+      "tasks": [
+        "marketing.content"
+      ],
+      "requires": [],
+      "services": [
+        "notion",
+        "atlassian",
+        "box",
+        "figma",
+        "gong",
+        "granola"
+      ],
+      "skills": 3,
+      "connectors": 6,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "agents"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ბრენდის ხმის ამოცნობა არსებული დოკუმენტებიდან, წესების შედგენა და ახალი ტექსტის შემოწმება ამ წესებთან.",
+        "en": "Finding your brand voice in existing documents, writing guidelines and checking new copy against them."
+      },
+      "source": {
+        "repo": "anthropics/knowledge-work-plugins",
+        "path": "partner-built/brand-voice",
+        "sha": "b4c9a4e1de4b42868b74a6fe30ac766f64e43a3e"
+      }
+    },
+    {
+      "id": "searchfit-seo@knowledge-work-plugins",
+      "name": "searchfit-seo",
+      "aka": [],
+      "title": "searchfit-seo",
+      "install": "searchfit-seo@knowledge-work-plugins",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "SearchFit",
+      "tier": "third-party",
+      "kind": "role",
+      "tasks": [
+        "marketing.analytics"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 11,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "agents"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "SEO-ს ხელსაწყოები: საიტის აუდიტი, კონტენტის გეგმა, გვერდის გაუმჯობესება და საკვანძო სიტყვების დაჯგუფება.",
+        "en": "SEO tools: a site audit, a content plan, page optimisation and keyword clustering."
+      },
+      "source": {
+        "repo": "searchfit/searchfit-seo",
+        "path": "",
+        "sha": "c324a2e87c4dd84fe6bd6d55e45272acdd090afd"
+      }
+    },
+    {
+      "id": "data-analytics@openai-curated",
+      "name": "data-analytics",
+      "aka": [],
+      "title": "Data Analytics",
+      "install": "data-analytics@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "finance.reports",
+        "marketing.analytics"
+      ],
+      "requires": [],
+      "services": [
+        "slack",
+        "microsoft-365",
+        "notion",
+        "gmail",
+        "google-calendar",
+        "google-drive",
+        "databricks",
+        "bigquery",
+        "snowflake",
+        "github",
+        "statsig",
+        "chatgpt-sites",
+        "hex",
+        "deepnote",
+        "amplitude",
+        "mixpanel",
+        "posthog",
+        "omni-analytics",
+        "metabase",
+        "thoughtspot"
+      ],
+      "skills": 15,
+      "connectors": 20,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "local"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "მონაცემებით პასუხი ბიზნესის კითხვებზე: რატომ შეიცვალა მაჩვენებელი, რამდენად სანდოა მონაცემები, რა KPI-ები გჭირდება; შედეგი ანგარიშის, გრაფიკის ან დეშბორდის სახით. მუშაობს ატვირთულ ფაილებთან ან დაკავშირებულ მონაცემთა წყაროებთან.",
+        "en": "Answers to business questions from data: why a metric moved, whether the data can be trusted, which KPIs to track; the result comes as a report, a chart or a dashboard. It works with files you upload or with connected data sources."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/data-analytics",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "creative-production@openai-curated",
+      "name": "creative-production",
+      "aka": [],
+      "title": "Creative Production",
+      "install": "creative-production@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "marketing.design",
+        "marketing.campaigns"
+      ],
+      "requires": [],
+      "services": [],
+      "skills": 2,
+      "connectors": 0,
+      "worksWith": false,
+      "access": [
+        "local"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "მარკეტინგის ვიზუალები ბრიფიდან ან პროდუქტის ფოტოდან: კამპანიის იდეები, რეკლამის ვარიანტები, სოციალური ქსელის პოსტები. ვარიანტებს ერთ დაფაზე გაჩვენებს და არჩეულს არხებს მოარგებს.",
+        "en": "Marketing visuals from a brief or a product photo: campaign ideas, ad directions, social posts. It shows the options on one board and adapts the one you pick to your channels."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/creative-production",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "sales@openai-curated-remote",
+      "name": "sales",
+      "aka": [],
+      "title": "Sales",
+      "install": "sales@openai-curated-remote",
+      "marketplace": "openai-curated-remote",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "sales.meetings",
+        "sales.pipeline"
+      ],
+      "requires": [],
+      "services": [
+        "google-calendar",
+        "microsoft-365",
+        "hubspot",
+        "close",
+        "attio",
+        "zoho-crm",
+        "salesforce",
+        "docusign",
+        "ironclad",
+        "pandadoc",
+        "gmail",
+        "outreach",
+        "salesloft",
+        "slack",
+        "notion",
+        "google-drive",
+        "seismic",
+        "highspot",
+        "figma",
+        "canva",
+        "gamma",
+        "atlassian",
+        "zoom",
+        "zoom-revenue-accelerator",
+        "granola",
+        "fireflies",
+        "otter-ai",
+        "gong",
+        "zoominfo",
+        "hg-insights",
+        "rox",
+        "apollo",
+        "actively",
+        "meticulate",
+        "common-room",
+        "backstory",
+        "calendly",
+        "monday"
+      ],
+      "skills": null,
+      "connectors": 38,
+      "worksWith": true,
+      "access": [],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "გაყიდვების ყოველდღიური საქმე: შეხვედრისთვის მომზადება და შემდგომი ნაბიჯები, პროგნოზი, კლიენტის ანგარიშის მომზადება. ყველაზე მეტს მაშინ აკეთებს, როცა შენი CRM-ის პლაგინიც დაყენებული გაქვს; ფოსტის, კალენდრის, გუნდის ჩატისა და შეხვედრების ჩანაწერების პლაგინები მას ავსებს.",
+        "en": "Everyday sales work: preparing for a meeting and following up, forecasting, getting an account ready. It does most when your CRM's plugin is installed too; plugins for email, calendar, team chat and meeting transcripts add to it."
+      },
+      "source": {
+        "directory": "openai-curated-remote",
+        "seen": "2026-11-19"
+      }
+    },
+    {
+      "id": "gmail@openai-curated",
+      "name": "gmail",
+      "aka": [],
+      "title": "Gmail",
+      "install": "gmail@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "gmail"
+      ],
+      "services": [
+        "gmail"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Gmail-ის წერილების წაკითხვა და შეჯამება, პასუხების მონახაზი და წერილების დალაგება.",
+        "en": "Reading and summarising Gmail, drafting replies and sorting mail."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/gmail",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "google-calendar@openai-curated",
+      "name": "google-calendar",
+      "aka": [],
+      "title": "Google Calendar",
+      "install": "google-calendar@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "google-calendar"
+      ],
+      "services": [
+        "google-calendar"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Google Calendar: დღის შეჯამება, თავისუფალი დროის ნახვა, შეხვედრის შექმნა, შეცვლა და წაშლა.",
+        "en": "Google Calendar: a summary of the day, checking availability, and creating, changing or deleting events."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/google-calendar",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "google-drive@openai-curated",
+      "name": "google-drive",
+      "aka": [],
+      "title": "Google Drive",
+      "install": "google-drive@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "owner.admin"
+      ],
+      "requires": [
+        "google-drive"
+      ],
+      "services": [
+        "google-drive"
+      ],
+      "skills": 5,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Google Drive-ში ფაილების ძიება, დალაგება და გაზიარება, და მუშაობა Docs-ის, Sheets-ისა და Slides-ის ფაილებზე.",
+        "en": "Searching, organising and sharing files in Google Drive, and working on Docs, Sheets and Slides files."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/google-drive",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "outlook-email@openai-curated",
+      "name": "outlook-email",
+      "aka": [],
+      "title": "Outlook Email",
+      "install": "outlook-email@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "microsoft-365"
+      ],
+      "services": [
+        "microsoft-365"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Outlook-ის ფოსტა: შემოსული წერილების გადარჩევა, მიმოწერის შეჯამება და პასუხების მონახაზი.",
+        "en": "Outlook mail: triaging the inbox, summarising threads and drafting replies."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/outlook-email",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "outlook-calendar@openai-curated",
+      "name": "outlook-calendar",
+      "aka": [],
+      "title": "Outlook Calendar",
+      "install": "outlook-calendar@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "microsoft-365"
+      ],
+      "services": [
+        "microsoft-365"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Outlook-ის კალენდარი: დღის შეჯამება, თავისუფალი დროის შედარება, შეხვედრის დანიშვნა, გადატანა და გაუქმება.",
+        "en": "Outlook calendar: a summary of the day, comparing availability, and scheduling, moving or cancelling meetings."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/outlook-calendar",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "teams@openai-curated",
+      "name": "teams",
+      "aka": [],
+      "title": "Teams",
+      "install": "teams@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "microsoft-365"
+      ],
+      "services": [
+        "microsoft-365"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Microsoft Teams: ჩატების შეჯამება, დავალებების ამოკრება და არხისთვის ან შეხვედრის შემდეგ გასაგზავნი ტექსტის მონახაზი.",
+        "en": "Microsoft Teams: summarising chats, pulling out action items and drafting channel or meeting follow-ups."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/teams",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "sharepoint@openai-curated",
+      "name": "sharepoint",
+      "aka": [],
+      "title": "SharePoint",
+      "install": "sharepoint@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.find"
+      ],
+      "requires": [
+        "microsoft-365"
+      ],
+      "services": [
+        "microsoft-365"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "SharePoint: საიტების, გვერდებისა და ფაილების შეჯამება და შიგთავსის განახლების დაგეგმვა.",
+        "en": "SharePoint: summarising sites, pages and files, and planning updates to their content."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/sharepoint",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "slack@openai-curated",
+      "name": "slack",
+      "aka": [],
+      "title": "Slack",
+      "install": "slack@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Slack",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "slack"
+      ],
+      "services": [
+        "slack"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Slack: არხების შეჯამება, შეტყობინებების მონახაზი და გუნდის მიმოწერის დალაგება.",
+        "en": "Slack: summarising channels, drafting messages and organising team conversations."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/slack",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "canva@openai-curated",
+      "name": "canva",
+      "aka": [],
+      "title": "Canva",
+      "install": "canva@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Canva Pty Ltd.",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.design",
+        "owner.marketing"
+      ],
+      "requires": [
+        "canva"
+      ],
+      "services": [
+        "canva"
+      ],
+      "skills": 8,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Canva-ს დიზაინების შექმნა და რედაქტირება, ზომის მორგება სოციალური ქსელებისთვის, ბრენდთან შესაბამისობის შემოწმება და თარგმნა.",
+        "en": "Creating and editing Canva designs, resizing them for social media, checking them against the brand and translating them."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/canva",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "adobe@openai-curated",
+      "name": "adobe",
+      "aka": [
+        "app-69312da8e4dc81919370cb86fd172b6c"
+      ],
+      "title": "Adobe",
+      "install": "app-69312da8e4dc81919370cb86fd172b6c@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Adobe Inc",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.design"
+      ],
+      "requires": [
+        "adobe"
+      ],
+      "services": [
+        "adobe"
+      ],
+      "skills": 6,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Adobe: ფოტოების რედაქტირება და რეტუში, მაკეტები, სოციალური ქსელის ვარიანტები და დიზაინი შაბლონიდან.",
+        "en": "Adobe: editing and retouching photos, mockups, social variations and designs from a template."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/adobe",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "notion@openai-curated",
+      "name": "notion",
+      "aka": [],
+      "title": "Notion",
+      "install": "notion@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Notion",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "people.process"
+      ],
+      "requires": [
+        "notion"
+      ],
+      "services": [
+        "notion"
+      ],
+      "skills": 4,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Notion: შეხვედრისთვის მასალის მომზადება, კვლევის დოკუმენტად ქცევა და გადაწყვეტილებების ჩაწერა ცოდნის გვერდებად.",
+        "en": "Notion: preparing meeting material, turning research into documents and capturing decisions as knowledge pages."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/notion",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "atlassian-rovo@openai-curated",
+      "name": "atlassian-rovo",
+      "aka": [],
+      "title": "Atlassian Rovo",
+      "install": "atlassian-rovo@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Atlassian",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process"
+      ],
+      "requires": [
+        "atlassian"
+      ],
+      "services": [
+        "atlassian"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Jira-სა და Confluence-ის მართვა საუბრით: ამოცანები, გვერდები და ძიება.",
+        "en": "Managing Jira and Confluence by conversation: issues, pages and search."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/atlassian-rovo",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "linear@openai-curated",
+      "name": "linear",
+      "aka": [],
+      "title": "Linear",
+      "install": "linear@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Linear Orbit, Inc",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "linear"
+      ],
+      "services": [
+        "linear"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Linear-ის ამოცანების, პროექტებისა და გუნდის სამუშაო პროცესის მართვა.",
+        "en": "Managing Linear issues, projects and team workflows."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/linear",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "monday-com@openai-curated",
+      "name": "monday-com",
+      "aka": [],
+      "title": "monday.com",
+      "install": "monday-com@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "monday.com",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.day",
+        "people.process"
+      ],
+      "requires": [
+        "monday"
+      ],
+      "services": [
+        "monday"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "monday.com-ის დაფებში ძიება, ჩანაწერების შექმნა და განახლება, პასუხისმგებლისა და ვადის მინიჭება.",
+        "en": "Searching monday.com boards, creating and updating items, assigning owners and timelines."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/monday-com",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "clickup@openai-curated",
+      "name": "clickup",
+      "aka": [],
+      "title": "ClickUp",
+      "install": "clickup@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "ClickUp",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.day",
+        "people.process"
+      ],
+      "requires": [
+        "clickup"
+      ],
+      "services": [
+        "clickup"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "ClickUp: ძიება მთელ სამუშაო სივრცეში და ამოცანების შექმნა და განახლება.",
+        "en": "ClickUp: searching the whole workspace, and creating and updating tasks."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/clickup",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "airtable@openai-curated",
+      "name": "airtable",
+      "aka": [],
+      "title": "Airtable",
+      "install": "airtable@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Airtable",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process",
+        "owner.admin"
+      ],
+      "requires": [
+        "airtable"
+      ],
+      "services": [
+        "airtable"
+      ],
+      "skills": 3,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Airtable-ის ბაზებზე კითხვების დასმა, ჩანაწერების შექმნა და განახლება და მონაცემების ანალიზი.",
+        "en": "Asking questions of Airtable bases, creating and updating records, and analysing the data."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/airtable",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "dropbox@openai-curated",
+      "name": "dropbox",
+      "aka": [
+        "app-69b31dc2110c8191b8b47dc98fe5a052"
+      ],
+      "title": "Dropbox",
+      "install": "app-69b31dc2110c8191b8b47dc98fe5a052@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Dropbox",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "owner.admin"
+      ],
+      "requires": [
+        "dropbox"
+      ],
+      "services": [
+        "dropbox"
+      ],
+      "skills": 6,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Dropbox-ის ფაილების ძიება, დათვალიერება, დალაგება და გაზიარება, და ფაილების შეგროვება სხვებისგან.",
+        "en": "Finding, inspecting, organising and sharing Dropbox files, and collecting files from other people."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/dropbox",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "granola@openai-curated",
+      "name": "granola",
+      "aka": [],
+      "title": "Granola",
+      "install": "granola@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Granola",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.meetings"
+      ],
+      "requires": [
+        "granola"
+      ],
+      "services": [
+        "granola"
+      ],
+      "skills": 0,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Granola-ს შეხვედრების ჩანაწერები: წინა საუბრების კონტექსტი, როცა წინადადებას ან შემდგომ წერილს წერ.",
+        "en": "Granola meeting notes: context from past conversations while you write a proposal or a follow-up."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/granola",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "zoom@openai-curated",
+      "name": "zoom",
+      "aka": [],
+      "title": "Zoom",
+      "install": "zoom@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Zoom",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "zoom"
+      ],
+      "services": [
+        "zoom"
+      ],
+      "skills": 27,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Zoom-ის შეხვედრების მონაცემები, რომ საუბარში გამოიყენო. სკილების უმეტესობა დეველოპერებისთვისაა: Zoom-თან ინტეგრაციის დაგეგმვა და აწყობა.",
+        "en": "Data from your Zoom meetings, to use in a conversation. Most of its skills are for developers: planning and building Zoom integrations."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/zoom",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    },
+    {
+      "id": "shopify@openai-curated",
+      "name": "shopify",
+      "aka": [],
+      "title": "Shopify",
+      "install": "shopify@openai-curated-remote",
+      "marketplace": "openai-curated",
+      "publisher": "Shopify",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "owner.customers"
+      ],
+      "requires": [
+        "shopify"
+      ],
+      "services": [
+        "shopify"
+      ],
+      "skills": 20,
+      "connectors": 1,
+      "worksWith": false,
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Shopify-ის მაღაზიის მართვა საუბრით: პროდუქტები, მარაგი, ფასდაკლების კოდები, შეკვეთები და ანალიტიკა. სკილების დიდი ნაწილი დეველოპერებისთვისაა.",
+        "en": "Running a Shopify store by conversation: products, inventory, discount codes, orders and analytics. A large part of its skills is for developers."
+      },
+      "source": {
+        "repo": "openai/plugins",
+        "path": "plugins/shopify",
+        "sha": "981b02c0c44058b595f3b4180002c3ae3c806d40"
+      }
+    }
+  ],
+  "georgianTools": [
+    {
+      "id": "nbg-rates-mcp",
+      "name": "nbg-rates-mcp",
+      "url": "https://github.com/akalongman/nbg-rates-mcp",
+      "status": "listed",
+      "reviewed": null,
+      "money": false,
+      "tasks": [
+        "finance.books",
+        "finance.reports",
+        "finance.payments",
+        "owner.money"
+      ],
+      "what": {
+        "ka": "ავტორის აღწერით: ეროვნული ბანკის ლარის გაცვლითი კურსები აგენტისთვის (MCP სერვერი). ეროვნულ ბანკთან კავშირი არ აქვს.",
+        "en": "By its author's description: GEL exchange rates from the National Bank of Georgia for an agent (an MCP server). It is not affiliated with the bank."
+      }
+    },
+    {
+      "id": "rsge-mcp",
+      "name": "rsge-mcp",
+      "url": "https://github.com/dimitri20/rsge-mcp",
+      "status": "listed",
+      "reviewed": null,
+      "money": true,
+      "tasks": [
+        "finance.tax",
+        "owner.money"
+      ],
+      "what": {
+        "ka": "ავტორის აღწერით: შემოსავლების სამსახურის (rs.ge) MCP სერვერი 147 ხელსაწყოთი, ნაგულისხმევად მხოლოდ კითხვისთვის.",
+        "en": "By its author's description: an MCP server for the Revenue Service (rs.ge) with 147 tools, read-only by default."
+      }
+    },
+    {
+      "id": "claude-rs-ge-waybill-skill",
+      "name": "claude-rs-ge-waybill-skill",
+      "url": "https://github.com/sepivip/claude-rs-ge-waybill-skill",
+      "status": "listed",
+      "reviewed": null,
+      "money": true,
+      "tasks": [
+        "finance.tax",
+        "owner.money"
+      ],
+      "what": {
+        "ka": "სახელის მიხედვით: სკილი rs.ge-ის ზედნადებებისთვის. რეპოს არც აღწერა აქვს და არც ლიცენზია.",
+        "en": "By its name: a skill for rs.ge waybills. The repository has neither a description nor a license."
+      }
+    },
+    {
+      "id": "bog-business-mcp",
+      "name": "bog-business-mcp",
+      "url": "https://github.com/rgurov/bog-business-mcp",
+      "status": "listed",
+      "reviewed": null,
+      "money": true,
+      "tasks": [
+        "finance.payments",
+        "owner.money"
+      ],
+      "what": {
+        "ka": "ავტორის აღწერით: საქართველოს ბანკის ბიზნეს ონლაინის MCP სერვერი მხოლოდ კითხვისთვის: ანგარიშები, ნაშთები, ბოლო ტრანზაქციები.",
+        "en": "By its author's description: a read-only MCP server for Bank of Georgia Business Online: accounts, balances, recent transactions."
+      }
+    },
+    {
+      "id": "ordo-mcp",
+      "name": "ordo-mcp",
+      "url": "https://github.com/sitechfromgeorgia/ordo-mcp",
+      "status": "listed",
+      "reviewed": null,
+      "money": false,
+      "tasks": [
+        "legal.research",
+        "legal.compliance"
+      ],
+      "what": {
+        "ka": "ავტორის აღწერით: ქართული სამართლის მოძიების MCP სერვერი: კანონმდებლობა, სასამართლოები, რეესტრები, ვადები და ბაჟები.",
+        "en": "By its author's description: an MCP server for Georgian legal research: legislation, courts, registries, deadlines and fees."
+      }
+    },
+    {
+      "id": "georgia-mcp",
+      "name": "georgia-mcp",
+      "url": "https://github.com/ABGEO/georgia-mcp",
+      "status": "listed",
+      "reviewed": null,
+      "money": false,
+      "tasks": [
+        "legal.research",
+        "owner.admin",
+        "people.process"
+      ],
+      "what": {
+        "ka": "ავტორის აღწერით: MCP სერვერი საქართველოს საჯარო სერვისების მონაცემებისთვის. ლიცენზია GPL-3.0.",
+        "en": "By its author's description: an MCP server for data from Georgian public services. Its license is GPL-3.0."
+      }
+    },
+    {
+      "id": "georgian-grammar-codex-skill",
+      "name": "georgian-grammar-codex-skill",
+      "url": "https://github.com/levan-ildani/georgian-grammar-codex-skill",
+      "status": "listed",
+      "reviewed": null,
+      "money": false,
+      "tasks": [
+        "marketing.content"
+      ],
+      "what": {
+        "ka": "ავტორის აღწერით: ქართული გრამატიკის, პუნქტუაციის, თარგმანისა და ტექსტის შემოწმების სკილი, დაწერილი Codex-ისთვის.",
+        "en": "By its author's description: a skill for Georgian grammar, punctuation, translation and writing checks, written for Codex."
+      }
+    }
+  ]
+}

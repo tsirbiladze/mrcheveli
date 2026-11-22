@@ -1,0 +1,88 @@
+{
+  "tools": [
+    {
+      "id": "nbg-rates-mcp",
+      "name": "nbg-rates-mcp",
+      "url": "https://github.com/akalongman/nbg-rates-mcp",
+      "status": "listed",
+      "money": false,
+      "tasks": ["finance.books", "finance.reports", "finance.payments", "owner.money"],
+      "what": {
+        "ka": "ავტორის აღწერით: ეროვნული ბანკის ლარის გაცვლითი კურსები აგენტისთვის (MCP სერვერი). ეროვნულ ბანკთან კავშირი არ აქვს.",
+        "en": "By its author's description: GEL exchange rates from the National Bank of Georgia for an agent (an MCP server). It is not affiliated with the bank."
+      }
+    },
+    {
+      "id": "rsge-mcp",
+      "name": "rsge-mcp",
+      "url": "https://github.com/dimitri20/rsge-mcp",
+      "status": "listed",
+      "money": true,
+      "tasks": ["finance.tax", "owner.money"],
+      "what": {
+        "ka": "ავტორის აღწერით: შემოსავლების სამსახურის (rs.ge) MCP სერვერი 147 ხელსაწყოთი, ნაგულისხმევად მხოლოდ კითხვისთვის.",
+        "en": "By its author's description: an MCP server for the Revenue Service (rs.ge) with 147 tools, read-only by default."
+      }
+    },
+    {
+      "id": "claude-rs-ge-waybill-skill",
+      "name": "claude-rs-ge-waybill-skill",
+      "url": "https://github.com/sepivip/claude-rs-ge-waybill-skill",
+      "status": "listed",
+      "money": true,
+      "tasks": ["finance.tax", "owner.money"],
+      "what": {
+        "ka": "სახელის მიხედვით: სკილი rs.ge-ის ზედნადებებისთვის. რეპოს არც აღწერა აქვს და არც ლიცენზია.",
+        "en": "By its name: a skill for rs.ge waybills. The repository has neither a description nor a license."
+      }
+    },
+    {
+      "id": "bog-business-mcp",
+      "name": "bog-business-mcp",
+      "url": "https://github.com/rgurov/bog-business-mcp",
+      "status": "listed",
+      "money": true,
+      "tasks": ["finance.payments", "owner.money"],
+      "what": {
+        "ka": "ავტორის აღწერით: საქართველოს ბანკის ბიზნეს ონლაინის MCP სერვერი მხოლოდ კითხვისთვის: ანგარიშები, ნაშთები, ბოლო ტრანზაქციები.",
+        "en": "By its author's description: a read-only MCP server for Bank of Georgia Business Online: accounts, balances, recent transactions."
+      }
+    },
+    {
+      "id": "ordo-mcp",
+      "name": "ordo-mcp",
+      "url": "https://github.com/sitechfromgeorgia/ordo-mcp",
+      "status": "listed",
+      "money": false,
+      "tasks": ["legal.research", "legal.compliance"],
+      "what": {
+        "ka": "ავტორის აღწერით: ქართული სამართლის მოძიების MCP სერვერი: კანონმდებლობა, სასამართლოები, რეესტრები, ვადები და ბაჟები.",
+        "en": "By its author's description: an MCP server for Georgian legal research: legislation, courts, registries, deadlines and fees."
+      }
+    },
+    {
+      "id": "georgia-mcp",
+      "name": "georgia-mcp",
+      "url": "https://github.com/ABGEO/georgia-mcp",
+      "status": "listed",
+      "money": false,
+      "tasks": ["legal.research", "owner.admin", "people.process"],
+      "what": {
+        "ka": "ავტორის აღწერით: MCP სერვერი საქართველოს საჯარო სერვისების მონაცემებისთვის. ლიცენზია GPL-3.0.",
+        "en": "By its author's description: an MCP server for data from Georgian public services. Its license is GPL-3.0."
+      }
+    },
+    {
+      "id": "georgian-grammar-codex-skill",
+      "name": "georgian-grammar-codex-skill",
+      "url": "https://github.com/levan-ildani/georgian-grammar-codex-skill",
+      "status": "listed",
+      "money": false,
+      "tasks": ["marketing.content"],
+      "what": {
+        "ka": "ავტორის აღწერით: ქართული გრამატიკის, პუნქტუაციის, თარგმანისა და ტექსტის შემოწმების სკილი, დაწერილი Codex-ისთვის.",
+        "en": "By its author's description: a skill for Georgian grammar, punctuation, translation and writing checks, written for Codex."
+      }
+    }
+  ]
+}

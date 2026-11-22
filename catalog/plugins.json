@@ -1,0 +1,1608 @@
+{
+  "plugins": [
+    {
+      "id": "sales@knowledge-work-plugins",
+      "name": "sales",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "sales.research",
+        "sales.meetings",
+        "sales.pipeline",
+        "sales.proposals"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "გაყიდვების მთელი დღე: ზარისთვის მომზადება, შეჯამება და შემდგომი წერილი, კომპანიის მოკვლევა, გარიგებებისა და პროგნოზის მიმოხილვა, კლიენტისთვის ერთგვერდიანი მასალა. მუშაობს შენს CRM-თან, ფოსტასთან და კალენდართან, ან ატვირთულ ფაილებთან.",
+        "en": "The whole sales day: call prep, summaries and follow-ups, account research, deal and forecast reviews, a one-pager for the customer. It works with your CRM, email and calendar, or with files you upload."
+      }
+    },
+    {
+      "id": "finance@knowledge-work-plugins",
+      "name": "finance",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "finance.books",
+        "finance.reports"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ბუღალტრული გატარებები, შეჯერება, ფინანსური ანგარიშგება, გადახრების ანალიზი, თვის დახურვა და აუდიტისთვის მომზადება. აშშ-ის პრაქტიკაზეა აგებული (მაგალითად SOX), საქართველოს საგადასახადო წესებს არ იცნობს.",
+        "en": "Journal entries, reconciliation, financial statements, variance analysis, month-end close and audit prep. It is built on US practice (SOX, for one) and does not know Georgian tax rules."
+      }
+    },
+    {
+      "id": "legal@knowledge-work-plugins",
+      "name": "legal",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "legal.contracts",
+        "legal.compliance",
+        "legal.signing"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ხელშეკრულების შემოწმება, NDA-ების დახარისხება, რისკის შეფასება, მომწოდებლის შემოწმება და ხელმოწერაზე გაგზავნა. კომპანიის შიდა იურისტისთვისაა; ქართულ კანონმდებლობას თვითონ არ შეიცავს.",
+        "en": "Contract review, NDA triage, risk assessment, vendor checks and sending for signature. It is made for in-house counsel; it does not hold Georgian legislation itself."
+      }
+    },
+    {
+      "id": "marketing@knowledge-work-plugins",
+      "name": "marketing",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "marketing.content",
+        "marketing.campaigns",
+        "marketing.analytics"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ტექსტების წერა, წერილების სერია, კამპანიის გეგმა, ბრენდის ხმის შემოწმება, კონკურენტების მიმოხილვა, შედეგების ანგარიში და SEO აუდიტი.",
+        "en": "Writing copy, email sequences, campaign plans, brand-voice reviews, competitor briefs, performance reports and SEO audits."
+      }
+    },
+    {
+      "id": "small-business@knowledge-work-plugins",
+      "name": "small-business",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "owner.money",
+        "owner.customers",
+        "owner.marketing",
+        "owner.admin"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "მცირე ბიზნესის ყოველდღიური საქმეები ერთ პლაგინში: ინვოისების გამოდევნება, გადასახდელი ანგარიშები, თვის დახურვა, ლიდების მოძიება, სოციალური ქსელების კონტენტი, განცხადება ვაკანსიაზე. ყოველ ნაბიჯს, რომელიც ფულს ან კლიენტს ეხება, შენ ადასტურებ.",
+        "en": "A small business's daily work in one plugin: chasing invoices, bills to pay, month-end close, finding leads, social content, job posts. You approve every step that touches money or a customer."
+      }
+    },
+    {
+      "id": "customer-support@knowledge-work-plugins",
+      "name": "customer-support",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "support.tickets",
+        "support.knowledge"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "მომართვების დახარისხება, პასუხის მონახაზი, ესკალაცია, კლიენტის კონტექსტის მოძიება და ცოდნის ბაზის სტატია გადაჭრილი საკითხიდან.",
+        "en": "Ticket triage, draft replies, escalations, customer research and a knowledge-base article from a solved issue."
+      }
+    },
+    {
+      "id": "human-resources@knowledge-work-plugins",
+      "name": "human-resources",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "people.hiring"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "დაქირავების პროცესი, გასაუბრებისთვის მომზადება, შეთავაზების წერილი, ახალი თანამშრომლის შემოყვანა, შეფასებები და ანაზღაურების ანალიზი.",
+        "en": "The hiring pipeline, interview prep, offer letters, onboarding, performance reviews and compensation analysis."
+      }
+    },
+    {
+      "id": "operations@knowledge-work-plugins",
+      "name": "operations",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "people.process"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "პროცესის აღწერა და გაუმჯობესება, მომწოდებლის შეფასება, ცვლილების მოთხოვნა, სიმძლავრის დაგეგმვა, რისკების შეფასება და სტატუსის ანგარიში.",
+        "en": "Process documentation and improvement, vendor reviews, change requests, capacity planning, risk assessment and status reports."
+      }
+    },
+    {
+      "id": "productivity@knowledge-work-plugins",
+      "name": "productivity",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ამოცანების სია, დღის გეგმა და სამუშაო მეხსიერება: რა გაქვს დაწყებული, ვის რას დაჰპირდი. ეყრდნობა კალენდარს, ფოსტასა და ჩატს.",
+        "en": "A task list, a plan for the day and a working memory of what you have started and promised. It draws on your calendar, email and chat."
+      }
+    },
+    {
+      "id": "enterprise-search@knowledge-work-plugins",
+      "name": "enterprise-search",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "role",
+      "tasks": [
+        "general.find"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ერთი ძიება ფოსტაში, ჩატში, დოკუმენტებსა და ვიკიში ერთდროულად, და ნაპოვნის შეჯამება წყაროებით.",
+        "en": "One search across email, chat, documents and wikis at once, and a summary of what it found, with sources."
+      }
+    },
+    {
+      "id": "pdf-viewer@knowledge-work-plugins",
+      "name": "pdf-viewer",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Anthropic",
+      "owner": "anthropics",
+      "tier": "anthropic",
+      "kind": "utility",
+      "tasks": [
+        "general.pdf",
+        "legal.signing"
+      ],
+      "requires": [],
+      "access": [],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "PDF-ის ნახვა, მონიშვნა, ფორმის შევსება და ხელმოწერის დასმა ცოცხალ ფანჯარაში, შემდეგ კი მონიშნული ასლის ჩამოტვირთვა.",
+        "en": "View a PDF, mark it up, fill a form and place a signature in a live viewer, then download the annotated copy."
+      }
+    },
+    {
+      "id": "hubspot-sales@knowledge-work-plugins",
+      "name": "hubspot-sales",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "HubSpot",
+      "owner": "HubSpot",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline",
+        "sales.meetings"
+      ],
+      "requires": [
+        "hubspot"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "HubSpot-ის გაყიდვების დღე Claude-იდან: კონტაქტებისა და გარიგებების შეტანა, დილის მიმოხილვა, ზარისთვის მომზადება, შემდგომი წერილი და ჩანაწერების განახლება. ყველაფერი HubSpot-ში იწერება.",
+        "en": "The HubSpot sales day from Claude: importing contacts and deals, a morning brief, call prep, follow-ups and record updates. Everything is written back to HubSpot."
+      }
+    },
+    {
+      "id": "monday-crm@knowledge-work-plugins",
+      "name": "monday-crm",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "monday.com",
+      "owner": "mondaycom",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.pipeline"
+      ],
+      "requires": [
+        "monday"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "monday CRM ჩვეულებრივი ენით: გაყიდვების ძაბრის აწყობა, გარიგებების დილის სია, პროგნოზის დაფა, მონაცემების გასუფთავება და შეხვედრის ჩანაწერებიდან გარიგების განახლება.",
+        "en": "monday CRM in plain language: building a pipeline, a ranked morning deal list, a forecast dashboard, data clean-up and deal updates from meeting notes."
+      }
+    },
+    {
+      "id": "monday-com@knowledge-work-plugins",
+      "name": "monday-com",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "monday.com",
+      "owner": "mondaycom",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.day",
+        "people.process"
+      ],
+      "requires": [
+        "monday"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "monday.com-ის დაფები, ჩანაწერები, დოკუმენტები და ფორმები Claude-იდან, კითხვისა და ჩაწერის სრული უფლებით.",
+        "en": "monday.com boards, items, docs and forms from Claude, with full read and write access."
+      }
+    },
+    {
+      "id": "apollo@knowledge-work-plugins",
+      "name": "apollo",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Apollo.io",
+      "owner": "anthropics",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "apollo"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Apollo.io-ში კონტაქტების მოძიება, ლიდის მონაცემების შევსება და მათი ჩატვირთვა წერილების სერიაში.",
+        "en": "Finding contacts in Apollo.io, enriching a lead and loading leads into an outreach sequence."
+      }
+    },
+    {
+      "id": "zoominfo@knowledge-work-plugins",
+      "name": "zoominfo",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "ZoomInfo",
+      "owner": "Zoominfo",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "zoominfo"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ZoomInfo-ში კომპანიებისა და კონტაქტების ძიება, ლიდის შევსება და მსგავსი კომპანიების პოვნა.",
+        "en": "Searching companies and contacts in ZoomInfo, enriching leads and finding lookalike companies."
+      }
+    },
+    {
+      "id": "lusha@knowledge-work-plugins",
+      "name": "lusha",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Lusha",
+      "owner": "lusha-oss",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "lusha"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Lusha-ს ბაზიდან კონტაქტების მოძიება და დასარეკი სიის აწყობა: ტელეფონის ნომრები და კომპანიის ნიშნები.",
+        "en": "Finding contacts in Lusha's database and building a call list: phone numbers and company signals."
+      }
+    },
+    {
+      "id": "leadfeeder@knowledge-work-plugins",
+      "name": "leadfeeder",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Leadfeeder",
+      "owner": "Leadfeeder",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research"
+      ],
+      "requires": [
+        "leadfeeder"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ვინ შემოვიდა შენს საიტზე: ყოველდღიური მიმოხილვა, კომპანიის მოკვლევა, კონტაქტის პოვნა და წერილის მონახაზი. სჭირდება Leadfeeder-ის ანგარიში.",
+        "en": "Who visited your website: a daily brief, company research, contact discovery and outreach drafts. It needs a Leadfeeder account."
+      }
+    },
+    {
+      "id": "common-room@knowledge-work-plugins",
+      "name": "common-room",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Common Room",
+      "owner": "anthropics",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.research",
+        "sales.meetings"
+      ],
+      "requires": [
+        "common-room"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Common Room-ის მონაცემებით კომპანიისა და კონტაქტის მოკვლევა, ზარისთვის მომზადება და პერსონალური წერილის მონახაზი.",
+        "en": "Account and contact research from Common Room data, call prep and personalised outreach drafts."
+      }
+    },
+    {
+      "id": "slack-by-salesforce@knowledge-work-plugins",
+      "name": "slack-by-salesforce",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Salesforce",
+      "owner": "anthropics",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "slack"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Slack-ში შეტყობინებების ძიება, გაგზავნა და canvas-ების მართვა Claude-იდან.",
+        "en": "Searching and sending Slack messages and managing canvases from Claude."
+      }
+    },
+    {
+      "id": "intercom@knowledge-work-plugins",
+      "name": "intercom",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Intercom",
+      "owner": "intercom",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "support.tickets"
+      ],
+      "requires": [
+        "intercom"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Intercom-ის საუბრების ძიება, მომართვების ტენდენციების ანალიზი და კონტაქტებისა და კომპანიების ნახვა.",
+        "en": "Searching Intercom conversations, analysing support patterns and looking up contacts and companies."
+      }
+    },
+    {
+      "id": "activecampaign@knowledge-work-plugins",
+      "name": "activecampaign",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "ActiveCampaign",
+      "owner": "ActiveCampaign",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.campaigns",
+        "marketing.content"
+      ],
+      "requires": [
+        "activecampaign"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ActiveCampaign-ის კონტაქტები, კამპანიები, ავტომატიზაციები და გარიგებები Claude-იდან.",
+        "en": "ActiveCampaign contacts, campaigns, automations and deals from Claude."
+      }
+    },
+    {
+      "id": "canva@knowledge-work-plugins",
+      "name": "canva",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Canva",
+      "owner": "canva-sdks",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.design",
+        "owner.marketing"
+      ],
+      "requires": [
+        "canva"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Canva-ს დიზაინების შექმნა, რედაქტირება, ზომის შეცვლა და ბრენდთან შესაბამისობის შემოწმება.",
+        "en": "Creating, editing, resizing and brand-checking Canva designs."
+      }
+    },
+    {
+      "id": "adobe-for-creativity@knowledge-work-plugins",
+      "name": "adobe-for-creativity",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Adobe",
+      "owner": "adobe",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.design"
+      ],
+      "requires": [
+        "adobe"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Adobe Creative Cloud-ის ხელსაწყოები სურათებისთვის, ვექტორებისთვის და ვიდეოსთვის: რამდენიმე ფაილის ერთად დამუშავება და სხვადასხვა პლატფორმაზე მორგება.",
+        "en": "Adobe Creative Cloud tools for images, vectors and video: editing several assets at once and adapting them for different platforms."
+      }
+    },
+    {
+      "id": "miro@knowledge-work-plugins",
+      "name": "miro",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Miro",
+      "owner": "miroapp",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process"
+      ],
+      "requires": [
+        "miro"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Miro-ს დაფების წაკითხვა და დიაგრამების შექმნა Claude-იდან.",
+        "en": "Reading Miro boards and creating diagrams from Claude."
+      }
+    },
+    {
+      "id": "zapier@knowledge-work-plugins",
+      "name": "zapier",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Zapier",
+      "owner": "zapier",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process",
+        "owner.admin"
+      ],
+      "requires": [
+        "zapier"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Zapier-ის მოქმედებების მოძებნა, ჩართვა და გაშვება Claude-იდან, იმ აპებში, რომლებიც Zapier-ში გაქვს დაკავშირებული.",
+        "en": "Finding, enabling and running Zapier actions from Claude, in the apps you have connected in Zapier."
+      }
+    },
+    {
+      "id": "airtable@knowledge-work-plugins",
+      "name": "airtable",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Airtable",
+      "owner": "Airtable",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process",
+        "owner.admin"
+      ],
+      "requires": [
+        "airtable"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Airtable-ის ბაზებთან მუშაობა Claude-იდან: ჩანაწერების ნახვა, დამატება და შეცვლა.",
+        "en": "Working with Airtable bases from Claude: reading, adding and changing records."
+      }
+    },
+    {
+      "id": "box@knowledge-work-plugins",
+      "name": "box",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Box",
+      "owner": "box",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "owner.admin"
+      ],
+      "requires": [
+        "box"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Box-ის ფაილების ძიება, საქაღალდეების მოწესრიგება და დოკუმენტების შეჯამება Box AI-ით.",
+        "en": "Searching Box files, organising folders and summarising documents with Box AI."
+      }
+    },
+    {
+      "id": "dropbox@knowledge-work-plugins",
+      "name": "dropbox",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Dropbox",
+      "owner": "dropbox",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "owner.admin"
+      ],
+      "requires": [
+        "dropbox"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Dropbox-ის ფაილების ძიება და მოწესრიგება, შექმნილი შინაარსის შენახვა და გასაზიარებელი ბმულების შექმნა. მუშაობს მხოლოდ იმ ფაილებთან, რომლებზეც უკვე გაქვს წვდომა.",
+        "en": "Searching and organising Dropbox files, saving generated content and creating sharing links. It works only with files you already have access to."
+      }
+    },
+    {
+      "id": "intuit-quickbooks@knowledge-work-plugins",
+      "name": "intuit-quickbooks",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Intuit",
+      "owner": "intuit",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "finance.books",
+        "finance.reports",
+        "owner.money"
+      ],
+      "requires": [
+        "quickbooks"
+      ],
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "QuickBooks-ის მონაცემებით ფინანსური მდგომარეობის მიმოხილვა, ვადაგადაცილებული ინვოისების შეხსენება და ინვოისის მონახაზი წერილიდან.",
+        "en": "A financial-health brief from QuickBooks data, overdue-invoice reminders and invoice drafts from email."
+      }
+    },
+    {
+      "id": "airwallex-agentos@knowledge-work-plugins",
+      "name": "airwallex-agentos",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Airwallex",
+      "owner": "airwallex",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "finance.payments",
+        "owner.money"
+      ],
+      "requires": [
+        "airwallex"
+      ],
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Airwallex-ის ანგარიშის მართვა ჩვეულებრივი ენით: ინვოისის აწყობა შეკვეთიდან, მომწოდებლის დამატება და ნაშთების ნახვა ვალუტების მიხედვით.",
+        "en": "Running an Airwallex account in plain language: invoices from a purchase order, onboarding suppliers and cash position by currency."
+      }
+    },
+    {
+      "id": "amazon-selling-partner@knowledge-work-plugins",
+      "name": "amazon-selling-partner",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Amazon",
+      "owner": "amzn",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "owner.customers"
+      ],
+      "requires": [
+        "amazon-seller"
+      ],
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "Amazon Seller Central-ის ანგარიში Claude-ში: გაყიდვები, მარაგი და განცხადებების შედეგები. ყოველ ცვლილებას გაშვებამდე შენ ადასტურებ.",
+        "en": "Your Amazon Seller Central account in Claude: sales, inventory and listing performance. You approve every change before it runs."
+      }
+    },
+    {
+      "id": "postiz@knowledge-work-plugins",
+      "name": "postiz",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Postiz",
+      "owner": "gitroomhq",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.content",
+        "owner.marketing"
+      ],
+      "requires": [
+        "postiz"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-code"
+      ],
+      "what": {
+        "ka": "სოციალური ქსელების პოსტების დაგეგმვა და ანალიტიკა Postiz-ის ბრძანებების ხაზიდან.",
+        "en": "Scheduling social posts and reading analytics through Postiz's command-line tool."
+      }
+    },
+    {
+      "id": "brand-voice@knowledge-work-plugins",
+      "name": "brand-voice",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "Tribe AI",
+      "owner": "anthropics",
+      "tier": "third-party",
+      "kind": "role",
+      "tasks": [
+        "marketing.content"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "ბრენდის ხმის ამოცნობა არსებული დოკუმენტებიდან, წესების შედგენა და ახალი ტექსტის შემოწმება ამ წესებთან.",
+        "en": "Finding your brand voice in existing documents, writing guidelines and checking new copy against them."
+      }
+    },
+    {
+      "id": "searchfit-seo@knowledge-work-plugins",
+      "name": "searchfit-seo",
+      "marketplace": "knowledge-work-plugins",
+      "publisher": "SearchFit",
+      "owner": "searchfit",
+      "tier": "third-party",
+      "kind": "role",
+      "tasks": [
+        "marketing.analytics"
+      ],
+      "requires": [],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "what": {
+        "ka": "SEO-ს ხელსაწყოები: საიტის აუდიტი, კონტენტის გეგმა, გვერდის გაუმჯობესება და საკვანძო სიტყვების დაჯგუფება.",
+        "en": "SEO tools: a site audit, a content plan, page optimisation and keyword clustering."
+      }
+    },
+    {
+      "id": "data-analytics@openai-curated",
+      "name": "data-analytics",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "finance.reports",
+        "marketing.analytics"
+      ],
+      "requires": [],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "მონაცემებით პასუხი ბიზნესის კითხვებზე: რატომ შეიცვალა მაჩვენებელი, რამდენად სანდოა მონაცემები, რა KPI-ები გჭირდება; შედეგი ანგარიშის, გრაფიკის ან დეშბორდის სახით. მუშაობს ატვირთულ ფაილებთან ან დაკავშირებულ მონაცემთა წყაროებთან.",
+        "en": "Answers to business questions from data: why a metric moved, whether the data can be trusted, which KPIs to track; the result comes as a report, a chart or a dashboard. It works with files you upload or with connected data sources."
+      }
+    },
+    {
+      "id": "creative-production@openai-curated",
+      "name": "creative-production",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "marketing.design",
+        "marketing.campaigns"
+      ],
+      "requires": [],
+      "access": [],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "მარკეტინგის ვიზუალები ბრიფიდან ან პროდუქტის ფოტოდან: კამპანიის იდეები, რეკლამის ვარიანტები, სოციალური ქსელის პოსტები. ვარიანტებს ერთ დაფაზე გაჩვენებს და არჩეულს არხებს მოარგებს.",
+        "en": "Marketing visuals from a brief or a product photo: campaign ideas, ad directions, social posts. It shows the options on one board and adapts the one you pick to your channels."
+      }
+    },
+    {
+      "id": "sales@openai-curated-remote",
+      "name": "sales",
+      "marketplace": "openai-curated-remote",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "role",
+      "tasks": [
+        "sales.meetings",
+        "sales.pipeline"
+      ],
+      "requires": [],
+      "access": [],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "გაყიდვების ყოველდღიური საქმე: შეხვედრისთვის მომზადება და შემდგომი ნაბიჯები, პროგნოზი, კლიენტის ანგარიშის მომზადება. ყველაზე მეტს მაშინ აკეთებს, როცა შენი CRM-ის პლაგინიც დაყენებული გაქვს; ფოსტის, კალენდრის, გუნდის ჩატისა და შეხვედრების ჩანაწერების პლაგინები მას ავსებს.",
+        "en": "Everyday sales work: preparing for a meeting and following up, forecasting, getting an account ready. It does most when your CRM's plugin is installed too; plugins for email, calendar, team chat and meeting transcripts add to it."
+      }
+    },
+    {
+      "id": "gmail@openai-curated",
+      "name": "gmail",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "gmail"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Gmail-ის წერილების წაკითხვა და შეჯამება, პასუხების მონახაზი და წერილების დალაგება.",
+        "en": "Reading and summarising Gmail, drafting replies and sorting mail."
+      }
+    },
+    {
+      "id": "google-calendar@openai-curated",
+      "name": "google-calendar",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "google-calendar"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Google Calendar: დღის შეჯამება, თავისუფალი დროის ნახვა, შეხვედრის შექმნა, შეცვლა და წაშლა.",
+        "en": "Google Calendar: a summary of the day, checking availability, and creating, changing or deleting events."
+      }
+    },
+    {
+      "id": "google-drive@openai-curated",
+      "name": "google-drive",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "owner.admin"
+      ],
+      "requires": [
+        "google-drive"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Google Drive-ში ფაილების ძიება, დალაგება და გაზიარება, და მუშაობა Docs-ის, Sheets-ისა და Slides-ის ფაილებზე.",
+        "en": "Searching, organising and sharing files in Google Drive, and working on Docs, Sheets and Slides files."
+      }
+    },
+    {
+      "id": "outlook-email@openai-curated",
+      "name": "outlook-email",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "microsoft-365"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Outlook-ის ფოსტა: შემოსული წერილების გადარჩევა, მიმოწერის შეჯამება და პასუხების მონახაზი.",
+        "en": "Outlook mail: triaging the inbox, summarising threads and drafting replies."
+      }
+    },
+    {
+      "id": "outlook-calendar@openai-curated",
+      "name": "outlook-calendar",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.day"
+      ],
+      "requires": [
+        "microsoft-365"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Outlook-ის კალენდარი: დღის შეჯამება, თავისუფალი დროის შედარება, შეხვედრის დანიშვნა, გადატანა და გაუქმება.",
+        "en": "Outlook calendar: a summary of the day, comparing availability, and scheduling, moving or cancelling meetings."
+      }
+    },
+    {
+      "id": "teams@openai-curated",
+      "name": "teams",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "microsoft-365"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Microsoft Teams: ჩატების შეჯამება, დავალებების ამოკრება და არხისთვის ან შეხვედრის შემდეგ გასაგზავნი ტექსტის მონახაზი.",
+        "en": "Microsoft Teams: summarising chats, pulling out action items and drafting channel or meeting follow-ups."
+      }
+    },
+    {
+      "id": "sharepoint@openai-curated",
+      "name": "sharepoint",
+      "marketplace": "openai-curated",
+      "publisher": "OpenAI",
+      "owner": "openai",
+      "tier": "openai",
+      "kind": "service",
+      "tasks": [
+        "general.find"
+      ],
+      "requires": [
+        "microsoft-365"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "SharePoint: საიტების, გვერდებისა და ფაილების შეჯამება და შიგთავსის განახლების დაგეგმვა.",
+        "en": "SharePoint: summarising sites, pages and files, and planning updates to their content."
+      }
+    },
+    {
+      "id": "slack@openai-curated",
+      "name": "slack",
+      "marketplace": "openai-curated",
+      "publisher": "Slack",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "slack"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Slack: არხების შეჯამება, შეტყობინებების მონახაზი და გუნდის მიმოწერის დალაგება.",
+        "en": "Slack: summarising channels, drafting messages and organising team conversations."
+      }
+    },
+    {
+      "id": "canva@openai-curated",
+      "name": "canva",
+      "marketplace": "openai-curated",
+      "publisher": "Canva Pty Ltd.",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.design",
+        "owner.marketing"
+      ],
+      "requires": [
+        "canva"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Canva-ს დიზაინების შექმნა და რედაქტირება, ზომის მორგება სოციალური ქსელებისთვის, ბრენდთან შესაბამისობის შემოწმება და თარგმნა.",
+        "en": "Creating and editing Canva designs, resizing them for social media, checking them against the brand and translating them."
+      }
+    },
+    {
+      "id": "adobe@openai-curated",
+      "name": "adobe",
+      "marketplace": "openai-curated",
+      "publisher": "Adobe Inc",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "marketing.design"
+      ],
+      "requires": [
+        "adobe"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Adobe: ფოტოების რედაქტირება და რეტუში, მაკეტები, სოციალური ქსელის ვარიანტები და დიზაინი შაბლონიდან.",
+        "en": "Adobe: editing and retouching photos, mockups, social variations and designs from a template."
+      }
+    },
+    {
+      "id": "notion@openai-curated",
+      "name": "notion",
+      "marketplace": "openai-curated",
+      "publisher": "Notion",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "people.process"
+      ],
+      "requires": [
+        "notion"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Notion: შეხვედრისთვის მასალის მომზადება, კვლევის დოკუმენტად ქცევა და გადაწყვეტილებების ჩაწერა ცოდნის გვერდებად.",
+        "en": "Notion: preparing meeting material, turning research into documents and capturing decisions as knowledge pages."
+      }
+    },
+    {
+      "id": "atlassian-rovo@openai-curated",
+      "name": "atlassian-rovo",
+      "marketplace": "openai-curated",
+      "publisher": "Atlassian",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process"
+      ],
+      "requires": [
+        "atlassian"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Jira-სა და Confluence-ის მართვა საუბრით: ამოცანები, გვერდები და ძიება.",
+        "en": "Managing Jira and Confluence by conversation: issues, pages and search."
+      }
+    },
+    {
+      "id": "linear@openai-curated",
+      "name": "linear",
+      "marketplace": "openai-curated",
+      "publisher": "Linear Orbit, Inc",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "linear"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Linear-ის ამოცანების, პროექტებისა და გუნდის სამუშაო პროცესის მართვა.",
+        "en": "Managing Linear issues, projects and team workflows."
+      }
+    },
+    {
+      "id": "monday-com@openai-curated",
+      "name": "monday-com",
+      "marketplace": "openai-curated",
+      "publisher": "monday.com",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.day",
+        "people.process"
+      ],
+      "requires": [
+        "monday"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "monday.com-ის დაფებში ძიება, ჩანაწერების შექმნა და განახლება, პასუხისმგებლისა და ვადის მინიჭება.",
+        "en": "Searching monday.com boards, creating and updating items, assigning owners and timelines."
+      }
+    },
+    {
+      "id": "clickup@openai-curated",
+      "name": "clickup",
+      "marketplace": "openai-curated",
+      "publisher": "ClickUp",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.day",
+        "people.process"
+      ],
+      "requires": [
+        "clickup"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "ClickUp: ძიება მთელ სამუშაო სივრცეში და ამოცანების შექმნა და განახლება.",
+        "en": "ClickUp: searching the whole workspace, and creating and updating tasks."
+      }
+    },
+    {
+      "id": "airtable@openai-curated",
+      "name": "airtable",
+      "marketplace": "openai-curated",
+      "publisher": "Airtable",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "people.process",
+        "owner.admin"
+      ],
+      "requires": [
+        "airtable"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Airtable-ის ბაზებზე კითხვების დასმა, ჩანაწერების შექმნა და განახლება და მონაცემების ანალიზი.",
+        "en": "Asking questions of Airtable bases, creating and updating records, and analysing the data."
+      }
+    },
+    {
+      "id": "dropbox@openai-curated",
+      "name": "dropbox",
+      "marketplace": "openai-curated",
+      "publisher": "Dropbox",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "general.find",
+        "owner.admin"
+      ],
+      "requires": [
+        "dropbox"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Dropbox-ის ფაილების ძიება, დათვალიერება, დალაგება და გაზიარება, და ფაილების შეგროვება სხვებისგან.",
+        "en": "Finding, inspecting, organising and sharing Dropbox files, and collecting files from other people."
+      }
+    },
+    {
+      "id": "granola@openai-curated",
+      "name": "granola",
+      "marketplace": "openai-curated",
+      "publisher": "Granola",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "sales.meetings"
+      ],
+      "requires": [
+        "granola"
+      ],
+      "access": [
+        "reads"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Granola-ს შეხვედრების ჩანაწერები: წინა საუბრების კონტექსტი, როცა წინადადებას ან შემდგომ წერილს წერ.",
+        "en": "Granola meeting notes: context from past conversations while you write a proposal or a follow-up."
+      }
+    },
+    {
+      "id": "zoom@openai-curated",
+      "name": "zoom",
+      "marketplace": "openai-curated",
+      "publisher": "Zoom",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [],
+      "requires": [
+        "zoom"
+      ],
+      "access": [
+        "reads",
+        "writes"
+      ],
+      "money": false,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Zoom-ის შეხვედრების მონაცემები, რომ საუბარში გამოიყენო. სკილების უმეტესობა დეველოპერებისთვისაა: Zoom-თან ინტეგრაციის დაგეგმვა და აწყობა.",
+        "en": "Data from your Zoom meetings, to use in a conversation. Most of its skills are for developers: planning and building Zoom integrations."
+      }
+    },
+    {
+      "id": "shopify@openai-curated",
+      "name": "shopify",
+      "marketplace": "openai-curated",
+      "publisher": "Shopify",
+      "owner": "openai",
+      "tier": "partner",
+      "kind": "service",
+      "tasks": [
+        "owner.customers"
+      ],
+      "requires": [
+        "shopify"
+      ],
+      "access": [
+        "reads",
+        "writes",
+        "money"
+      ],
+      "money": true,
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "what": {
+        "ka": "Shopify-ის მაღაზიის მართვა საუბრით: პროდუქტები, მარაგი, ფასდაკლების კოდები, შეკვეთები და ანალიტიკა. სკილების დიდი ნაწილი დეველოპერებისთვისაა.",
+        "en": "Running a Shopify store by conversation: products, inventory, discount codes, orders and analytics. A large part of its skills is for developers."
+      }
+    }
+  ]
+}

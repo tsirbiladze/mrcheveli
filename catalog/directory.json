@@ -1,0 +1,22 @@
+{
+  "plugins": {
+    "sales@openai-curated-remote": {
+      "title": "Sales",
+      "developer": "OpenAI",
+      "seen": "2026-11-19",
+      "how": "The plugin's own page in ChatGPT's plugin directory, read from a screenshot the owner took in his account. The screenshot ends inside the row \"Work Management\": what the page shows below it was not seen. The page does not show how many skills the plugin holds.",
+      "worksWith": {
+        "Calendar": ["Google Calendar", "Outlook Calendar"],
+        "CRM": ["HubSpot", "Close", "Attio", "Zoho CRM", "Salesforce"],
+        "Document Signing": ["Docusign", "Ironclad Contracts", "PandaDoc"],
+        "Email": ["Gmail", "Outlook Email", "Outreach", "Salesloft"],
+        "Internal Messaging": ["Slack", "Teams"],
+        "Knowledge & Files": ["Notion", "Google Drive", "SharePoint", "Seismic", "Highspot", "Figma", "Canva", "Gamma", "Atlassian"],
+        "Meeting Transcripts": ["Zoom", "Zoom Revenue Accelerator", "Granola", "Fireflies", "Otter.ai", "Gong"],
+        "Sales Intelligence": ["Zoom Revenue Accelerator", "ZoomInfo", "HG Insights - RGI", "Rox", "Apollo.io", "Actively", "Meticulate", "Common Room", "Backstory"],
+        "Scheduling": ["Calendly"],
+        "Work Management": ["monday.com"]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "test-market": {
+    "repo": "example/test-market",
+    "platform": "claude",
+    "format": "claude"
+  },
+  "chat-market": {
+    "repo": "example/chat-market",
+    "platform": "chatgpt",
+    "format": "codex",
+    "installs": "chat-directory"
+  },
+  "chat-directory": {
+    "platform": "chatgpt",
+    "format": "directory"
+  }
+}

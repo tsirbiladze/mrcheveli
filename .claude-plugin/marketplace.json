@@ -1,0 +1,18 @@
+{
+  "name": "mrcheveli",
+  "owner": {
+    "name": "Tornike Sirbiladze",
+    "url": "https://tsirbiladze.com"
+  },
+  "metadata": {
+    "description": "Choose plugins for Claude or ChatGPT that fit your work and work in Georgia."
+  },
+  "plugins": [
+    {
+      "name": "mrcheveli",
+      "source": "./",
+      "description": "Four questions about your work, then at most five plugins for Claude or ChatGPT and the connectors worth connecting, without the services that do not work in Georgia.",
+      "category": "productivity"
+    }
+  ]
+}

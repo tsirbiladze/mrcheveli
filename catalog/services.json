@@ -1,0 +1,1391 @@
+{
+  "services": [
+    {
+      "id": "google-workspace",
+      "name": "Google Workspace",
+      "group": "google",
+      "money": false,
+      "keys": [],
+      "abstract": true,
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://knowledge.workspace.google.com/admin/support/troubleshooting/countries-or-regions-where-google-workspace-is-available",
+        "quote": "Google Workspace is available in most countries and regions. However, Google restricts access to some of its business services in certain countries or regions, such as Crimea, Cuba,",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "group": "google",
+      "money": false,
+      "keys": [
+        "gmail"
+      ],
+      "evidence": "google-workspace"
+    },
+    {
+      "id": "google-calendar",
+      "name": "Google Calendar",
+      "group": "google",
+      "money": false,
+      "keys": [
+        "google-calendar"
+      ],
+      "evidence": "google-workspace"
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "aliases": [
+        "Google Docs",
+        "Google Sheets"
+      ],
+      "group": "google",
+      "money": false,
+      "keys": [
+        "google-drive"
+      ],
+      "evidence": "google-workspace"
+    },
+    {
+      "id": "microsoft-365",
+      "name": "Microsoft 365",
+      "aliases": [
+        "Outlook",
+        "Teams",
+        "Excel",
+        "Word",
+        "OneDrive",
+        "SharePoint"
+      ],
+      "group": "microsoft",
+      "money": false,
+      "keys": [
+        "microsoft-365",
+        "teams",
+        "outlook-email",
+        "outlook-calendar",
+        "sharepoint"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://www.microsoft.com/en-us/microsoft-365/business/international-availability",
+        "quote": "French Southern Territories, Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "slack"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "georgia-statement",
+        "source": "https://slack.com/help/articles/226166647-Sales-tax-and-VAT",
+        "quote": "Slack is registered for Georgia VAT as a non-resident vendor. As such, Slack is required to collect VAT on sales of electronic services to Georgia customers who have not provided their VAT ID.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "notion"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "asana",
+      "name": "Asana",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "asana"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://asana.com/ru/guide/help/faq/global-trade-compliance",
+        "quote": "Asana в настоящее время не может предоставлять доступ к своей платформе или поставлять другие продукты и услуги физическим лицам и компаниям, расположенным в следующих странах и регионах, на которые распространяется эмбарго:",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "linear"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian",
+      "aliases": [
+        "Jira",
+        "Confluence"
+      ],
+      "group": "team",
+      "money": false,
+      "keys": [
+        "atlassian"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "trello",
+      "name": "Trello",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "trello"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://support.atlassian.com/trello/docs/sanctioned-countries/",
+        "quote": "Crimea Region of Ukraine, Cuba, Iran, North Korea, Syria, Sudan and Venezuela.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "monday",
+      "name": "monday.com",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "monday",
+        "monday-com",
+        "monday.com"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://monday.com/l/legal/tos/",
+        "quote": "(currently, Cuba, Lebanon, Iran, Syria, North Korea, the Crimea region of Ukraine, the so-called Donetsk People’s Republic, or the so-called Luhansk People’s Republic)",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "clickup",
+      "name": "ClickUp",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "clickup"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://help.clickup.com/hc/en-us/articles/6327730920599-Global-Trade-Compliance",
+        "quote": "we cannot provide access to ClickUp or any of our other products or services to companies or individuals in the following embargoed countries and regions:",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "guru",
+      "name": "Guru",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "guru"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "ringcentral",
+      "name": "RingCentral",
+      "aliases": [
+        "RingEX"
+      ],
+      "group": "team",
+      "money": false,
+      "keys": [
+        "ringex-chat"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://support.ringcentral.com/article-v2/8825.html?brand=RC_US&product=RingEX&language=en_US",
+        "quote": "Finland, France, Germany, Greece, Hungary",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "საქართველო არ არის იმ ქვეყნებს შორის, სადაც RingEX იყიდება.",
+          "en": "Georgia is not among the countries where RingEX is offered."
+        }
+      }
+    },
+    {
+      "id": "zoho-projects",
+      "name": "Zoho Projects",
+      "group": "team",
+      "money": false,
+      "keys": [
+        "zoho-projects"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/account/articles/account-restrictions-for-sanctioned-countries-regions",
+        "quote": "Users located in the sanctioned countries or regions cannot create new Zoho accounts.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "group": "crm",
+      "money": false,
+      "keys": [
+        "hubspot"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "group": "crm",
+      "money": false,
+      "keys": [
+        "salesforce"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://www.salesforce.com/company/legal/compliance/",
+        "quote": "Salesforce currently prohibits use of its products and services in Cuba, Iran, North Korea, Syria, and the regions of Crimea, Luhansk People's Republic (LNR), and Donetsk People's Republic (DNR).",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "close",
+      "name": "Close",
+      "group": "crm",
+      "money": false,
+      "keys": [
+        "close"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "zoho-crm",
+      "name": "Zoho CRM",
+      "group": "crm",
+      "money": false,
+      "keys": [
+        "zoho-crm"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/account/articles/account-restrictions-for-sanctioned-countries-regions",
+        "quote": "Users located in the sanctioned countries or regions cannot create new Zoho accounts.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "quickbooks",
+      "name": "QuickBooks",
+      "aliases": [
+        "QuickBooks Online"
+      ],
+      "group": "accounting",
+      "money": true,
+      "keys": [
+        "intuit-quickbooks"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://quickbooks.intuit.com/choose-country/",
+        "quote": "Georgia",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "xero",
+      "name": "Xero",
+      "group": "accounting",
+      "money": true,
+      "keys": [
+        "xero"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "worldwide-statement",
+        "source": "https://www.xero.com/legal/terms/",
+        "quote": "New Zealand and the rest of the world",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "myob",
+      "name": "MYOB",
+      "group": "accounting",
+      "money": true,
+      "keys": [
+        "myob"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://www.myob.com/au/support/myob-business/product-account/myob-business-release-notes",
+        "quote": "The MYOB Connector is now available to all MYOB Business and AccountRight browser customers in Australia and New Zealand.",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "MYOB ავსტრალიისა და ახალი ზელანდიის ბიზნესისთვისაა, და მისი კონექტორიც იქაური მომხმარებლებისთვის.",
+          "en": "MYOB is made for businesses in Australia and New Zealand, and its connector is offered to customers there."
+        }
+      }
+    },
+    {
+      "id": "zoho-books",
+      "name": "Zoho Books",
+      "group": "accounting",
+      "money": true,
+      "keys": [
+        "zoho-books"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/account/articles/account-restrictions-for-sanctioned-countries-regions",
+        "quote": "Users located in the sanctioned countries or regions cannot create new Zoho accounts.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "expensify",
+      "name": "Expensify",
+      "group": "accounting",
+      "money": true,
+      "keys": [
+        "expensify"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://www.expensify.com/terms",
+        "quote": "any country or territory subject to comprehensive U.S. sanctions (currently, Cuba, Iran, Syria, North Korea, and the Crimea region of Ukraine)",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "gusto",
+      "name": "Gusto",
+      "group": "accounting",
+      "money": true,
+      "keys": [
+        "gusto"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://gusto.com/legal/terms",
+        "quote": "The Bank Account must be in the United States.",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Gusto-ს ხელფასების სერვისს ამერიკული საბანკო ანგარიში სჭირდება.",
+          "en": "Gusto payroll needs a bank account in the United States."
+        }
+      }
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "group": "payments",
+      "money": true,
+      "keys": [
+        "stripe"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://stripe.com/global",
+        "quote": "Stripe is currently supported in the following countries/regions, with more to come.",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "საქართველო არ არის იმ ქვეყნებს შორის, სადაც ბიზნესს Stripe-ის ანგარიშის გახსნა შეუძლია.",
+          "en": "Georgia is not among the countries where a business can open a Stripe account."
+        }
+      }
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "group": "payments",
+      "money": true,
+      "keys": [
+        "paypal"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://developer.paypal.com/payouts/supported-features",
+        "quote": "Georgia Send, receive, and withdraw",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "group": "payments",
+      "money": true,
+      "keys": [
+        "square"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://squareup.com/help/us/en/article/5085-accepted-cards",
+        "quote": "Card payment acceptance with the Square app is currently available in the US, Canada, Australia, Japan, the United Kingdom, Republic of Ireland, France and Spain.",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Square ბარათით გადახდას მხოლოდ რვა ქვეყნის ბიზნესისთვის იღებს და საქართველო მათ შორის არ არის.",
+          "en": "Square takes card payments only for businesses in eight countries, and Georgia is not one of them."
+        }
+      }
+    },
+    {
+      "id": "airwallex",
+      "name": "Airwallex",
+      "group": "payments",
+      "money": true,
+      "keys": [
+        "airwallex"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
+        "quote": "If your registration location is not listed, Airwallex is unable to process your application at this time.",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "საქართველო არ არის იმ ადგილების სიაში, სადაც ბიზნესს Airwallex-ში რეგისტრაცია შეუძლია.",
+          "en": "Georgia is not on the list of places where a business can register for Airwallex."
+        }
+      }
+    },
+    {
+      "id": "ramp",
+      "name": "Ramp",
+      "group": "payments",
+      "money": true,
+      "keys": [
+        "ramp"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://support.ramp.com/applying-and-signing-up-for-ramp-us-based/",
+        "quote": "Be registered in the United States",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Ramp-ის ეს პროგრამა მხოლოდ აშშ-ში რეგისტრირებულ კომპანიებს იღებს.",
+          "en": "This Ramp programme accepts only companies registered in the United States."
+        }
+      }
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom",
+      "group": "meetings",
+      "money": false,
+      "keys": [
+        "zoom"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "georgia-statement",
+        "source": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0066420",
+        "quote": "Georgia VAT",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies.ai",
+      "group": "meetings",
+      "money": false,
+      "keys": [
+        "fireflies"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "otter-ai",
+      "name": "Otter.ai",
+      "group": "meetings",
+      "money": false,
+      "keys": [
+        "otter-ai",
+        "otter.ai"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "gong",
+      "name": "Gong",
+      "group": "meetings",
+      "money": false,
+      "keys": [
+        "gong"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "group": "meetings",
+      "money": false,
+      "keys": [
+        "granola"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://www.granola.ai/static/Granola-Platform-Terms-2025-12-19.pdf",
+        "quote": "Cuba, Iran, North Korea, Syria, and the Crimea, so-called Donetsk People’s Republic,",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "calendly",
+      "name": "Calendly",
+      "group": "meetings",
+      "money": false,
+      "keys": [
+        "calendly"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "zoominfo",
+      "name": "ZoomInfo",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "zoominfo"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo.io",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "apollo",
+        "apollo-io",
+        "apollo.io"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "clay",
+      "name": "Clay",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "clay"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "worldwide-statement",
+        "source": "https://www.clay.com/faq/what-countries-is-the-app-available-in",
+        "quote": "Clay in ChatGPT and Claude is available globally.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "lusha",
+      "name": "Lusha",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "lusha"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "crunchbase",
+      "name": "Crunchbase",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "crunchbase"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "outreach",
+      "name": "Outreach",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "outreach"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "common-room",
+      "name": "Common Room",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "common-room"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "leadfeeder",
+      "name": "Leadfeeder",
+      "group": "prospecting",
+      "money": false,
+      "keys": [],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "similarweb",
+      "name": "Similarweb",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "similarweb"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "group": "design",
+      "money": false,
+      "keys": [
+        "canva"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "worldwide-statement",
+        "source": "https://www.canva.com/help/global-payment-methods/",
+        "quote": "Payment methods accepted globally",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "group": "design",
+      "money": false,
+      "keys": [
+        "figma"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "adobe",
+      "name": "Adobe Creative Cloud",
+      "aliases": [
+        "Photoshop",
+        "Illustrator",
+        "Adobe Express"
+      ],
+      "group": "design",
+      "money": false,
+      "keys": [],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://helpx.adobe.com/express/mobile/get-started/faq.html",
+        "quote": "Adobe Express for mobile is available worldwide, except for China, Cuba, Iran, North Korea, Syria, Crimea, and the so-called Donetsk and Luhansk People's Republics.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "box",
+      "name": "Box",
+      "group": "files",
+      "money": false,
+      "keys": [
+        "box"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "worldwide-statement",
+        "source": "https://www.box.com/legal/termsofservice",
+        "quote": "If you reside outside of the United States excluding Japan, you are entering into this contract with Box.com (UK) Ltd.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "egnyte",
+      "name": "Egnyte",
+      "group": "files",
+      "money": false,
+      "keys": [
+        "egnyte"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "group": "files",
+      "money": false,
+      "keys": [],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://help.dropbox.com/security/restricted-access-region-country",
+        "quote": "doesn't support access to some of our services in certain countries or regions, such as Crimea, North Korea, and Syria.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "docusign",
+      "name": "Docusign",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "docusign"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://www.docusign.com/legal/terms-and-conditions/msa",
+        "quote": "located or organized in a country or territory subject to comprehensive U.S. sanctions (currently including Cuba, Crimea, Iran, North Korea)",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "amplitude",
+      "name": "Amplitude",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "amplitude",
+        "amplitude-eu"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://amplitude.com/terms",
+        "quote": "(currently, Cuba, Iran, North Korea, Syria, the Crimea region of Ukraine, the so-called Donetsk People’s Republic, and the so-called Luhansk People’s Republic)",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "ahrefs",
+      "name": "Ahrefs",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "ahrefs"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "klaviyo",
+      "name": "Klaviyo",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "klaviyo"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "supermetrics",
+      "name": "Supermetrics",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "supermetrics"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://supermetrics.com/terms-of-service",
+        "quote": "As at the date of this Agreement prohibited countries or territories include Cuba, Iran, North Korea, Syria, the Crimea, Donetsk, and Luhansk regions of Ukraine, Belarus, Russia and Venezuela.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "mailchimp",
+      "name": "Mailchimp",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "intuit-mailchimp"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://mailchimp.com/legal/terms/",
+        "quote": "not be based in comprehensively embargoed and comprehensively sanctioned jurisdictions, including Cuba, Iran, North Korea, Syria and the regions of Crimea, Zaporizhzhia and Kherson",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "tiktok-ads",
+      "name": "TikTok Ads",
+      "aliases": [
+        "TikTok"
+      ],
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "tiktok"
+      ],
+      "georgia": {
+        "status": "no",
+        "basis": "country-list",
+        "source": "https://ads.tiktok.com/resources/help/article/available-countries-and-regions-for-ad-account-creation-in-bc",
+        "quote": "Users from the following countries and regions can create ad accounts in TikTok Business Center, without having to go through a TikTok representative.",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "საქართველო არ არის იმ ქვეყნების სიაში, საიდანაც TikTok-ის სარეკლამო ანგარიშის დამოუკიდებლად გახსნა შეიძლება.",
+          "en": "Georgia is not on the list of countries whose users can create a TikTok ad account on their own."
+        }
+      }
+    },
+    {
+      "id": "activecampaign",
+      "name": "ActiveCampaign",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://www.activecampaign.com/legal/terms-of-service",
+        "quote": "including Cuba, Iran, North Korea, Syria, and the Crimea region",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "postiz",
+      "name": "Postiz",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "group": "commerce",
+      "money": true,
+      "keys": [
+        "shopify"
+      ],
+      "georgia": {
+        "status": "partial",
+        "basis": "country-list",
+        "source": "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries",
+        "quote": "You can use Shopify Payments to accept payments at checkout if your business is located in one of the supported countries listed on this page.",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Shopify Payments საქართველოში არ არის: გადახდების მისაღებად სხვა პროვაიდერი გჭირდება.",
+          "en": "Shopify Payments is not offered in Georgia: taking payments needs another provider."
+        }
+      }
+    },
+    {
+      "id": "wix",
+      "name": "Wix",
+      "group": "commerce",
+      "money": true,
+      "keys": [
+        "wix"
+      ],
+      "georgia": {
+        "status": "partial",
+        "basis": "country-list",
+        "source": "https://www.wix.com/payments",
+        "quote": "Wix Payments is available in the following countries and currencies:",
+        "checked": "2026-11-19",
+        "note": {
+          "ka": "Wix Payments საქართველოში არ არის: გადახდების მისაღებად სხვა პროვაიდერი გჭირდება.",
+          "en": "Wix Payments is not offered in Georgia: taking payments needs another provider."
+        }
+      }
+    },
+    {
+      "id": "amazon-seller",
+      "name": "Amazon Seller Central",
+      "aliases": [
+        "Amazon"
+      ],
+      "group": "commerce",
+      "money": true,
+      "keys": [],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://sellercentral.amazon.com/help/hub/reference/external/200405020",
+        "quote": "Find below the list of countries currently accepted to register for selling on Amazon.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "snowflake"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "databricks"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://www.databricks.com/legal/external-use-schedule",
+        "quote": "the world, other than those countries to which export of software is restricted by applicable law (as of the Effective Date: Russia, Crimea Region of Ukraine, Cuba, Iran, North Korea, Syria)",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "bigquery",
+      "name": "Google BigQuery",
+      "aliases": [
+        "Google Cloud"
+      ],
+      "group": "data",
+      "money": false,
+      "keys": [
+        "bigquery"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "georgia-statement",
+        "source": "https://docs.cloud.google.com/billing/docs/resources/vat-overview",
+        "quote": "Google Cloud usage by customers in Georgia is subject to 18% VAT.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "group": "support-tools",
+      "money": false,
+      "keys": [
+        "intercom"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "zoho-desk",
+      "name": "Zoho Desk",
+      "group": "support-tools",
+      "money": false,
+      "keys": [
+        "zoho-desk"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/account/articles/account-restrictions-for-sanctioned-countries-regions",
+        "quote": "Users located in the sanctioned countries or regions cannot create new Zoho accounts.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "zapier"
+      ],
+      "georgia": {
+        "status": "yes",
+        "basis": "restricted-list",
+        "source": "https://zapier.com/legal/website-terms-of-use",
+        "quote": "are not a resident of Cuba, Iran, North Korea, Sudan or Syria.",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "airtable",
+      "name": "Airtable",
+      "group": "other",
+      "money": false,
+      "keys": [],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "miro",
+      "name": "Miro",
+      "group": "other",
+      "money": false,
+      "keys": [],
+      "georgia": {
+        "status": "yes",
+        "basis": "country-list",
+        "source": "https://miro.com/legal/documents/Miro-Support-Policy.pdf",
+        "quote": "Gabon Gambia Georgia Germany Ghana",
+        "checked": "2026-11-19"
+      }
+    },
+    {
+      "id": "emergent",
+      "name": "Emergent",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "emergent"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "github"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "statsig",
+      "name": "Statsig",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "statsig"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "chatgpt-sites",
+      "name": "ChatGPT Sites",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "sites"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "hex",
+      "name": "Hex",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "hex"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "deepnote",
+      "name": "Deepnote",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "deepnote"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "mixpanel",
+      "name": "Mixpanel",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "mixpanel"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "posthog",
+      "name": "PostHog",
+      "group": "marketing-tools",
+      "money": false,
+      "keys": [
+        "posthog"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "omni-analytics",
+      "name": "Omni Analytics",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "omni-analytics"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "metabase",
+      "name": "Metabase",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "metabase"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "thoughtspot",
+      "name": "ThoughtSpot",
+      "group": "data",
+      "money": false,
+      "keys": [
+        "thoughtspot"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "attio",
+      "name": "Attio",
+      "group": "crm",
+      "money": false,
+      "keys": [
+        "attio"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "ironclad",
+      "name": "Ironclad",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "ironclad-contracts"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "pandadoc",
+      "name": "PandaDoc",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "pandadoc"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "salesloft",
+      "name": "Salesloft",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "salesloft"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "seismic",
+      "name": "Seismic",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "seismic"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "highspot",
+      "name": "Highspot",
+      "group": "other",
+      "money": false,
+      "keys": [
+        "highspot"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "group": "design",
+      "money": false,
+      "keys": [
+        "gamma"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "zoom-revenue-accelerator",
+      "name": "Zoom Revenue Accelerator",
+      "group": "meetings",
+      "money": false,
+      "keys": [
+        "zoom-revenue-accelerator"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "hg-insights",
+      "name": "HG Insights",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "HG Insights - RGI"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "rox",
+      "name": "Rox",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "rox"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "actively",
+      "name": "Actively",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "actively"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "meticulate",
+      "name": "Meticulate",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "meticulate"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "backstory",
+      "name": "Backstory",
+      "group": "prospecting",
+      "money": false,
+      "keys": [
+        "backstory"
+      ],
+      "georgia": {
+        "status": "unknown"
+      }
+    }
+  ]
+}

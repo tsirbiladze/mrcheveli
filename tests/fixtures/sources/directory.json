@@ -1,0 +1,25 @@
+{
+  "plugins": {
+    "closer@chat-directory": {
+      "title": "Closer",
+      "developer": "OpenAI",
+      "seen": "2026-01-02",
+      "how": "A page made up for the tests.",
+      "worksWith": {
+        "Mail": [
+          "Mail"
+        ],
+        "CRM": [
+          "CRM A",
+          "CRM B"
+        ],
+        "Payments": [
+          "Pay X"
+        ],
+        "Chat": [
+          "Chat"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "roles": [
+    {
+      "id": "sales",
+      "asked": true,
+      "label": {
+        "ka": "გაყიდვები და კლიენტები",
+        "en": "Sales and customers"
+      }
+    },
+    {
+      "id": "finance",
+      "asked": true,
+      "label": {
+        "ka": "ბუღალტერია და ფინანსები",
+        "en": "Accounting and finance"
+      }
+    },
+    {
+      "id": "marketing",
+      "asked": true,
+      "label": {
+        "ka": "მარკეტინგი და ტექსტები",
+        "en": "Marketing and content"
+      }
+    },
+    {
+      "id": "legal",
+      "asked": true,
+      "label": {
+        "ka": "სამართალი და დოკუმენტები",
+        "en": "Legal and documents"
+      }
+    },
+    {
+      "id": "owner",
+      "asked": false,
+      "label": {
+        "ka": "მცირე ბიზნესის მფლობელი",
+        "en": "Small business owner"
+      }
+    },
+    {
+      "id": "support",
+      "asked": false,
+      "label": {
+        "ka": "მომხმარებელთა მხარდაჭერა",
+        "en": "Customer support"
+      }
+    },
+    {
+      "id": "people",
+      "asked": false,
+      "label": {
+        "ka": "ადამიანური რესურსები და ოპერაციები",
+        "en": "HR and operations"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "sales.research",
+      "role": "sales",
+      "label": {
+        "ka": "კომპანიებისა და კონტაქტების მოძიება",
+        "en": "Finding companies and contacts"
+      }
+    },
+    {
+      "id": "sales.meetings",
+      "role": "sales",
+      "label": {
+        "ka": "შეხვედრისთვის მომზადება და შემდგომი წერილები",
+        "en": "Preparing for calls and following up"
+      }
+    },
+    {
+      "id": "sales.pipeline",
+      "role": "sales",
+      "label": {
+        "ka": "CRM-ის მოწესრიგება და გაყიდვების პროგნოზი",
+        "en": "Keeping the CRM tidy and forecasting"
+      }
+    },
+    {
+      "id": "sales.proposals",
+      "role": "sales",
+      "label": {
+        "ka": "შეთავაზებები და ხელშეკრულებები",
+        "en": "Proposals and contracts"
+      }
+    },
+    {
+      "id": "finance.books",
+      "role": "finance",
+      "label": {
+        "ka": "ბუღალტრული ჩანაწერები, ინვოისები, შეჯერება",
+        "en": "Bookkeeping, invoices, reconciliation"
+      }
+    },
+    {
+      "id": "finance.reports",
+      "role": "finance",
+      "label": {
+        "ka": "ანგარიშგება და ანალიზი",
+        "en": "Reporting and analysis"
+      }
+    },
+    {
+      "id": "finance.tax",
+      "role": "finance",
+      "label": {
+        "ka": "დეკლარაციები და rs.ge",
+        "en": "Tax returns and rs.ge"
+      }
+    },
+    {
+      "id": "finance.payments",
+      "role": "finance",
+      "label": {
+        "ka": "გადახდები და ბანკი",
+        "en": "Payments and banking"
+      }
+    },
+    {
+      "id": "marketing.content",
+      "role": "marketing",
+      "label": {
+        "ka": "ტექსტები, პოსტები, წერილები",
+        "en": "Copy, posts and emails"
+      }
+    },
+    {
+      "id": "marketing.design",
+      "role": "marketing",
+      "label": {
+        "ka": "ვიზუალი და პრეზენტაციები",
+        "en": "Visuals and presentations"
+      }
+    },
+    {
+      "id": "marketing.campaigns",
+      "role": "marketing",
+      "label": {
+        "ka": "კამპანიები და რეკლამა",
+        "en": "Campaigns and ads"
+      }
+    },
+    {
+      "id": "marketing.analytics",
+      "role": "marketing",
+      "label": {
+        "ka": "შედეგების ანალიზი და SEO",
+        "en": "Performance analysis and SEO"
+      }
+    },
+    {
+      "id": "legal.contracts",
+      "role": "legal",
+      "label": {
+        "ka": "ხელშეკრულებების შემოწმება და შედგენა",
+        "en": "Reviewing and drafting contracts"
+      }
+    },
+    {
+      "id": "legal.research",
+      "role": "legal",
+      "label": {
+        "ka": "კანონმდებლობისა და პრაქტიკის მოძიება",
+        "en": "Researching legislation and case law"
+      }
+    },
+    {
+      "id": "legal.compliance",
+      "role": "legal",
+      "label": {
+        "ka": "შესაბამისობა და რისკები",
+        "en": "Compliance and risk"
+      }
+    },
+    {
+      "id": "legal.signing",
+      "role": "legal",
+      "label": {
+        "ka": "ხელმოწერა და დოკუმენტების მართვა",
+        "en": "Signing and managing documents"
+      }
+    },
+    {
+      "id": "owner.money",
+      "role": "owner",
+      "label": {
+        "ka": "ფული: ინვოისები, ხარჯები, გადახდები",
+        "en": "Money: invoices, expenses, payments"
+      }
+    },
+    {
+      "id": "owner.customers",
+      "role": "owner",
+      "label": {
+        "ka": "კლიენტების მოზიდვა და გაყიდვა",
+        "en": "Winning and serving customers"
+      }
+    },
+    {
+      "id": "owner.marketing",
+      "role": "owner",
+      "label": {
+        "ka": "საიტი, სოციალური ქსელები, რეკლამა",
+        "en": "Website, social media, ads"
+      }
+    },
+    {
+      "id": "owner.admin",
+      "role": "owner",
+      "label": {
+        "ka": "ყოველდღიური საქმეები და დოკუმენტები",
+        "en": "Day-to-day admin and documents"
+      }
+    },
+    {
+      "id": "support.tickets",
+      "role": "support",
+      "label": {
+        "ka": "მომართვებზე პასუხი და ესკალაცია",
+        "en": "Answering and escalating tickets"
+      }
+    },
+    {
+      "id": "support.knowledge",
+      "role": "support",
+      "label": {
+        "ka": "ცოდნის ბაზა და ხშირი კითხვები",
+        "en": "Knowledge base and FAQs"
+      }
+    },
+    {
+      "id": "people.hiring",
+      "role": "people",
+      "label": {
+        "ka": "დაქირავება და თანამშრომლების საკითხები",
+        "en": "Hiring and people matters"
+      }
+    },
+    {
+      "id": "people.process",
+      "role": "people",
+      "label": {
+        "ka": "პროცესები, მომწოდებლები, დაგეგმვა",
+        "en": "Processes, vendors, planning"
+      }
+    },
+    {
+      "id": "general.day",
+      "role": "*",
+      "label": {
+        "ka": "ფოსტა, კალენდარი და ამოცანები",
+        "en": "Email, calendar and tasks"
+      }
+    },
+    {
+      "id": "general.find",
+      "role": "*",
+      "label": {
+        "ka": "ინფორმაციის პოვნა კომპანიის ხელსაწყოებში",
+        "en": "Finding information across company tools"
+      }
+    },
+    {
+      "id": "general.pdf",
+      "role": "*",
+      "label": {
+        "ka": "PDF-ების ნახვა, შევსება და ხელმოწერა",
+        "en": "Viewing, filling and signing PDFs"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "google",
+      "asked": true,
+      "label": {
+        "ka": "Google (Gmail, კალენდარი, Drive)",
+        "en": "Google (Gmail, Calendar, Drive)"
+      },
+      "short": {
+        "ka": "Google",
+        "en": "Google"
+      }
+    },
+    {
+      "id": "microsoft",
+      "asked": true,
+      "label": {
+        "ka": "Microsoft 365 (Outlook, Teams, Excel)",
+        "en": "Microsoft 365 (Outlook, Teams, Excel)"
+      },
+      "short": {
+        "ka": "Microsoft 365",
+        "en": "Microsoft 365"
+      }
+    },
+    {
+      "id": "team",
+      "asked": true,
+      "label": {
+        "ka": "Slack, Notion ან მსგავსი გუნდური ხელსაწყო",
+        "en": "Slack, Notion or a similar team tool"
+      },
+      "short": {
+        "ka": "გუნდური ხელსაწყოები",
+        "en": "Team tools"
+      }
+    },
+    {
+      "id": "crm",
+      "asked": true,
+      "label": {
+        "ka": "CRM ან ბუღალტრული პროგრამა",
+        "en": "A CRM or an accounting program"
+      },
+      "short": {
+        "ka": "CRM",
+        "en": "CRM"
+      },
+      "also": [
+        "accounting"
+      ]
+    },
+    {
+      "id": "accounting",
+      "asked": false,
+      "label": {
+        "ka": "ბუღალტრული პროგრამა",
+        "en": "Accounting program"
+      }
+    },
+    {
+      "id": "payments",
+      "asked": false,
+      "label": {
+        "ka": "გადახდები",
+        "en": "Payments"
+      }
+    },
+    {
+      "id": "meetings",
+      "asked": false,
+      "label": {
+        "ka": "შეხვედრები და ჩანაწერები",
+        "en": "Meetings and recordings"
+      }
+    },
+    {
+      "id": "prospecting",
+      "asked": false,
+      "label": {
+        "ka": "კონტაქტების ბაზები",
+        "en": "Contact databases"
+      }
+    },
+    {
+      "id": "design",
+      "asked": false,
+      "label": {
+        "ka": "დიზაინი",
+        "en": "Design"
+      }
+    },
+    {
+      "id": "files",
+      "asked": false,
+      "label": {
+        "ka": "ფაილების საცავი",
+        "en": "File storage"
+      }
+    },
+    {
+      "id": "marketing-tools",
+      "asked": false,
+      "label": {
+        "ka": "მარკეტინგის ხელსაწყოები",
+        "en": "Marketing tools"
+      }
+    },
+    {
+      "id": "commerce",
+      "asked": false,
+      "label": {
+        "ka": "ონლაინ მაღაზია და საიტი",
+        "en": "Online store and website"
+      }
+    },
+    {
+      "id": "data",
+      "asked": false,
+      "label": {
+        "ka": "მონაცემთა საცავები",
+        "en": "Data warehouses"
+      }
+    },
+    {
+      "id": "support-tools",
+      "asked": false,
+      "label": {
+        "ka": "მხარდაჭერის ხელსაწყოები",
+        "en": "Support tools"
+      }
+    },
+    {
+      "id": "other",
+      "asked": false,
+      "label": {
+        "ka": "სხვა",
+        "en": "Other"
+      }
+    }
+  ],
+  "limits": [
+    {
+      "id": "known-publishers",
+      "label": {
+        "ka": "მხოლოდ {owner}-ის ან თვითონ სერვისის გამოშვებული პლაგინები",
+        "en": "Only plugins published by {owner} or by the service itself"
+      }
+    },
+    {
+      "id": "no-money",
+      "label": {
+        "ka": "არაფერი, რაც ფულთან, ბანკთან ან გადასახადებთან წვდომას ითხოვს",
+        "en": "Nothing that needs access to money, a bank or taxes"
+      }
+    },
+    {
+      "id": "managed",
+      "label": {
+        "ka": "კომპანიის ანგარიშია, პლაგინებს ადმინისტრატორი მართავს",
+        "en": "A company account: an administrator manages plugins"
+      }
+    }
+  ],
+  "tiers": [
+    {
+      "id": "anthropic",
+      "label": {
+        "ka": "Anthropic-ის გამოშვებული",
+        "en": "Published by Anthropic"
+      }
+    },
+    {
+      "id": "openai",
+      "label": {
+        "ka": "OpenAI-ის გამოშვებული",
+        "en": "Published by OpenAI"
+      }
+    },
+    {
+      "id": "partner",
+      "label": {
+        "ka": "თვითონ სერვისის გამოშვებული, {owner}-ის კატალოგში",
+        "en": "Published by the service itself, in {owner}'s catalog"
+      }
+    },
+    {
+      "id": "third-party",
+      "label": {
+        "ka": "მესამე მხარის, {owner}-ის კატალოგში",
+        "en": "Third party, in {owner}'s catalog"
+      }
+    }
+  ],
+  "platforms": [
+    {
+      "id": "claude",
+      "name": "Claude",
+      "owner": "Anthropic",
+      "tier": "anthropic",
+      "surfaces": [
+        "claude-app",
+        "claude-code"
+      ],
+      "assistant": {
+        "claude-app": "Claude",
+        "claude-code": "Claude"
+      }
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "owner": "OpenAI",
+      "tier": "openai",
+      "surfaces": [
+        "chatgpt-app",
+        "codex-cli"
+      ],
+      "assistant": {
+        "chatgpt-app": "ChatGPT",
+        "codex-cli": "Codex"
+      }
+    }
+  ],
+  "surfaces": [
+    "claude-app",
+    "claude-code",
+    "chatgpt-app",
+    "codex-cli"
+  ],
+  "georgia": [
+    "yes",
+    "partial",
+    "no",
+    "unknown"
+  ]
+}

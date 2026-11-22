@@ -1,0 +1,418 @@
+{
+  "fetched": "2026-01-03",
+  "marketplaces": {
+    "test-market": {
+      "repo": "example/test-market",
+      "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "plugins": 17
+    },
+    "chat-market": {
+      "repo": "example/chat-market",
+      "commit": "cccccccccccccccccccccccccccccccccccccccc",
+      "plugins": 4
+    }
+  },
+  "plugins": {
+    "seller@test-market": {
+      "source": {
+        "repo": "anthropics/seller-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 36,
+      "connectors": [
+        {
+          "key": "mail",
+          "url": "https://example.test/mail"
+        },
+        {
+          "key": "The Calendar",
+          "url": "https://example.test/The-Calendar"
+        },
+        {
+          "key": "crm-a",
+          "url": "https://example.test/crm-a"
+        },
+        {
+          "key": "crm-b",
+          "url": "https://example.test/crm-b"
+        },
+        {
+          "key": "crm-c",
+          "url": "https://example.test/crm-c"
+        },
+        {
+          "key": "pay-x",
+          "url": "https://example.test/pay-x"
+        },
+        {
+          "key": "pay-y",
+          "url": "https://example.test/pay-y"
+        },
+        {
+          "key": "chat",
+          "url": "https://example.test/chat"
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "keeper@test-market": {
+      "source": {
+        "repo": "anthropics/keeper-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [
+        {
+          "key": "books",
+          "url": "https://example.test/books"
+        },
+        {
+          "key": "pay-y",
+          "url": "https://example.test/pay-y"
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "crm-a-plugin@test-market": {
+      "source": {
+        "repo": "crm-a-plugin-org/crm-a-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "Crm-A-Plugin",
+      "skills": 3,
+      "connectors": [
+        {
+          "key": "crm-a",
+          "url": "https://example.test/crm-a"
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "crm-b-plugin@test-market": {
+      "source": {
+        "repo": "crm-b-plugin-org/crm-b-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "Crm-B-Plugin",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "crm-c-plugin@test-market": {
+      "source": {
+        "repo": "crm-c-plugin-org/crm-c-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "Crm-C-Plugin",
+      "skills": 3,
+      "connectors": [
+        {
+          "key": "crm-c",
+          "url": "https://example.test/crm-c"
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "nowhere-plugin@test-market": {
+      "source": {
+        "repo": "nowhere-plugin-org/nowhere-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "Nowhere-Plugin",
+      "skills": 3,
+      "connectors": [
+        {
+          "key": "nowhere",
+          "url": "https://example.test/nowhere"
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "outsider@test-market": {
+      "source": {
+        "repo": "outsider-org/outsider-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "Somebody",
+      "skills": 3,
+      "connectors": [
+        {
+          "key": "design-a",
+          "url": "https://example.test/design-a"
+        }
+      ],
+      "localServers": [],
+      "agents": true,
+      "hooks": false,
+      "bin": false
+    },
+    "viewer@test-market": {
+      "source": {
+        "repo": "anthropics/viewer-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [
+        "pdf"
+      ],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "code-only@test-market": {
+      "source": {
+        "repo": "anthropics/code-only-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "chat-plugin@test-market": {
+      "source": {
+        "repo": "chat-plugin-org/chat-plugin-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "Chat-Plugin",
+      "skills": 3,
+      "connectors": [
+        {
+          "key": "chat",
+          "url": "https://example.test/chat"
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "extra1@test-market": {
+      "source": {
+        "repo": "anthropics/extra1-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "extra2@test-market": {
+      "source": {
+        "repo": "anthropics/extra2-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "extra3@test-market": {
+      "source": {
+        "repo": "anthropics/extra3-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "extra4@test-market": {
+      "source": {
+        "repo": "anthropics/extra4-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "extra5@test-market": {
+      "source": {
+        "repo": "anthropics/extra5-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "extra6@test-market": {
+      "source": {
+        "repo": "anthropics/extra6-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "extra7@test-market": {
+      "source": {
+        "repo": "anthropics/extra7-repo",
+        "path": "",
+        "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "author": "",
+      "skills": 3,
+      "connectors": [],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "insight@chat-market": {
+      "source": {
+        "repo": "openai/chat-market",
+        "path": "plugins/insight",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      },
+      "author": "OpenAI",
+      "title": "Insight Desk",
+      "skills": 15,
+      "connectors": [
+        {
+          "key": "chat",
+          "url": ""
+        },
+        {
+          "key": "crm_a",
+          "url": ""
+        },
+        {
+          "key": "pay-x",
+          "url": ""
+        },
+        {
+          "key": "mail",
+          "url": ""
+        }
+      ],
+      "localServers": [
+        "widgets"
+      ],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "chat-app@chat-market": {
+      "source": {
+        "repo": "openai/chat-market",
+        "path": "plugins/chat-app",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      },
+      "author": "Chat Co.",
+      "title": "Chat App",
+      "skills": 0,
+      "connectors": [
+        {
+          "key": "chat",
+          "url": ""
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "mail-app@chat-market": {
+      "source": {
+        "repo": "openai/chat-market",
+        "path": "plugins/mail-app",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      },
+      "author": "OpenAI",
+      "title": "Mail App",
+      "skills": 0,
+      "connectors": [
+        {
+          "key": "mail",
+          "url": ""
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    },
+    "crm-a-kit@chat-market": {
+      "source": {
+        "repo": "openai/chat-market",
+        "path": "plugins/crm-a-kit",
+        "sha": "cccccccccccccccccccccccccccccccccccccccc"
+      },
+      "author": "Crm-A Inc",
+      "title": "CRM-A Kit",
+      "skills": 4,
+      "connectors": [
+        {
+          "key": "app-0123456789abcdef0123456789abcdef",
+          "url": ""
+        }
+      ],
+      "localServers": [],
+      "agents": false,
+      "hooks": false,
+      "bin": false
+    }
+  }
+}

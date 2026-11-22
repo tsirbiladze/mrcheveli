@@ -1,0 +1,36 @@
+{
+  "tools": [
+    {
+      "id": "tool-listed",
+      "name": "tool-listed",
+      "url": "https://github.com/example/tool-listed",
+      "status": "listed",
+      "money": true,
+      "tasks": [
+        "finance.tax"
+      ],
+      "what": {
+        "ka": "ჩამოთვლილი ხელსაწყო.",
+        "en": "A listed tool."
+      }
+    },
+    {
+      "id": "tool-reviewed",
+      "name": "tool-reviewed",
+      "url": "https://github.com/example/tool-reviewed",
+      "status": "reviewed",
+      "reviewed": {
+        "sha": "cccccccccccccccccccccccccccccccccccccccc",
+        "date": "2026-01-01"
+      },
+      "money": false,
+      "tasks": [
+        "legal.research"
+      ],
+      "what": {
+        "ka": "გადამოწმებული ხელსაწყო.",
+        "en": "A reviewed tool."
+      }
+    }
+  ]
+}
